@@ -1,5 +1,5 @@
 # Welcome to Breathe!
-This is a production ready branch. For development go to [develop](../../tree/develop).
+"master" branch is a production ready branch. For development use "develop" branch.
 # Git
 - [Our Git Branching Model](http://nvie.com/posts/a-successful-git-branching-model/)
 - [Git Workflow](https://ecgit01.corp.edifecs.com/help/workflow/README.md)
