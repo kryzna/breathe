@@ -1,7 +1,7 @@
 package com.rgp.breathe.dao;
 
 import com.rgp.breathe.model.Question;
-import com.rgp.breathe.model.Questionary;
+import com.rgp.breathe.model.Questionnaire;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,23 +9,23 @@ import java.util.List;
 /**
  * Created by mdansari on 3/29/2016.
  */
-public class QuestionnaryDataGenerator {
+public class QuestionnaireDataGenerator {
 
     static String[] titles = {"Asthma Primary Control Questionnaire (APCQ)", "Asthma Secondary Control Questionnaire (ASCQ)"};
     static String[] status = {"completed", "not completed"};
 
-    static List<Questionary> questionaryList;
+    static List<Questionnaire> questionnaireList;
 
 
-    public static void setQuestionaryData() {
-        questionaryList = new ArrayList<>();
+    public static void setQuestionnairesData() {
+        questionnaireList = new ArrayList<>();
         for (int i = 0; i < titles.length; i++) {
-            questionaryList.add(new Questionary(titles[i], status[i], getQuestionList(i)));
+            questionnaireList.add(new Questionnaire(titles[i], status[i], getQuestionList(i)));
         }
     }
 
-    public static List<Questionary> getQuestionaryData() {
-        return questionaryList;
+    public static List<Questionnaire> getQuestionnairesData() {
+        return questionnaireList;
     }
 
     public static List<Question> getQuestionList(int i) {

@@ -8,7 +8,7 @@
     android:padding="20dp">
 
     <TextView
-        android:id="@+id/questionary_title"
+        android:id="@+id/questionnaire_title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
          android:textColor="@color/white"
@@ -27,7 +27,6 @@
         android:layout_height="match_parent"
         android:textStyle="normal"
         android:textSize="20sp"
-        android:layout_marginBottom="20dp"
-        android:text="Do you find difficulty in taking breathe? "/>
+        android:layout_marginBottom="20dp"/>
 
 </LinearLayout>

@@ -11,10 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.rgp.breathe.R;
-import com.rgp.breathe.dao.QuestionnaryDataGenerator;
-import com.rgp.breathe.model.Questionary;
+import com.rgp.breathe.dao.QuestionnaireDataGenerator;
+import com.rgp.breathe.model.Questionnaire;
 import com.rgp.breathe.view.activity.MainActivity;
-import com.rgp.breathe.view.adapter.MyAdapter;
+import com.rgp.breathe.view.adapter.QuetionnaireAdapter;
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ import java.util.List;
 @SuppressLint("ValidFragment")
 public class FragmentHealthRiskAssesment extends Fragment {
 
-    private List<Questionary> questionaryList;
+    private List<Questionnaire> questionnaireList;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -33,8 +33,8 @@ public class FragmentHealthRiskAssesment extends Fragment {
 
     public FragmentHealthRiskAssesment(Context context) {
         this.context = context;
-        QuestionnaryDataGenerator.setQuestionaryData();
-        questionaryList = QuestionnaryDataGenerator.getQuestionaryData();
+        QuestionnaireDataGenerator.setQuestionnairesData();
+        questionnaireList = QuestionnaireDataGenerator.getQuestionnairesData();
     }
 
     @Override
@@ -42,12 +42,12 @@ public class FragmentHealthRiskAssesment extends Fragment {
         ((MainActivity) getActivity()).setActionBarTitle(getString(R.string.health_risk_assesment));
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_health_risk_assesment, null);
 
-        mRecyclerView = (RecyclerView) root.findViewById(R.id.questionary_list_view);
+        mRecyclerView = (RecyclerView) root.findViewById(R.id.questionnaire_list_view);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(context);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new MyAdapter(getContext(), questionaryList);
+        mAdapter = new QuetionnaireAdapter(getContext(), questionnaireList);
         mRecyclerView.setAdapter(mAdapter);
         return root;
     }

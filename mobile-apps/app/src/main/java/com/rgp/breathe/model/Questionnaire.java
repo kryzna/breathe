@@ -5,13 +5,13 @@ import java.util.List;
 /**
  * Created by mdansari on 3/28/2016.
  */
-public class Questionary {
+public class Questionnaire {
 
     private String title;
     private String status;
     private List<Question> questionList;
 
-    public Questionary(String title, String status, List<Question> questionList) {
+    public Questionnaire(String title, String status, List<Question> questionList) {
         this.title = title;
         this.status = status;
         this.questionList = questionList;

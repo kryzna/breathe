@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -97,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             selectFragmentView(new FragmentTracking(getApplicationContext()));
         } else if (mSelectedId == R.id.nav_share) {
             final Dialog dialog = new Dialog(this);
-            dialog.setContentView(R.layout.list_row);
+            dialog.setContentView(R.layout.questionnaire_row_view);
             dialog.setTitle("Title Questionarie");
             dialog.show();
         } else if (mSelectedId == R.id.nav_about) {
