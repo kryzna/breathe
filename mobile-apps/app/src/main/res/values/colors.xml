@@ -3,11 +3,13 @@
     <color name="cyan">#ff2196f3</color>
     <color name="dark_cyan">#ff1976d2</color>
 
-    <color name="colorPrimary">#FFA500</color>
-    <color name="colorPrimaryDark">#FF8C00</color>
+    <color name="colorPrimary">#ff2196f3</color>
+    <color name="colorPrimaryDark">#ff1976d2</color>
 
     <color name="colorAccent">#FF4081</color>
     <color name="white">#ffffff</color>
+    <color name="red">#FF0000</color>
+    <color name="orange_red">#FF4500</color>
     <color name="pink">#fff8bbd0</color>
     <color name="darker_pink">#ffff9a97</color>
 

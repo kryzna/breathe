@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="Average (6.1 of 10)"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/light_orange"
             android:textSize="20sp" />
 
         <View

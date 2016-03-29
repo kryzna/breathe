@@ -3,6 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_orange"
     android:minHeight="360dp"
     android:padding="20dp">
 
@@ -10,7 +11,7 @@
         android:id="@+id/questionary_title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-         android:textColor="@color/colorPrimary"
+         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"/>
 
@@ -21,7 +22,7 @@
         android:layout_marginBottom="10dp"/>
 
     <TextView
-        android:id="@+id/question"
+        android:id="@+id/question_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textStyle="normal"
