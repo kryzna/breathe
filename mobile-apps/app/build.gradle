@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 
+project.ext.appName = 'Breathe'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
@@ -12,11 +13,29 @@ android {
         versionName "1.0"
     }
     buildTypes {
+	
+		def formattedDate = new Date().format('yyyyMMddHHmmss')
+		def buildName = { String buildType -> 
+							applicationVariants.all{ varient ->
+								varient.outputs.each{ output ->
+										def buildFileName = output.outputFile.name
+										buildFileName = buildFileName.replace("app-", "$project.ext.appName" + '-')
+										buildFileName = buildFileName.replace('-'+buildType, '-' + buildType + '-' + formattedDate)
+										output.outputFile = new File(output.outputFile.parent, buildFileName)
+								}
+							}			
+						}
+						
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
+			buildName('release')
+		}
+		debug {
+			debuggable = true
+			buildName('debug')
+		}
+	}
 }
 
 dependencies {
