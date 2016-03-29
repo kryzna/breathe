@@ -118,7 +118,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private boolean isNameValid(String name) {
-        if (TextUtils.isEmpty(name)) {
+       /* if (TextUtils.isEmpty(name)) {
             mNameView.setError(getString(R.string.error_field_required));
             return false;
         } else {
@@ -128,11 +128,12 @@ public class RegisterActivity extends AppCompatActivity {
             } else {
                 return true;
             }
-        }
+        }*/
+        return true;
     }
 
     private boolean isEmailValid(String email) {
-        if (TextUtils.isEmpty(email)) {
+        /*if (TextUtils.isEmpty(email)) {
             mEmailView.setError(getString(R.string.error_field_required));
             return false;
         } else {
@@ -142,19 +143,21 @@ public class RegisterActivity extends AppCompatActivity {
             } else {
                 return true;
             }
-        }
+        }*/
+        return true;
     }
 
     private boolean isDOBValid(String dob) {
-        if (TextUtils.isEmpty(dob)) {
+       /* if (TextUtils.isEmpty(dob)) {
             mDateOfBirthView.setError(getString(R.string.error_field_required));
             return false;
         }
+        return true;*/
         return true;
     }
 
     private boolean isPasswordValid(String password) {
-        if (TextUtils.isEmpty(password)) {
+       /* if (TextUtils.isEmpty(password)) {
             mPasswordView.setError(getString(R.string.error_field_required));
             return false;
         } else {
@@ -164,7 +167,8 @@ public class RegisterActivity extends AppCompatActivity {
             } else {
                 return true;
             }
-        }
+        }*/
+        return true;
     }
 
     public class UserRegisterTask extends AsyncTask<Void, Void, Boolean> {

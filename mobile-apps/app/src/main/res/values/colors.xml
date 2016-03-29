@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cyan">#ff2196f3</color>
+    <color name="dark_cyan">#ff1976d2</color>
+
+    <color name="colorPrimary">#FFA500</color>
+    <color name="colorPrimaryDark">#FF8C00</color>
+
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="pink">#fff8bbd0</color>
+    <color name="darker_pink">#ffff9a97</color>
+
+    <color name="light_orange">#FFA500</color>
+    <color name="orange">#FD9600</color>
+    <color name="dark_orange">#FF8C00</color>
+    <color name="dark_green">#26ae90</color>
+    <color name="bg_register">#2e3237</color>
+    <color name="black">#000000</color>
+</resources>

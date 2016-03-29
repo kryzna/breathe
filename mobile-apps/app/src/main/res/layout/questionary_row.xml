@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:id="@+id/title_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/questionary_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asthma assesment by NIC"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/status_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_row"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completed"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/questionary_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="not completed"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

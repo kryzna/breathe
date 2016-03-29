@@ -99,7 +99,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private boolean isEmailValid(String email) {
-        if (TextUtils.isEmpty(email)) {
+        /*if (TextUtils.isEmpty(email)) {
             mEmailView.setError(getString(R.string.error_field_required));
             return false;
         } else {
@@ -109,11 +109,12 @@ public class LoginActivity extends AppCompatActivity {
             } else {
                 return true;
             }
-        }
+        }*/
+        return true;
     }
 
     private boolean isPasswordValid(String password) {
-        if (TextUtils.isEmpty(password)) {
+        /*if (TextUtils.isEmpty(password)) {
             mPasswordView.setError(getString(R.string.error_field_required));
             return false;
         } else {
@@ -123,7 +124,8 @@ public class LoginActivity extends AppCompatActivity {
             } else {
                 return true;
             }
-        }
+        }*/
+        return true;
     }
 
     public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {

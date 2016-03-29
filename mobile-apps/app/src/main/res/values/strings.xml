@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">breathe</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_dob">Date of Birth</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_register">Create Account</string>
+    <string name="hint_name">Name</string>
+
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="treatment_plan">Treatment Plan</string>
+    <string name="health_risk_assesment">Health Risk Assesment</string>
+    <string name="alerts">Alerts</string>
+    <string name="tracking">Tracking</string>
+
+
+    <string-array name="list">
+        <item>Questionaries 1</item>
+        <item>Questionaries 2</item>
+        <item>Questionaries 3</item>
+        <item>Questionaries 4</item>
+        <item>Questionaries 5</item>
+        <item>Questionaries 6</item>
+        <item>Questionaries 7</item>
+        <item>Questionaries 8</item>
+        <item>Questionaries 9</item>
+        <item>Questionaries 10</item>
+        <item>Questionaries 11</item>
+        <item>Questionaries 12</item>
+        <item>Questionaries 13</item>
+        <item>Questionaries 14</item>
+        <item>Questionaries 15</item>
+        <item>Questionaries 16</item>
+        <item>Questionaries 17</item>
+        <item>Questionaries 18</item>
+        <item>Questionaries 19</item>
+        <item>Questionaries 20</item>
+        <item>Questionaries 21</item>
+        <item>Questionaries 22</item>
+        <item>Questionaries 23</item>
+        <item>Questionaries 24</item>
+        <item>Questionaries 25</item>
+    </string-array>
+
+
+
+</resources>
