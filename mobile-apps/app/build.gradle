@@ -13,19 +13,16 @@ android {
         versionName "1.0"
     }
     buildTypes {
-	
-		def formattedDate = new Date().format('yyyyMMddHHmmss')
-		def buildName = { String buildType -> 
+
+		def buildName = { String buildType ->
 							applicationVariants.all{ varient ->
 								varient.outputs.each{ output ->
 										def buildFileName = output.outputFile.name
 										buildFileName = buildFileName.replace("app-", "$project.ext.appName" + '-')
-										buildFileName = buildFileName.replace('-'+buildType, '-' + buildType + '-' + formattedDate)
 										output.outputFile = new File(output.outputFile.parent, buildFileName)
 								}
 							}			
 						}
-						
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
