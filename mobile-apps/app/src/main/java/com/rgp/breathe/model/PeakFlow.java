@@ -22,6 +22,10 @@ public class PeakFlow {
         this.peakFlowReading = peakFlowReading;
     }
 
+    public PeakFlow(String peakFlowReading, String dateTime) {
+        this.dateTime = dateTime;
+        this.peakFlowReading = peakFlowReading;
+    }
 
     public String getDateTime() {
         return dateTime;

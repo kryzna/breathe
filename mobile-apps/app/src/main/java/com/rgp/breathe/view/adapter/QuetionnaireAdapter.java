@@ -17,6 +17,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.rgp.breathe.R;
+import com.rgp.breathe.helper.Helper;
 import com.rgp.breathe.model.Question;
 import com.rgp.breathe.model.Questionnaire;
 
@@ -66,15 +67,16 @@ public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapte
         holder.questionnaireStatus.setText(status);
 
         if (status.equalsIgnoreCase("completed")) {
-            holder.questionnaireStatus.setBackgroundColor(ContextCompat.getColor(context, R.color.white));
+            //holder.questionnaireStatus.setBackgroundColor(ContextCompat.getColor(context, R.color.white));
             holder.questionnaireStatus.setTextColor(ContextCompat.getColor(context, R.color.cyan));
+            holder.questionnaireStatus.setText("completed on " + Helper.getFormattedDate("MM.dd.yyyy"));
         } else {
             holder.questionnaireStatus.setTextColor(ContextCompat.getColor(context, R.color.orange_red));
         }
         holder.questionnaireStatus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (status.equalsIgnoreCase("completed")) {
+                if (status.contains("completed")) {
                     showSubmitQuestionsDialog(title, questionnaireList.get(position).getQuestionList());
                 } else {
                     showQuestionsDialog(0, title, questionnaireList.get(position).getQuestionList());

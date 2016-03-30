@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Phantom on 3/30/2016.
+ * Created by mdansari on 3/30/2016.
  */
 public class PeakFlowDao {
 
@@ -24,6 +24,8 @@ public class PeakFlowDao {
     }
 
     public static void addPeakFlow(PeakFlow peakFlow) {
+        if(peakFlowList == null)
+            peakFlowList = new ArrayList<>();
         peakFlowList.add(0,peakFlow);
     }
 

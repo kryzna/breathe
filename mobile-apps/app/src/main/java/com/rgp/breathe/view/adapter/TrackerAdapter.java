@@ -46,7 +46,10 @@ public class TrackerAdapter extends RecyclerView.Adapter<TrackerAdapter.TrackVie
 
     @Override
     public int getItemCount() {
-        return peakFlowList.size();
+        if(peakFlowList != null) {
+            return peakFlowList.size();
+        }
+        return -1;
     }
 
     public static class TrackViewHolder extends RecyclerView.ViewHolder {

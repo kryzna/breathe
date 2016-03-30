@@ -15,9 +15,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.TextView;
 
 import com.rgp.breathe.R;
-import com.rgp.breathe.dao.PeakFlowDao;
+import com.rgp.breathe.helper.Helper;
+import com.rgp.breathe.helper.SQLiteHandler;
 import com.rgp.breathe.model.PeakFlow;
 import com.rgp.breathe.view.activity.MainActivity;
 import com.rgp.breathe.view.activity.PeakFlowActivity;
@@ -34,6 +36,7 @@ public class FragmentTracking extends Fragment {
 
     private CoordinatorLayout coordinatorLayout;
     private AppCompatSpinner spinner;
+    private TextView textView;
     private FloatingActionButton floatingActionButton;
     private List<PeakFlow> peakFlowList;
     private RecyclerView mRecyclerView;
@@ -44,8 +47,6 @@ public class FragmentTracking extends Fragment {
 
     public FragmentTracking(Context context) {
         this.context = context;
-        PeakFlowDao.generateDummyRecords();
-        peakFlowList = PeakFlowDao.getPeakFlowList();
     }
 
     @Override
@@ -60,6 +61,8 @@ public class FragmentTracking extends Fragment {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         coordinatorLayout = (CoordinatorLayout) root;
+        textView = (TextView) root.findViewById(R.id.readingSince);
+        textView.setText("10 reading Since " + Helper.getFormattedDate("dd.MM.yyyy"));
         floatingActionButton = (FloatingActionButton) root.findViewById(R.id.fab);
         spinner = (AppCompatSpinner) root.findViewById(R.id.spinner);
 
@@ -67,16 +70,16 @@ public class FragmentTracking extends Fragment {
 
             @Override
             public void onItemSelected(AdapterView<?> adapter, View v, int position, long id) {
-                String s = adapter.getItemAtPosition(position).toString();
-                if(position == 0) {
+                //String s = adapter.getItemAtPosition(position).toString();
+                if (position == 0) {
                     mAdapter = new TrackerAdapter(getContext(), peakFlowList);
                     mRecyclerView.setAdapter(mAdapter);
                     floatingActionButton.show();
-                } else if(position == 1) {
+                } else if (position == 1) {
                     mAdapter = new TrackerAdapter(getContext(), new ArrayList<PeakFlow>());
                     mRecyclerView.setAdapter(mAdapter);
                     floatingActionButton.hide();
-                } else if(position == 2) {
+                } else if (position == 2) {
                     mAdapter = new TrackerAdapter(getContext(), new ArrayList<PeakFlow>());
                     mRecyclerView.setAdapter(mAdapter);
                     floatingActionButton.hide();
@@ -93,7 +96,7 @@ public class FragmentTracking extends Fragment {
             @Override
             public void onClick(View v) {
                 Snackbar snackbar = Snackbar
-                        .make(coordinatorLayout, "Add to new entry", Snackbar.LENGTH_LONG)
+                        .make(coordinatorLayout, "Add new entry", Snackbar.LENGTH_LONG)
                         .setAction("Add", new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
@@ -106,7 +109,40 @@ public class FragmentTracking extends Fragment {
                 snackbar.show();
             }
         });
+        initializeData();
         return root;
+    }
+
+    private void initializeAdapter() {
+        mAdapter = new TrackerAdapter(context, peakFlowList);
+        mRecyclerView.setAdapter(mAdapter);
+    }
+
+    /*private void initializeData(){
+        List<PeakFlow> list = PeakFlowDao.getPeakFlowList();
+        if(list != null) {
+            if(list.size() > 10)
+                peakFlowList = PeakFlowDao.getPeakFlowList().subList(0, 10);
+            else
+                peakFlowList = list;
+        }
+        initializeAdapter();
+    }*/
+
+    private void initializeData() {
+        SQLiteHandler sqLiteHandler = new SQLiteHandler(context);
+        List<PeakFlow> list = sqLiteHandler.getPeakFlowList();
+        if (list != null) {
+            peakFlowList = list;
+        }
+        initializeAdapter();
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        initializeData();
     }
 
 }

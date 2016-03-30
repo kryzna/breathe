@@ -1,7 +1,9 @@
 package com.rgp.breathe.view.activity;
 
-import android.app.Dialog;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -10,21 +12,29 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.rgp.breathe.R;
-import com.rgp.breathe.view.fragment.FragmentTracking;
-import com.rgp.breathe.view.fragment.FragmentTreatmentPlan;
+import com.rgp.breathe.view.fragment.FragmentAbout;
 import com.rgp.breathe.view.fragment.FragmentAlerts;
 import com.rgp.breathe.view.fragment.FragmentHealthRiskAssesment;
+import com.rgp.breathe.view.fragment.FragmentTracking;
+import com.rgp.breathe.view.fragment.FragmentTreatmentPlan;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static final int RESULT_SETTINGS = 1;
     private Toolbar toolbar;
     private NavigationView mDrawer;
     private DrawerLayout mDrawerLayout;
-    private  ActionBarDrawerToggle drawerToggle;
+    private ActionBarDrawerToggle drawerToggle;
+
+    private TextView userNameView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         mDrawerLayout.setDrawerListener(drawerToggle);
@@ -40,11 +51,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mDrawer = (NavigationView) findViewById(R.id.nav_view);
         mDrawer.setNavigationItemSelectedListener(this);
 
+        View header = mDrawer.getHeaderView(0);
+        userNameView = (TextView) header.findViewById(R.id.user_name);
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if(!sharedPrefs.getString("prefUsername", "NULL").equals("NULL"))
+            userNameView.setText(sharedPrefs.getString("prefUsername", "NULL"));
         //Add the Very First Fragment to the Container
         selectFragmentView(new FragmentTreatmentPlan(getApplicationContext()));
     }
 
-    public void setActionBarTitle(String title){
+    public void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);
     }
 
@@ -67,18 +83,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent i = new Intent(this, SettingsActivity.class);
+            startActivityForResult(i, RESULT_SETTINGS);
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode) {
+            case RESULT_SETTINGS:
+                SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+                userNameView.setText(sharedPrefs.getString("prefUsername", "NULL"));
+                break;
+        }
+    }
+
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -87,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int mSelectedId = item.getItemId();
 
         if (mSelectedId == R.id.nav_treatment_plan) {
-           selectFragmentView(new FragmentTreatmentPlan(getApplicationContext()));
+            selectFragmentView(new FragmentTreatmentPlan(getApplicationContext()));
         } else if (mSelectedId == R.id.nav_health_risk_assesment) {
             selectFragmentView(new FragmentHealthRiskAssesment(getApplicationContext()));
         } else if (mSelectedId == R.id.nav_alerts) {
@@ -95,12 +120,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (mSelectedId == R.id.nav_tracking) {
             selectFragmentView(new FragmentTracking(getApplicationContext()));
         } else if (mSelectedId == R.id.nav_share) {
-            final Dialog dialog = new Dialog(this);
-            dialog.setContentView(R.layout.questionnaire_row_view);
-            dialog.setTitle("Title Questionarie");
-            dialog.show();
+            Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+            sharingIntent.setType("text/plain");
+            String shareMessageBody = getString(R.string.share_message);
+            sharingIntent.putExtra(Intent.EXTRA_SUBJECT, R.string.share_subject);
+            sharingIntent.putExtra(Intent.EXTRA_TEXT, shareMessageBody);
+            startActivity(Intent.createChooser(sharingIntent, "Share via"));
         } else if (mSelectedId == R.id.nav_about) {
-
+            selectFragmentView(new FragmentAbout(getApplicationContext()));
         }
         mDrawerLayout.closeDrawer(GravityCompat.START);
         return true;
@@ -108,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void selectFragmentView(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.containerView,fragment,null);
+        fragmentTransaction.replace(R.id.containerView, fragment, null);
         fragmentTransaction.commit();
     }
 

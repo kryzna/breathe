@@ -1,18 +1,30 @@
 package com.rgp.breathe.view.activity;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 
 import com.rgp.breathe.R;
+import com.rgp.breathe.dao.PeakFlowDao;
+import com.rgp.breathe.helper.Helper;
+import com.rgp.breathe.helper.SQLiteHandler;
+import com.rgp.breathe.model.PeakFlow;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Created by mdansari on 3/30/2016.
  */
 public class PeakFlowActivity extends AppCompatActivity {
+
+    final String DATE_TIME_FORMAT = "dd/MM/yyyy hh:mm:ss a";
 
     NumberPicker numberPicker1;
     NumberPicker numberPicker2;
@@ -49,11 +61,11 @@ public class PeakFlowActivity extends AppCompatActivity {
         np.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
             @Override
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-                if(pos == 0){
+                if (pos == 0) {
                     wheelReading1.setText(String.valueOf(newVal));
-                } else if(pos == 1){
+                } else if (pos == 1) {
                     wheelReading2.setText(String.valueOf(newVal));
-                } else  if(pos == 2){
+                } else if (pos == 2) {
                     wheelReading3.setText(String.valueOf(newVal));
                 }
             }
@@ -65,4 +77,32 @@ public class PeakFlowActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_peakflow, menu);
         return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_save) {
+            savePeakflowInfo();
+        } else {
+            onBackPressed();
+        }
+        return true;
+    }
+
+    private void savePeakflowInfo(){
+        //final ProgressDialog loading = ProgressDialog.show(this, null, "Adding new entry...", false, false);
+        StringBuilder peakflowReading = new StringBuilder();
+        peakflowReading.append(wheelReading1.getText()).append(wheelReading2.getText()).append(wheelReading3.getText()).append(" ml/s");
+        String currentDateTime = Helper.getFormattedDate(DATE_TIME_FORMAT);
+        PeakFlow peakFlow = new PeakFlow(peakflowReading.toString(), currentDateTime);
+        SQLiteHandler sqLiteHandler = new SQLiteHandler(this);
+        sqLiteHandler.addPeakFlowEntry(peakFlow);
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
 }
