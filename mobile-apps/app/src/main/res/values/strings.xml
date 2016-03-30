@@ -23,34 +23,12 @@
     <string name="tracking">Tracking</string>
 
 
-    <string-array name="list">
-        <item>Questionaries 1</item>
-        <item>Questionaries 2</item>
-        <item>Questionaries 3</item>
-        <item>Questionaries 4</item>
-        <item>Questionaries 5</item>
-        <item>Questionaries 6</item>
-        <item>Questionaries 7</item>
-        <item>Questionaries 8</item>
-        <item>Questionaries 9</item>
-        <item>Questionaries 10</item>
-        <item>Questionaries 11</item>
-        <item>Questionaries 12</item>
-        <item>Questionaries 13</item>
-        <item>Questionaries 14</item>
-        <item>Questionaries 15</item>
-        <item>Questionaries 16</item>
-        <item>Questionaries 17</item>
-        <item>Questionaries 18</item>
-        <item>Questionaries 19</item>
-        <item>Questionaries 20</item>
-        <item>Questionaries 21</item>
-        <item>Questionaries 22</item>
-        <item>Questionaries 23</item>
-        <item>Questionaries 24</item>
-        <item>Questionaries 25</item>
+    <string-array name="tracking_spiner_array">
+        <item>Peak Flow</item>
+        <item>FEV1</item>
+        <item>O2 saturation</item>
     </string-array>
-
+    <string name="title_activity_main2">Main2Activity</string>
 
 
 </resources>
