@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
  * Created by amolverm on 3/29/2016.
  */
 public class LeftMenu {
-    public WebElement userName,userEmail,leftnav;
+    public WebElement userName,userEmail,leftnav,leftnav_Healthassessment,leftnav_Healthassessment_btn;
     public void setUserName(AndroidDriver aDriver){
         userName=aDriver.findElement(By.id("user_name"));
     }
@@ -32,4 +32,5 @@ public class LeftMenu {
     public void leftnavclick(){
         leftnav.click();
     }
+
 }
