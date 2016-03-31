@@ -2,9 +2,10 @@
 <suite name="suite_tracking">
     <test name="test_tracking">
         <classes>
-
+            <!--//add classes below which needs to be executed-->
             <class name="TestTracking">
                 <methods>
+                    <!--//add test cases below with method name, which needs to be executed-->
                     <include name="verifyRowCount"/>
                 </methods>
             </class>
