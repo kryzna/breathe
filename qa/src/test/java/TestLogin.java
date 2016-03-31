@@ -36,7 +36,41 @@ public class TestLogin {
         loginPage.setPatientemailid(androidSetup.aDriver);
         loginPage.setPatient_Password(androidSetup.aDriver);
     }
+/*
+    // This test case is to check if blank username and password were submitted
+    @Test(priority = 1)
+    public void testBlankLogin() throws InterruptedException {
+        assert(loginPage.Patient_loginButton.getText().equals("Login"));
+        loginPage.enter_blankemail_id();
+        loginPage.enter_blankpassword();
+        loginPage.loginButtonClick();
+        wait = new WebDriverWait(androidSetup.aDriver, 5);
+        // assert for message if user pass blank credentails
+    }
 
+    // This test case is to check if blank username was submitted
+    @Test(priority = 1)
+    public void testBlankUsernameLogin() throws InterruptedException {
+        assert(loginPage.Patient_loginButton.getText().equals("Login"));
+        loginPage.enter_blankemail_id();
+        loginPage.enter_password();
+        loginPage.loginButtonClick();
+        wait = new WebDriverWait(androidSetup.aDriver, 5);
+        // assert for message if user pass blank username
+    }
+
+    // This test case is to check if blank password was submitted
+    @Test(priority = 1)
+    public void testBlankPasswordLogin() throws InterruptedException {
+        assert(loginPage.Patient_loginButton.getText().equals("Login"));
+        loginPage.enter_email_id();
+        loginPage.enter_blankpassword();
+        loginPage.loginButtonClick();
+        wait = new WebDriverWait(androidSetup.aDriver, 5);
+        // assert for message if user pass blank password
+    }
+*/
+    // This test case is to check if valid credentails were submitted
     @Test(priority = 1)
     public void testLogin() throws InterruptedException {
         assert(loginPage.Patient_loginButton.getText().equals("Login"));
@@ -49,6 +83,7 @@ public class TestLogin {
         leftmenu.leftnavclick();
     }
 
+    // This test case is to check if correct username got displayed or not
     @Test(priority = 2)
     public void verifyUserName(){
         leftmenu.setUserName(androidSetup.aDriver);
@@ -56,11 +91,16 @@ public class TestLogin {
         wait = new WebDriverWait(androidSetup.aDriver, 5);
     }
 
+    // This test case is to check if correct emailid got displayed or not
     @Test(priority = 3)
     public void verifyUserEmail(){
         leftmenu.setUserEmail(androidSetup.aDriver);
         assert(leftmenu.getUserEmail().getText().toString().equals(myxls.getCellData("Sheet1","PatientEmailid",2)));
     }
+
+    // -------------Need to add test cases for autologin functionality-----------------------------
+
+    // Need to move to different class
     @Test(priority = 4)
     public void verifyHealthRiskAssessment(){
         androidSetup.aDriver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id='com.rgp.breathe:id/nav_view']/android.support.v7.widget.RecyclerView//android.widget.CheckedTextView[contains(@text,'Health Risk Assesment')]")).click();
