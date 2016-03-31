@@ -106,6 +106,6 @@ public class TestLogin {
         androidSetup.aDriver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id='com.rgp.breathe:id/nav_view']/android.support.v7.widget.RecyclerView//android.widget.CheckedTextView[contains(@text,'Health Risk Assesment')]")).click();
         String assesmentTitle = androidSetup.aDriver.findElement(By.xpath("//android.widget.FrameLayut[@resource-id='com.rgp.breathe:id/containerView']/android.widget.RelativeLayout[@index='0']/android.widget.LinearLayout[@index='0']/android.widget.TextView[@index='1')]")).getText().toString();
         System.out.println(assesmentTitle);
-        assert (assesmentTitle.equals("Average (6 of 10)"));
+        assert (assesmentTitle.equals("Average (6.1 of 10)"));
     }
 }
