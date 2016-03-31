@@ -1,1 +1,2 @@
-#List of artifacts not to be commited in git
+target/
+app/
