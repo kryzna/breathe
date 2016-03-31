@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="suite_tracking">
+    <test name="test_tracking">
+        <classes>
+
+            <class name="TestTracking">
+                <methods>
+                    <include name="verifyRowCount"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
