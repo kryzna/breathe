@@ -38,6 +38,7 @@ public class TestSettings {
 
     @Test(priority = 1)
     public void testmodifyUserName() throws InterruptedException {
+        wait = new WebDriverWait(androidSetup.aDriver, 15);
 
 
     }

@@ -74,29 +74,47 @@ public class TestLogin {
     // This test case is to check if valid credentails were submitted
     @Test(priority = 1)
     public void testValidLogin() throws InterruptedException {
-        assert(loginPage.Patient_loginButton.getText().equals("Login"));
-        loginPage.enter_email_id();
-        loginPage.enter_password();
-        loginPage.loginButtonClick();
-        wait = new WebDriverWait(androidSetup.aDriver, 5);
-       // androidSetup.aDriver.findElement(By.xpath("//android.widget.ImageButton[@content-desc='Open navigation drawer']")).click();
-        leftmenu.getleftnav(androidSetup.aDriver);
-        leftmenu.leftnavclick();
+        try {
+            assert (loginPage.Patient_loginButton.getText().equals("Login"));
+            loginPage.enter_email_id();
+            loginPage.enter_password();
+            loginPage.loginButtonClick();
+            wait = new WebDriverWait(androidSetup.aDriver, 5);
+            // androidSetup.aDriver.findElement(By.xpath("//android.widget.ImageButton[@content-desc='Open navigation drawer']")).click();
+            leftmenu.getleftnav(androidSetup.aDriver);
+            leftmenu.leftnavclick();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 
     // This test case is to check if correct username got displayed or not
     @Test(priority = 2)
     public void verifyUserName(){
-        leftmenu.setUserName(androidSetup.aDriver);
-        assert(leftmenu.getUserName().getText().toString().equals(myxls.getCellData("UserData","UserName",2)));
-        wait = new WebDriverWait(androidSetup.aDriver, 5);
+        try {
+            leftmenu.setUserName(androidSetup.aDriver);
+            assert (leftmenu.getUserName().getText().toString().equals(myxls.getCellData("UserData", "UserName", 2)));
+            wait = new WebDriverWait(androidSetup.aDriver, 5);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 
     // This test case is to check if correct emailid got displayed or not
     @Test(priority = 3)
     public void verifyUserEmail(){
-        leftmenu.setUserEmail(androidSetup.aDriver);
-        assert(leftmenu.getUserEmail().getText().toString().equals(myxls.getCellData("UserData","PatientEmailid",2)));
+        try {
+            leftmenu.setUserEmail(androidSetup.aDriver);
+            assert (leftmenu.getUserEmail().getText().toString().equals(myxls.getCellData("UserData", "PatientEmailid", 2)));
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 
     // -------------Need to add test cases for autologin functionality-----------------------------

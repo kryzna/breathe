@@ -46,20 +46,26 @@ public class TestHealthRiskAssessment {
     @Test(priority = 1)
     // This test case is to check the completed date on the button
       public void verifyHealthRiskAssessment_yes(){
-        healthassess.getleftnav_HealtAssessment(androidSetup.aDriver);
-        healthassess.leftnavHealthAssessmentclick();
-        healthassess.getleftnav_HealtAssessment_completed(androidSetup.aDriver);
-        healthassess.leftnavHealthAssessment_completed_btnclick();
-        healthassess.getleftnav_HealtAssessment_questionnairechoice_yes(androidSetup.aDriver);
-        healthassess.leftnav_Healthassessment_choice_yesclick();
-        healthassess.getHealtAssessment_questionnairechoice_yes_radio1(androidSetup.aDriver);
-        healthassess.getHealtAssessment_questionnairechoice_next(androidSetup.aDriver);
-        healthassess.getHealtAssessment_questionnairechoice_yes_radio1(androidSetup.aDriver);
-        healthassess.getHealtAssessment_questionnairechoice_next(androidSetup.aDriver);
-        healthassess.getHealtAssessment_questionnairechoice_checkbox1(androidSetup.aDriver);
-        healthassess.getHealtAssessment_questionnairechoice_next(androidSetup.aDriver);
-        healthassess.getleftnav_HealtAssessment_completed(androidSetup.aDriver);
-        assert(healthassess.gettext_HealtAssessment_completed(androidSetup.aDriver)).equals(myxls.getCellData("HealtAssessmentData","Completed_Status",2));
+        try {
+            healthassess.getleftnav_HealtAssessment(androidSetup.aDriver);
+            healthassess.leftnavHealthAssessmentclick();
+            healthassess.getleftnav_HealtAssessment_completed(androidSetup.aDriver);
+            healthassess.leftnavHealthAssessment_completed_btnclick();
+            healthassess.getleftnav_HealtAssessment_questionnairechoice_yes(androidSetup.aDriver);
+            healthassess.leftnav_Healthassessment_choice_yesclick();
+            healthassess.getHealtAssessment_questionnairechoice_yes_radio1(androidSetup.aDriver);
+            healthassess.getHealtAssessment_questionnairechoice_next(androidSetup.aDriver);
+            healthassess.getHealtAssessment_questionnairechoice_yes_radio1(androidSetup.aDriver);
+            healthassess.getHealtAssessment_questionnairechoice_next(androidSetup.aDriver);
+            healthassess.getHealtAssessment_questionnairechoice_checkbox1(androidSetup.aDriver);
+            healthassess.getHealtAssessment_questionnairechoice_next(androidSetup.aDriver);
+            healthassess.getleftnav_HealtAssessment_completed(androidSetup.aDriver);
+            assert (healthassess.gettext_HealtAssessment_completed(androidSetup.aDriver)).equals(myxls.getCellData("HealtAssessmentData", "Completed_Status", 2));
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
         }
 
   /*  @AfterClass
