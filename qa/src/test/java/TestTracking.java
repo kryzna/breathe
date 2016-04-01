@@ -57,32 +57,7 @@ public class TestTracking {
     }
     @Test
     // This test case is to check count of Peak Flow
-<<<<<<< Updated upstream
-    public void verifyRowCount() throws InterruptedException {
-        try {
-            trackingsList = tracking.getTrackingElements();
-            trackingsRowsList = tracking.getTrackingRows();
-            assert (trackingsList.size() == 2);
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-    }
 
-    @Test
-    public void verifyStat(){
-        try {
-            System.out.println(trackingsList.get(0).findElement(By.className("android.widget.LinearLayout")).findElement(By.className("android.widget.TextView")).getText().toString());
-            //System.out.println(trackingsList.get(0).findElement(By.xpath(".//android.widget.LinearLayout")).getText().toString());
-            System.out.println(trackingsRowsList.get(0).getText().toString());
-            System.out.println(trackingsRowsList.get(1).getText().toString());
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-=======
     public void verifyTrackingsCount() throws InterruptedException {
         trackingsList = tracking.getTrackingElements();
         assert (trackingsList.size() == 2);
@@ -99,7 +74,6 @@ public class TestTracking {
         //System.out.println(trackingsRowsListDateTime.get(1).getText().toString());
         //System.out.println(trackingsRowsListPeakValue.get(0).getText().toString());
         //System.out.println(trackingsRowsListPeakValue.get(1).getText().toString());
->>>>>>> Stashed changes
     }
   /*  @AfterClass
     public void teardown() throws IOException {
