@@ -1,4 +1,4 @@
-package com.rgp.breathe.helper;
+package com.rgp.breathe.database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -52,7 +52,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 
         ContentValues values = new ContentValues();
         values.put(KEY_PEAKFLOWREADING, peakFlow.getPeakFlowReading());
-        //values.put(KEY_LOCATION, peakFlow.getGeoLocation());
+        values.put(KEY_LOCATION, peakFlow.getGeoLocation());
         //values.put(KEY_SYMPTOMS, peakFlow.getSymptomsList());
         //values.put(KEY_TRIGGERS, peakFlow.getTriggersList());
 
@@ -66,13 +66,13 @@ public class SQLiteHandler extends SQLiteOpenHelper {
     public List<PeakFlow> getPeakFlowList() {
         List<PeakFlow> peakFlowList = new ArrayList<>();
 
-        String selectQuery = "SELECT  peakflow_reading,  datetime(date_time, 'localtime') as Time FROM " + TABLE_PEAKFLOW + " ORDER BY " + KEY_DATETIME + " DESC Limit 10";
+        String selectQuery = "SELECT  peakflow_reading,  datetime(date_time, 'localtime') as Time, location FROM " + TABLE_PEAKFLOW + " ORDER BY " + KEY_DATETIME + " DESC";
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
         for (int i = 0; i < cursor.getCount(); i++) {
             cursor.moveToPosition(i);
-            peakFlowList.add(new PeakFlow(cursor.getString(0), cursor.getString(1)));
+            peakFlowList.add(new PeakFlow(cursor.getString(0), cursor.getString(1), cursor.getString(2)));
         }
         cursor.close();
         db.close();

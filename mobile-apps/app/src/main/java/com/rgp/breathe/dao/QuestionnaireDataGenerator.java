@@ -30,7 +30,7 @@ public class QuestionnaireDataGenerator {
 
     public static List<Question> getQuestionList(int i) {
         List<Question> questionList = new ArrayList<>();
-        if (i == 0) {
+        if (i == 1) {
             //1st questionnary
             String ques = "Have you heard wheezing in your chest when you breathe?";
             List<String> possibleAnswers = new ArrayList<>();
@@ -40,16 +40,6 @@ public class QuestionnaireDataGenerator {
             answers.add(null);
             answers.add(null);
             Question question = new Question(ques, "RADIO", possibleAnswers, answers);
-            questionList.add(question);
-
-            ques = "Have you had a hard time coughing, breathing or wheezing in the daytime?";
-            possibleAnswers = new ArrayList<>();
-            possibleAnswers.add("YES");
-            possibleAnswers.add("NO");
-            answers = new ArrayList<>();
-            answers.add(null);
-            answers.add(null);
-            question = new Question(ques, "RADIO", possibleAnswers, answers);
             questionList.add(question);
 
             ques = "How often do you have a hard time with coughing, breathing or wheezing?";
@@ -62,6 +52,16 @@ public class QuestionnaireDataGenerator {
             answers.add(null);
             answers.add(null);
             question = new Question(ques, "CHECKBOX", possibleAnswers, answers);
+            questionList.add(question);
+
+            ques = "Have you had a hard time coughing, breathing or wheezing in the daytime?";
+            possibleAnswers = new ArrayList<>();
+            possibleAnswers.add("YES");
+            possibleAnswers.add("NO");
+            answers = new ArrayList<>();
+            answers.add(null);
+            answers.add(null);
+            question = new Question(ques, "RADIO", possibleAnswers, answers);
             questionList.add(question);
 
         } else {

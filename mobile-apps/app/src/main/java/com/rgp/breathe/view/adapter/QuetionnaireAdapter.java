@@ -59,7 +59,7 @@ public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapte
 
     // Replace the contents of a view (invoked by the layout manager)
     @Override
-    public void onBindViewHolder(QuetionnaireViewHolder holder, final int position) {
+    public void onBindViewHolder(final QuetionnaireViewHolder holder, final int position) {
         final String title = questionnaireList.get(position).getTitle();
         final String status = questionnaireList.get(position).getStatus();
 
@@ -67,7 +67,6 @@ public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapte
         holder.questionnaireStatus.setText(status);
 
         if (status.equalsIgnoreCase("completed")) {
-            //holder.questionnaireStatus.setBackgroundColor(ContextCompat.getColor(context, R.color.white));
             holder.questionnaireStatus.setTextColor(ContextCompat.getColor(context, R.color.cyan));
             holder.questionnaireStatus.setText("completed on " + Helper.getFormattedDate("MM.dd.yyyy"));
         } else {
@@ -76,10 +75,10 @@ public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapte
         holder.questionnaireStatus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (status.contains("completed")) {
-                    showSubmitQuestionsDialog(title, questionnaireList.get(position).getQuestionList());
-                } else {
+                if (status.contains("not completed")) {
                     showQuestionsDialog(0, title, questionnaireList.get(position).getQuestionList());
+                } else {
+                    showSubmitQuestionsDialog(title, questionnaireList.get(position).getQuestionList());
                 }
             }
         });

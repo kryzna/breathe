@@ -2,9 +2,13 @@ package com.rgp.breathe.view.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -14,13 +18,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.rgp.breathe.R;
-import com.rgp.breathe.helper.SessionManager;
+import com.rgp.breathe.database.SharedPreferenceHandler;
 
 public class LoginActivity extends AppCompatActivity {
 
     private static String TAG = LoginActivity.class.getSimpleName();
 
-    private static SessionManager sessionManager;
+    private static SharedPreferenceHandler sharedPreferenceHandler;
 
     private EditText mEmailView;
     private EditText mPasswordView;
@@ -37,8 +41,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        sessionManager = new SessionManager(this);
-        if (sessionManager.isAutoLoginEnabled()) {
+        sharedPreferenceHandler = new SharedPreferenceHandler(this);
+        if (SharedPreferenceHandler.ismAutoLogin()) {
             gotoMainScreen();
         }
 
@@ -85,19 +89,20 @@ public class LoginActivity extends AppCompatActivity {
 
         String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
+        boolean autologinEnabled = mAutoLoginView.isChecked();
 
         if (isEmailValid(email) && isPasswordValid(password)) {
             progressDialog = new ProgressDialog(LoginActivity.this);
             progressDialog.setIndeterminate(true);
             progressDialog.setMessage("Authenticating...");
             progressDialog.show();
-            mAuthTask = new UserLoginTask(email, password);
+            mAuthTask = new UserLoginTask(email, password, autologinEnabled);
             mAuthTask.execute((Void) null);
         }
     }
 
     private boolean isEmailValid(String email) {
-        /*if (TextUtils.isEmpty(email)) {
+        if (TextUtils.isEmpty(email)) {
             mEmailView.setError(getString(R.string.error_field_required));
             return false;
         } else {
@@ -107,41 +112,59 @@ public class LoginActivity extends AppCompatActivity {
             } else {
                 return true;
             }
-        }*/
-        return true;
+        }
+
     }
 
     private boolean isPasswordValid(String password) {
-        /*if (TextUtils.isEmpty(password)) {
+        if (TextUtils.isEmpty(password)) {
             mPasswordView.setError(getString(R.string.error_field_required));
             return false;
         } else {
-            if (!(password.length() > 4)) {
+            if (!(password.length() > 1)) {
                 mPasswordView.setError(getString(R.string.error_invalid_password));
                 return false;
             } else {
                 return true;
             }
-        }*/
-        return true;
+        }
     }
 
     public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 
         private final String mEmail;
         private final String mPassword;
-        private String userName;
 
-        public UserLoginTask(String mEmail, String mPassword) {
+        private boolean isUserValid = true;
+        private boolean isPassValid = true;
+        private boolean autologinEnabled = true;
+
+
+        public UserLoginTask(String mEmail, String mPassword, boolean isAutologinEnabled) {
             this.mEmail = mEmail;
             this.mPassword = mPassword;
+            isUserValid = true;
+            isPassValid = true;
+            this.autologinEnabled = isAutologinEnabled;
         }
 
         @Override
         protected Boolean doInBackground(Void... params) {
             // TODO: attempt authentication against a network service.
-            this.userName = "default user";
-            return true;
+            SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
+            String email = SharedPreferenceHandler.getmEmail();
+            String pass = SharedPreferenceHandler.getmPass();
+            if (email.equals(mEmail)) {
+                if (pass.equals(mPassword)) {
+                    return true;
+                } else {
+                    isPassValid = false;
+                    return false;
+                }
+            } else {
+                isUserValid = false;
+                return false;
+            }
         }
 
         @Override
@@ -149,12 +172,18 @@ public class LoginActivity extends AppCompatActivity {
             progressDialog.hide();
             mAuthTask = null;
             if (success) {
-                //sessionManager.createLogin(userName, mEmail, mAutoLoginView.isChecked());
+                SharedPreferenceHandler.setAutoEnable(autologinEnabled);
                 gotoMainScreen();
             } else {
-                Toast.makeText(getApplicationContext(), "Authentication failed!", Toast.LENGTH_LONG);
-                mPasswordView.setError(getString(R.string.error_incorrect_password));
-                mPasswordView.requestFocus();
+                if (!isUserValid) {
+                    Toast.makeText(LoginActivity.this, "User not exist, create user to log in.", Toast.LENGTH_LONG).show();
+                    mEmailView.setError("User not exist.");
+                    mEmailView.requestFocus();
+                } else {
+                    Toast.makeText(LoginActivity.this, "Incorrect password.", Toast.LENGTH_LONG).show();
+                    mPasswordView.setError(getString(R.string.error_incorrect_password));
+                    mPasswordView.requestFocus();
+                }
             }
         }
 

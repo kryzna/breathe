@@ -12,18 +12,18 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 import com.rgp.breathe.R;
+import com.rgp.breathe.database.SharedPreferenceHandler;
 import com.rgp.breathe.view.fragment.FragmentAbout;
 import com.rgp.breathe.view.fragment.FragmentAlerts;
 import com.rgp.breathe.view.fragment.FragmentHealthRiskAssesment;
 import com.rgp.breathe.view.fragment.FragmentTracking;
-import com.rgp.breathe.view.fragment.FragmentTreatmentPlan;
+import com.rgp.breathe.view.fragment.TreatmentPlanFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ActionBarDrawerToggle drawerToggle;
 
     private TextView userNameView;
+    private TextView userEmailView;
 
 
     @Override
@@ -53,11 +54,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         View header = mDrawer.getHeaderView(0);
         userNameView = (TextView) header.findViewById(R.id.user_name);
-        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        if(!sharedPrefs.getString("prefUsername", "NULL").equals("NULL"))
-            userNameView.setText(sharedPrefs.getString("prefUsername", "NULL"));
+        userEmailView = (TextView) header.findViewById(R.id.user_email);
+
+        userNameView.setText(SharedPreferenceHandler.getmUser());
+        userEmailView.setText(SharedPreferenceHandler.getmEmail());
+
         //Add the Very First Fragment to the Container
-        selectFragmentView(new FragmentTreatmentPlan(getApplicationContext()));
+        selectFragmentView(new TreatmentPlanFragment());
     }
 
     public void setActionBarTitle(String title) {
@@ -112,13 +115,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int mSelectedId = item.getItemId();
 
         if (mSelectedId == R.id.nav_treatment_plan) {
-            selectFragmentView(new FragmentTreatmentPlan(getApplicationContext()));
+            selectFragmentView(new TreatmentPlanFragment());
         } else if (mSelectedId == R.id.nav_health_risk_assesment) {
-            selectFragmentView(new FragmentHealthRiskAssesment(getApplicationContext()));
+            selectFragmentView(new FragmentHealthRiskAssesment());
         } else if (mSelectedId == R.id.nav_alerts) {
-            selectFragmentView(new FragmentAlerts(getApplicationContext()));
+            selectFragmentView(new FragmentAlerts());
         } else if (mSelectedId == R.id.nav_tracking) {
-            selectFragmentView(new FragmentTracking(getApplicationContext()));
+            selectFragmentView(new FragmentTracking());
         } else if (mSelectedId == R.id.nav_share) {
             Intent sharingIntent = new Intent(Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
@@ -127,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             sharingIntent.putExtra(Intent.EXTRA_TEXT, shareMessageBody);
             startActivity(Intent.createChooser(sharingIntent, "Share via"));
         } else if (mSelectedId == R.id.nav_about) {
-            selectFragmentView(new FragmentAbout(getApplicationContext()));
+            selectFragmentView(new FragmentAbout());
         }
         mDrawerLayout.closeDrawer(GravityCompat.START);
         return true;

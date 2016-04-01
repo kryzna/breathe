@@ -13,22 +13,18 @@
 
         <android.support.v7.widget.AppCompatSpinner
             android:id="@+id/spinner"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/tracking_spiner_array"
             android:layout_marginBottom="10dp"/>
-
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="2dp"
-            android:background="#c0c0c0"
-            android:layout_marginBottom="16dp"/>
 
         <TextView
             android:id="@+id/readingSince"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
+            android:textColor="@color/orange"
             android:text="10 reading since 31.03.2016"
             android:textSize="20sp" />
 

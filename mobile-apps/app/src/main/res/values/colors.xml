@@ -19,4 +19,10 @@
     <color name="dark_green">#26ae90</color>
     <color name="bg_register">#2e3237</color>
     <color name="black">#000000</color>
+
+
+    <color name="app_green">#8243a047</color>
+    <color name="dark_grey">#ff282828</color>
+    <color name="light_grey">#36c8c8c8</color>
+    <color name="peach">#FFDEAD</color>
 </resources>

@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.rgp.breathe.R;
+import com.rgp.breathe.database.SharedPreferenceHandler;
 
 import java.util.Calendar;
 
@@ -118,22 +119,21 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private boolean isNameValid(String name) {
-       /* if (TextUtils.isEmpty(name)) {
+        if (TextUtils.isEmpty(name)) {
             mNameView.setError(getString(R.string.error_field_required));
             return false;
         } else {
-            if (!(name.length() > 4)) {
+            if (!(name.length() > 1)) {
                 mNameView.setError(getString(R.string.error_invalid_password));
                 return false;
             } else {
                 return true;
             }
-        }*/
-        return true;
+        }
     }
 
     private boolean isEmailValid(String email) {
-        /*if (TextUtils.isEmpty(email)) {
+        if (TextUtils.isEmpty(email)) {
             mEmailView.setError(getString(R.string.error_field_required));
             return false;
         } else {
@@ -143,32 +143,30 @@ public class RegisterActivity extends AppCompatActivity {
             } else {
                 return true;
             }
-        }*/
-        return true;
+        }
     }
 
     private boolean isDOBValid(String dob) {
-       /* if (TextUtils.isEmpty(dob)) {
+        if (TextUtils.isEmpty(dob)) {
             mDateOfBirthView.setError(getString(R.string.error_field_required));
             return false;
         }
-        return true;*/
         return true;
+
     }
 
     private boolean isPasswordValid(String password) {
-       /* if (TextUtils.isEmpty(password)) {
+        if (TextUtils.isEmpty(password)) {
             mPasswordView.setError(getString(R.string.error_field_required));
             return false;
         } else {
-            if (!(password.length() > 4)) {
+            if (!(password.length() > 1)) {
                 mPasswordView.setError(getString(R.string.error_invalid_password));
                 return false;
             } else {
                 return true;
             }
-        }*/
-        return true;
+        }
     }
 
     public class UserRegisterTask extends AsyncTask<Void, Void, Boolean> {
@@ -188,6 +186,7 @@ public class RegisterActivity extends AppCompatActivity {
         @Override
         protected Boolean doInBackground(Void... params) {
             // TODO: create user against a network service.
+            SharedPreferenceHandler.saveUserInfo(mUserName, mEmail, mDOB, mPassword);
             return true;
         }
 
@@ -196,6 +195,7 @@ public class RegisterActivity extends AppCompatActivity {
             progressDialog.hide();
             mAuthTask = null;
             if (success) {
+                Toast.makeText(getApplicationContext(), "User created successfully", Toast.LENGTH_LONG);
                 showSignInScreen();
             } else {
                 Toast.makeText(getApplicationContext(), "User already exist!", Toast.LENGTH_LONG);

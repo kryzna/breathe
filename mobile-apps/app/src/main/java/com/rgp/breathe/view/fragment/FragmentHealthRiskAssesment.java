@@ -1,7 +1,5 @@
 package com.rgp.breathe.view.fragment;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -21,7 +19,6 @@ import java.util.List;
 /**
  * Created by mdansari on 3/28/2016.
  */
-@SuppressLint("ValidFragment")
 public class FragmentHealthRiskAssesment extends Fragment {
 
     private List<Questionnaire> questionnaireList;
@@ -29,10 +26,7 @@ public class FragmentHealthRiskAssesment extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
-    Context context;
-
-    public FragmentHealthRiskAssesment(Context context) {
-        this.context = context;
+    public FragmentHealthRiskAssesment() {
         QuestionnaireDataGenerator.setQuestionnairesData();
         questionnaireList = QuestionnaireDataGenerator.getQuestionnairesData();
     }
@@ -44,7 +38,7 @@ public class FragmentHealthRiskAssesment extends Fragment {
 
         mRecyclerView = (RecyclerView) root.findViewById(R.id.questionnaire_list_view);
         mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(context);
+        mLayoutManager = new LinearLayoutManager(getContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         mAdapter = new QuetionnaireAdapter(getContext(), questionnaireList);

@@ -27,6 +27,12 @@ public class PeakFlow {
         this.peakFlowReading = peakFlowReading;
     }
 
+    public PeakFlow(String peakFlowReading, String dateTime, String geoLocation) {
+        this.dateTime = dateTime;
+        this.peakFlowReading = peakFlowReading;
+        this.geoLocation = geoLocation;
+    }
+
     public String getDateTime() {
         return dateTime;
     }

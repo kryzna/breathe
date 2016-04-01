@@ -1,23 +1,25 @@
 package com.rgp.breathe.view.activity;
 
 import android.app.ProgressDialog;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.rgp.breathe.R;
-import com.rgp.breathe.dao.PeakFlowDao;
 import com.rgp.breathe.helper.Helper;
-import com.rgp.breathe.helper.SQLiteHandler;
+import com.rgp.breathe.database.SQLiteHandler;
+import com.rgp.breathe.location.LocationAddress;
+import com.rgp.breathe.location.DeviceLocationListener;
 import com.rgp.breathe.model.PeakFlow;
-
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 
 /**
  * Created by mdansari on 3/30/2016.
@@ -33,6 +35,13 @@ public class PeakFlowActivity extends AppCompatActivity {
     TextView wheelReading1;
     TextView wheelReading2;
     TextView wheelReading3;
+
+    EditText address1;
+    EditText address2;
+    Button fetchCurrentLocButton;
+    private DeviceLocationListener locationListener;
+
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +60,48 @@ public class PeakFlowActivity extends AppCompatActivity {
         numberPicker3 = (NumberPicker) findViewById(R.id.number_picker3);
         wheelReading3 = (TextView) findViewById(R.id.peak_reading3);
         setNumberWheel(numberPicker3, 2);
+
+        address1 = (EditText) findViewById(R.id.address1);
+        address2 = (EditText) findViewById(R.id.address2);
+        fetchCurrentLocButton = (Button) findViewById(R.id.fetch);
+
+        fetchCurrentLocButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fetchAddress();
+            }
+        });
+
+        progressDialog = new ProgressDialog(PeakFlowActivity.this);
+        progressDialog.setMessage("fetching current location...");
+    }
+
+    private void fetchAddress() {
+        locationListener = new DeviceLocationListener(this);
+        progressDialog.show();
+        new FetchUserAddressTask().execute(new Void[0]);
+    }
+
+    private class FetchUserAddressTask extends AsyncTask<Void, Void, String> {
+        private FetchUserAddressTask() {
+        }
+
+        protected String doInBackground(Void... params) {
+            return LocationAddress.getAddressFromLatLang(locationListener.latitude, locationListener.longitude, getApplicationContext());
+        }
+
+        protected void onPostExecute(String s) {
+            String[] location = s.split("\\++");
+            progressDialog.dismiss();
+            if (location.length > 1) {
+                address1.setText(location[0]);
+                address2.setText(location[1]);
+                return;
+            }
+            Toast.makeText(getApplicationContext(), "Unable to fetch address. Try again or change your setting!", Toast.LENGTH_LONG).show();
+            address1.setText("");
+            address2.setText("");
+        }
     }
 
     private void setNumberWheel(NumberPicker np, final int pos) {
@@ -89,12 +140,13 @@ public class PeakFlowActivity extends AppCompatActivity {
         return true;
     }
 
-    private void savePeakflowInfo(){
+    private void savePeakflowInfo() {
         //final ProgressDialog loading = ProgressDialog.show(this, null, "Adding new entry...", false, false);
         StringBuilder peakflowReading = new StringBuilder();
         peakflowReading.append(wheelReading1.getText()).append(wheelReading2.getText()).append(wheelReading3.getText()).append(" ml/s");
         String currentDateTime = Helper.getFormattedDate(DATE_TIME_FORMAT);
-        PeakFlow peakFlow = new PeakFlow(peakflowReading.toString(), currentDateTime);
+        String location = address2.getText().toString();
+        PeakFlow peakFlow = new PeakFlow(peakflowReading.toString(), currentDateTime, location);
         SQLiteHandler sqLiteHandler = new SQLiteHandler(this);
         sqLiteHandler.addPeakFlowEntry(peakFlow);
         finish();

@@ -34,19 +34,15 @@ public class TrackerAdapter extends RecyclerView.Adapter<TrackerAdapter.TrackVie
 
     @Override
     public void onBindViewHolder(TrackViewHolder holder, int position) {
-        if (peakFlowList.size() == 0) {
-            holder.readingUnit.setText("No reading added yet");
-        } else {
-            final String readingUnit = peakFlowList.get(position).getPeakFlowReading();
-            final String readingTime = peakFlowList.get(position).getDateTime();
-            holder.readingUnit.setText(readingUnit);
-            holder.readingTime.setText(readingTime);
-        }
+        final String readingUnit = peakFlowList.get(position).getPeakFlowReading();
+        final String readingTime = peakFlowList.get(position).getDateTime();
+        holder.readingUnit.setText(readingUnit);
+        holder.readingTime.setText(readingTime);
     }
 
     @Override
     public int getItemCount() {
-        if(peakFlowList != null) {
+        if (peakFlowList != null) {
             return peakFlowList.size();
         }
         return -1;
