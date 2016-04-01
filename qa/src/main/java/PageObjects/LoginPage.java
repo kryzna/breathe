@@ -29,13 +29,13 @@ public class LoginPage {
         Utility.loadPropertyFile("config.properties");
         myxls = new Xls_Reader(Utility.getValueOf("testExcel"));
 
-        Patient_Emailid.sendKeys(myxls.getCellData("Sheet1","PatientEmailid",2));
+        Patient_Emailid.sendKeys(myxls.getCellData("UserData","PatientEmailid",2));
     }
 
     public void enter_password(){
         Utility.loadPropertyFile("config.properties");
         myxls = new Xls_Reader(Utility.getValueOf("testExcel"));
-        Patient_Pwd.sendKeys(myxls.getCellData("Sheet1","PatientPassword",2));
+        Patient_Pwd.sendKeys(myxls.getCellData("UserData","PatientPassword",2));
     }
 
 /*    public void setSignupLink(){

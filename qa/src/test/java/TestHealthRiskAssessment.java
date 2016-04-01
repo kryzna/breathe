@@ -6,6 +6,7 @@ import PageObjects.LeftMenu;
 import PageObjects.LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -27,21 +28,24 @@ public class TestHealthRiskAssessment {
     public void startApp() throws IOException {
         Utility.loadPropertyFile("config.properties");
         myxls = new Xls_Reader(Utility.getValueOf("testExcel"));
-        androidSetup.andySetup();
-        wait = new WebDriverWait(androidSetup.aDriver, 5);
+
+        // Need to commented if run through testng TestSuite
+     /*   androidSetup.andySetup();
         loginPage.setLoginButton(androidSetup.aDriver);
         loginPage.setPatientemailid(androidSetup.aDriver);
         loginPage.setPatient_Password(androidSetup.aDriver);
-    }
-
-    @Test(priority = 1)
-      public void verifyHealthRiskAssessment_yes(){
         loginPage.enter_email_id();
         loginPage.enter_password();
         loginPage.loginButtonClick();
         wait = new WebDriverWait(androidSetup.aDriver, 5);
         leftmenu.getleftnav(androidSetup.aDriver);
         leftmenu.leftnavclick();
+        */
+    }
+
+    @Test(priority = 1)
+    // This test case is to check the completed date on the button
+      public void verifyHealthRiskAssessment_yes(){
         healthassess.getleftnav_HealtAssessment(androidSetup.aDriver);
         healthassess.leftnavHealthAssessmentclick();
         healthassess.getleftnav_HealtAssessment_completed(androidSetup.aDriver);
@@ -54,12 +58,13 @@ public class TestHealthRiskAssessment {
         healthassess.getHealtAssessment_questionnairechoice_next(androidSetup.aDriver);
         healthassess.getHealtAssessment_questionnairechoice_checkbox1(androidSetup.aDriver);
         healthassess.getHealtAssessment_questionnairechoice_next(androidSetup.aDriver);
-       // assert(leftmenu.getUserEmail().getText().toString().equals(myxls.getCellData("Sheet1","PatientEmailid",2)));
+        healthassess.getleftnav_HealtAssessment_completed(androidSetup.aDriver);
+        assert(healthassess.gettext_HealtAssessment_completed(androidSetup.aDriver)).equals(myxls.getCellData("HealtAssessmentData","Completed_Status",2));
         }
 
-    @AfterClass
+  /*  @AfterClass
     public void teardown() throws IOException {
         androidSetup.aDriver.quit();
     }
-
+*/
 }

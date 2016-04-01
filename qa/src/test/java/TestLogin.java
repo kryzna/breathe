@@ -73,7 +73,7 @@ public class TestLogin {
 */
     // This test case is to check if valid credentails were submitted
     @Test(priority = 1)
-    public void testLogin() throws InterruptedException {
+    public void testValidLogin() throws InterruptedException {
         assert(loginPage.Patient_loginButton.getText().equals("Login"));
         loginPage.enter_email_id();
         loginPage.enter_password();
@@ -88,7 +88,7 @@ public class TestLogin {
     @Test(priority = 2)
     public void verifyUserName(){
         leftmenu.setUserName(androidSetup.aDriver);
-        assert(leftmenu.getUserName().getText().toString().equals(myxls.getCellData("Sheet1","UserName",2)));
+        assert(leftmenu.getUserName().getText().toString().equals(myxls.getCellData("UserData","UserName",2)));
         wait = new WebDriverWait(androidSetup.aDriver, 5);
     }
 
@@ -96,14 +96,15 @@ public class TestLogin {
     @Test(priority = 3)
     public void verifyUserEmail(){
         leftmenu.setUserEmail(androidSetup.aDriver);
-        assert(leftmenu.getUserEmail().getText().toString().equals(myxls.getCellData("Sheet1","PatientEmailid",2)));
+        assert(leftmenu.getUserEmail().getText().toString().equals(myxls.getCellData("UserData","PatientEmailid",2)));
     }
 
     // -------------Need to add test cases for autologin functionality-----------------------------
 
-    @AfterClass
+   /*  @AfterClass
     public void teardown() throws IOException {
         androidSetup.aDriver.quit();
     }
+*/
 
 }

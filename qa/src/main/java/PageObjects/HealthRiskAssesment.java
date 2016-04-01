@@ -11,7 +11,7 @@ public class HealthRiskAssesment {
 
     public WebElement leftnav_Healthassessment,leftnav_Healthassessment_btn,leftnav_Healthassessment_choice_yes,
             getHealtAssessment_questionnairechoice_yes_radio1,getHealtAssessment_questionnairechoice_next,
-            getHealtAssessment_questionnairechoice_checkbox1,gettext_HealtAssessment_completed;
+            getHealtAssessment_questionnairechoice_checkbox1,text_HealtAssessment_completed;
 
     public void getleftnav_HealtAssessment(AndroidDriver aDriver){
         leftnav_Healthassessment=aDriver.findElement(By.xpath("//android.widget.CheckedTextView[@text='Health Risk Assesment']"));
@@ -24,8 +24,10 @@ public class HealthRiskAssesment {
     public void getleftnav_HealtAssessment_completed(AndroidDriver aDriver){
         leftnav_Healthassessment_btn=aDriver.findElement(By.id("questionary_status_button"));
     }
-    public void gettext_HealtAssessment_completed(AndroidDriver aDriver){
-       // gettext_HealtAssessment_completed=aDriver.findElement(By.("questionary_status_button"));
+    public String gettext_HealtAssessment_completed(AndroidDriver aDriver){
+        text_HealtAssessment_completed=aDriver.findElement(By.id("questionary_status_button"));
+        String txtvalue = text_HealtAssessment_completed.getText();
+        return txtvalue;
     }
 
     public void leftnavHealthAssessment_completed_btnclick(){
@@ -44,6 +46,8 @@ public class HealthRiskAssesment {
         getHealtAssessment_questionnairechoice_yes_radio1=aDriver.findElement(By.xpath("//android.widget.RadioButton[@text='YES']"));
         getHealtAssessment_questionnairechoice_yes_radio1.click();
     }
+
+
 
     public void getHealtAssessment_questionnairechoice_next(AndroidDriver aDriver){
         getHealtAssessment_questionnairechoice_next=aDriver.findElement(By.id("android:id/button1"));

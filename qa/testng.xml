@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<suite name="suite_tracking">
+<suite name="BreatheQA_TestSuite">
+    <test name="test_Login">
+        <classes>
+            <!--//add classes below which needs to be executed-->
+            <class name="TestLogin">
+                <methods>
+                    <!--//add test cases below with method name, which needs to be executed-->
+                    <include name="testValidLogin"/>
+                    <include name="verifyUserName"/>
+                    <include name="verifyUserEmail"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="test_HealtAssessment">
+        <classes>
+            <!--//add classes below which needs to be executed-->
+            <class name="TestHealthRiskAssessment">
+                <methods>
+                    <!--//add test cases below with method name, which needs to be executed-->
+                    <include name="verifyHealthRiskAssessment_yes"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
     <test name="test_tracking">
         <classes>
             <!--//add classes below which needs to be executed-->
