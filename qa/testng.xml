@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <suite name="BreatheQA_TestSuite">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
     <test name="test_Login">
         <classes>
             <!--//add classes below which needs to be executed-->
@@ -28,10 +32,10 @@
         <classes>
             <!--//add classes below which needs to be executed-->
             <class name="TestTracking">
-                <methods>
-                    <!--//add test cases below with method name, which needs to be executed-->
+                <!--<methods>
+                    &lt;!&ndash;//add test cases below with method name, which needs to be executed&ndash;&gt;
                     <include name="verifyRowCount"/>
-                </methods>
+                </methods>-->
             </class>
         </classes>
     </test>

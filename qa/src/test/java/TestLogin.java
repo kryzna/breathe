@@ -29,8 +29,9 @@ public class TestLogin {
     AndroidSetup androidSetup = new AndroidSetup();
     @BeforeClass
     public void startApp() throws IOException {
+        System.out.println(System.getProperty("user.dir"));
         Utility.loadPropertyFile("config.properties");
-        myxls = new Xls_Reader(Utility.getValueOf("testExcel"));
+        myxls = new Xls_Reader(System.getProperty("user.dir")+Utility.getValueOf("testExcel"));
         androidSetup.andySetup();
         wait = new WebDriverWait(androidSetup.aDriver, 5);
         loginPage.setLoginButton(androidSetup.aDriver);

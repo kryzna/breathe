@@ -27,7 +27,7 @@ public class TestHealthRiskAssessment {
     @BeforeClass
     public void startApp() throws IOException {
         Utility.loadPropertyFile("config.properties");
-        myxls = new Xls_Reader(Utility.getValueOf("testExcel"));
+        myxls = new Xls_Reader(System.getProperty("user.dir")+Utility.getValueOf("testExcel"));
 
         // Need to commented if run through testng TestSuite
      /*   androidSetup.andySetup();

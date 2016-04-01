@@ -27,14 +27,14 @@ public class LoginPage {
     }
     public void enter_email_id(){
         Utility.loadPropertyFile("config.properties");
-        myxls = new Xls_Reader(Utility.getValueOf("testExcel"));
+        myxls = new Xls_Reader(System.getProperty("user.dir")+Utility.getValueOf("testExcel"));
 
         Patient_Emailid.sendKeys(myxls.getCellData("UserData","PatientEmailid",2));
     }
 
     public void enter_password(){
         Utility.loadPropertyFile("config.properties");
-        myxls = new Xls_Reader(Utility.getValueOf("testExcel"));
+        myxls = new Xls_Reader(System.getProperty("user.dir")+Utility.getValueOf("testExcel"));
         Patient_Pwd.sendKeys(myxls.getCellData("UserData","PatientPassword",2));
     }
 

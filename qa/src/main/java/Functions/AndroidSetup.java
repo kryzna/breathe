@@ -24,7 +24,7 @@ public class AndroidSetup {
             e.printStackTrace();
         }
         prop.load(readProperties);
-        File breathApkDir = new File(prop.getProperty("apkFolder"));
+        File breathApkDir = new File(System.getProperty("user.dir")+"\\app\\");
         File breathApk = new File(breathApkDir, prop.getProperty("apkName"));
 
         DesiredCapabilities capabilities = new DesiredCapabilities();

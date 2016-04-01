@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test_HealtAssessment"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="11.422">
+  <properties />
+  
+  
+            <testcase name="verifyHealthRiskAssessment_yes" time="11.422" classname="TestHealthRiskAssessment" />
+      
+</testsuite>

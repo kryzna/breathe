@@ -12,27 +12,35 @@ import java.util.List;
  */
 public class Tracking {
     List<WebElement> trackingElements;
-    List<WebElement> trackingRows = new ArrayList<WebElement>();
-    WebElement tracking,addButton,addNew,saveButton;
+    List<WebElement> trackingRowsDateTime = new ArrayList<WebElement>();
+    List<WebElement> trackingRowsPeakValue = new ArrayList<WebElement>();
+    WebElement trackingDateTime,trackingPeakValue,addButton,addNew,saveButton,numberPicker;
     public void setTrackingElements(AndroidDriver aDriver){
         trackingElements=aDriver.findElements(By.xpath("//android.support.v7.widget.RecyclerView[@resource-id='com.rgp.breathe:id/tracking_recyclerView']/android.widget.LinearLayout"));
         //tracking= aDriver.findElement(By.xpath("//android.support.v7.widget.RecyclerView[@resource-id='com.rgp.breathe:id/tracking_recyclerView']/android.widget.LinearLayout"));
         if(trackingElements.size()>0) {
             for (int i = 1; i <= trackingElements.size(); i++) {
-                tracking= aDriver.findElement(By.xpath("//android.support.v7.widget.RecyclerView[@resource-id='com.rgp.breathe:id/tracking_recyclerView']/android.widget.LinearLayout["+i+"]/android.widget.LinearLayout[1]/android.widget.TextView[3]"));
-                trackingRows.add(tracking);
+                trackingDateTime= aDriver.findElement(By.xpath("//android.support.v7.widget.RecyclerView[@resource-id='com.rgp.breathe:id/tracking_recyclerView']/android.widget.LinearLayout["+i+"]/android.widget.LinearLayout[1]/android.widget.TextView[3]"));
+                trackingRowsDateTime.add(trackingDateTime);
+                trackingPeakValue=aDriver.findElement(By.xpath("//android.support.v7.widget.RecyclerView[@resource-id='com.rgp.breathe:id/tracking_recyclerView']/android.widget.LinearLayout["+i+"]/android.widget.LinearLayout[1]/android.widget.TextView[1]"));
+                trackingRowsPeakValue.add(trackingPeakValue);
             }
         }
     }
 
     public List<WebElement> getTrackingElements(){
-        System.out.println(trackingRows.size());
+        //System.out.println(trackingRows.size());
         return trackingElements;
     }
 
-    public List<WebElement> getTrackingRows(){
-        System.out.println(trackingRows.size());
-        return trackingRows;
+    public List<WebElement> getTrackingRowsDateTime(){
+        //System.out.println(trackingRows.size());
+        return trackingRowsDateTime;
+    }
+
+    public List<WebElement> getTrackingRowsPeakValue(){
+        //System.out.println(trackingRows.size());
+        return trackingRowsPeakValue;
     }
 
     public void setAddButton(AndroidDriver aDriver){
@@ -53,6 +61,14 @@ public class Tracking {
 
     public void setSaveButton(AndroidDriver aDriver){
         saveButton=aDriver.findElement(By.id("com.rgp.breathe:id/action_save"));
+    }
+
+    public void setNumberPicker(AndroidDriver aDriver){
+        numberPicker = aDriver.findElement(By.xpath("//android.widget.NumberPicker[1]/android.widget.Button[1]"));
+    }
+
+    public WebElement getNumberPicker(){
+        return numberPicker;
     }
 
     public void clickSaveButton(){

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test_tracking"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.066">
+  <properties />
+  
+  
+            <testcase name="verifyTrackingsCount" time="0.000" classname="TestTracking" />
+                <testcase name="verifyLatestEntry" time="0.066" classname="TestTracking" />
+      
+</testsuite>
