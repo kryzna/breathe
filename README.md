@@ -6,3 +6,7 @@
 
 # Android
 - [Android Tutorials](https://www.udacity.com/courses/android)
+
+# Risk Assessment Module
+
+- ![RA Module Flow](docs/RAModule.png)
