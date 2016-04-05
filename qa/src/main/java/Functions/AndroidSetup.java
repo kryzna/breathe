@@ -30,6 +30,7 @@ public class AndroidSetup {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("BROWSER_NAME","Android");
         capabilities.setCapability("deviceName","My Emulator");
+        capabilities.setCapability("","");
         capabilities.setCapability("platformName","Android");
         capabilities.setCapability("app",breathApk.getAbsolutePath());
         aDriver =  new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);

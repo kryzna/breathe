@@ -43,12 +43,13 @@ public class TestTracking {
         tracking.clickAddButton();
         tracking.setAddNew(androidSetup.aDriver);
         tracking.clickAddNew();
+        Thread.sleep(5000);
         tracking.setSaveButton(androidSetup.aDriver);
         tracking.clickSaveButton();
         Thread.sleep(2000);
         tracking.clickAddButton();
         tracking.clickAddNew();
-        Thread.sleep(2000);
+        Thread.sleep(8000);
         tracking.setNumberPicker(androidSetup.aDriver);
         tracking.getNumberPicker().click();
         tracking.clickSaveButton();

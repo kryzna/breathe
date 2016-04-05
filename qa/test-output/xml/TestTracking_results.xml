@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.066">
+           time="0.493">
   <properties />
   
   
-            <testcase name="verifyTrackingsCount" time="0.000" classname="TestTracking" />
-                <testcase name="verifyLatestEntry" time="0.066" classname="TestTracking" />
+            <testcase name="verifyLatestEntry" time="0.492" classname="TestTracking" />
+                <testcase name="verifyTrackingsCount" time="0.001" classname="TestTracking" />
       
 </testsuite>
