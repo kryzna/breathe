@@ -4,8 +4,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created by mdansari on 3/30/2016.
+ * Created by krish on 4/5/2016.
  */
+
 public class Helper {
 
     public static String getFormattedDate(String dateFormat) {

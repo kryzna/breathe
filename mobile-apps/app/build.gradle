@@ -1,6 +1,31 @@
 apply plugin: 'com.android.application'
 
+group 'com.edifecs.cdm'
+version '1.0-SNAPSHOT'
+
+// ------------ Coding Standard Check ----------- //
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.palantir:jacoco-coverage:0.3.0'
+        classpath "com.google.guava:guava:18.0"
+    }
+}
+apply plugin: 'com.palantir.jacoco-coverage'
+jacocoCoverage {
+    // Enforce minimum code coverage of 50% for every Java file.
+    fileThreshold 0.8
+}
+//apply plugin: 'checkstyle'
+apply plugin: 'findbugs'
+apply plugin: 'pmd'
+
+// ----------------------------------------------- //
+
 project.ext.appName = 'Breathe'
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
@@ -12,17 +37,21 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    lintOptions {
+        abortOnError false
+    }
     buildTypes {
 
-		def buildName = { String buildType ->
-							applicationVariants.all{ varient ->
-								varient.outputs.each{ output ->
-										def buildFileName = output.outputFile.name
-										buildFileName = buildFileName.replace("app-", "$project.ext.appName" + '-')
-										output.outputFile = new File(output.outputFile.parent, buildFileName)
-								}
-							}			
-						}
+        def buildName = { String buildType ->
+            applicationVariants.all { varient ->
+                varient.outputs.each { output ->
+                    def buildFileName = output.outputFile.name
+                    buildFileName = buildFileName.replace("app-", "$project.ext.appName" + '-')
+                    output.outputFile = new File(output.outputFile.parent, buildFileName)
+                }
+            }
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -32,15 +61,27 @@ android {
 			debuggable = true
 			buildName('debug')
 		}
-	}
+    }
 }
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:1.10.19'
+    testCompile 'org.assertj:assertj-core:1.7.1'
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
 	compile 'com.android.support:cardview-v7:23.0.+'
     compile 'com.android.support:recyclerview-v7:23.0.+'
     compile 'com.google.android.gms:play-services:8.4.0'
+}
+
+android.testOptions.unitTests.all {
+    // configure whether failing tests should fail the build
+    ignoreFailures false
+
+    testLogging {
+        events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+    }
 }
