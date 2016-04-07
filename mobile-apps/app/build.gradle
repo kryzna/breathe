@@ -1,28 +1,8 @@
+apply from: 'https://ecgit01.corp.edifecs.com/cdm/coding-standard/raw/master/coding-standard-android.gradle'
 apply plugin: 'com.android.application'
 
 group 'com.edifecs.cdm'
 version '1.0-SNAPSHOT'
-
-// ------------ Coding Standard Check ----------- //
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.palantir:jacoco-coverage:0.3.0'
-        classpath "com.google.guava:guava:18.0"
-    }
-}
-apply plugin: 'com.palantir.jacoco-coverage'
-jacocoCoverage {
-    // Enforce minimum code coverage of 50% for every Java file.
-    fileThreshold 0.8
-}
-//apply plugin: 'checkstyle'
-apply plugin: 'findbugs'
-apply plugin: 'pmd'
-
-// ----------------------------------------------- //
 
 project.ext.appName = 'Breathe'
 
