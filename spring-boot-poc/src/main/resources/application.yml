@@ -1,0 +1,10 @@
+configuration:
+  name : Munish
+  age : 32
+
+app:
+  name : Spring Boot POC
+  log.tomcat-version : true
+
+server:
+  port: ${port:8080}

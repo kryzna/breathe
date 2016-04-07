@@ -185,6 +185,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         @Override
         protected Boolean doInBackground(Void... params) {
+            progressDialog.show();
             // TODO: create user against a network service.
             SharedPreferenceHandler.saveUserInfo(mUserName, mEmail, mDOB, mPassword);
             return true;
