@@ -18,7 +18,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.rgp.breathe.R;
-import com.rgp.breathe.database.SharedPreferenceHandler;
+import com.rgp.breathe.database.SharedPreferencesHelper;
 import com.rgp.breathe.view.fragment.FragmentAbout;
 import com.rgp.breathe.view.fragment.FragmentAlerts;
 import com.rgp.breathe.view.fragment.FragmentHealthRiskAssesment;
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private TextView userNameView;
     private TextView userEmailView;
+    private SharedPreferencesHelper sharedPreferencesHelper;
 
 
     @Override
@@ -44,9 +45,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        sharedPreferencesHelper = new SharedPreferencesHelper(PreferenceManager.getDefaultSharedPreferences(this));
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        mDrawerLayout.setDrawerListener(drawerToggle);
+        mDrawerLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
 
         mDrawer = (NavigationView) findViewById(R.id.nav_view);
@@ -56,8 +59,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         userNameView = (TextView) header.findViewById(R.id.user_name);
         userEmailView = (TextView) header.findViewById(R.id.user_email);
 
-        userNameView.setText(SharedPreferenceHandler.getmUser());
-        userEmailView.setText(SharedPreferenceHandler.getmEmail());
+        userNameView.setText(sharedPreferencesHelper.getmUserName());
+        userEmailView.setText(sharedPreferencesHelper.getmEmail());
 
         //Add the Very First Fragment to the Container
         selectFragmentView(new TreatmentPlanFragment());

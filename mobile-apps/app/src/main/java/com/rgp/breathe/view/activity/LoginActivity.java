@@ -18,13 +18,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.rgp.breathe.R;
-import com.rgp.breathe.database.SharedPreferenceHandler;
+import com.rgp.breathe.database.SharedPreferencesHelper;
 
 public class LoginActivity extends AppCompatActivity {
-
     private static String TAG = LoginActivity.class.getSimpleName();
 
-    private static SharedPreferenceHandler sharedPreferenceHandler;
+    private SharedPreferencesHelper sharedPreferencesHelper;
 
     private EditText mEmailView;
     private EditText mPasswordView;
@@ -34,15 +33,16 @@ public class LoginActivity extends AppCompatActivity {
 
     private UserLoginTask mAuthTask = null;
     private ProgressDialog progressDialog;
-
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        sharedPreferenceHandler = new SharedPreferenceHandler(this);
-        if (SharedPreferenceHandler.ismAutoLogin()) {
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPreferencesHelper = new SharedPreferencesHelper(sharedPreferences);
+        if (sharedPreferencesHelper.ismAutoLogin()) {
             gotoMainScreen();
         }
 
@@ -151,9 +151,8 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected Boolean doInBackground(Void... params) {
             // TODO: attempt authentication against a network service.
-            SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
-            String email = SharedPreferenceHandler.getmEmail();
-            String pass = SharedPreferenceHandler.getmPass();
+            String email = sharedPreferencesHelper.getmEmail();
+            String pass = sharedPreferencesHelper.getmPassword();
             if (email.equals(mEmail)) {
                 if (pass.equals(mPassword)) {
                     return true;
@@ -172,7 +171,7 @@ public class LoginActivity extends AppCompatActivity {
             progressDialog.hide();
             mAuthTask = null;
             if (success) {
-                SharedPreferenceHandler.setAutoEnable(autologinEnabled);
+                sharedPreferencesHelper.setAutoEnable(autologinEnabled);
                 gotoMainScreen();
             } else {
                 if (!isUserValid) {

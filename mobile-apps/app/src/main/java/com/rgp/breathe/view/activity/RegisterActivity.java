@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -16,7 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.rgp.breathe.R;
-import com.rgp.breathe.database.SharedPreferenceHandler;
+import com.rgp.breathe.database.SharedPreferencesHelper;
 
 import java.util.Calendar;
 
@@ -36,6 +37,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private UserRegisterTask mAuthTask = null;
     private ProgressDialog progressDialog;
+    private SharedPreferencesHelper sharedPreferencesHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +70,8 @@ public class RegisterActivity extends AppCompatActivity {
                 showSignInScreen();
             }
         });
+
+        sharedPreferencesHelper = new SharedPreferencesHelper(PreferenceManager.getDefaultSharedPreferences(this));
     }
 
 
@@ -187,7 +191,7 @@ public class RegisterActivity extends AppCompatActivity {
         protected Boolean doInBackground(Void... params) {
             progressDialog.show();
             // TODO: create user against a network service.
-            SharedPreferenceHandler.saveUserInfo(mUserName, mEmail, mDOB, mPassword);
+            sharedPreferencesHelper.saveUserInfo(mUserName, mEmail, mDOB, mPassword);
             return true;
         }
 

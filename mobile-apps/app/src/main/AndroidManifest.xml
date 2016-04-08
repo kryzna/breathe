@@ -14,14 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-
-        <!--  use below in case using google play service api
+        <!--  use below meta data codes in case using google play service api for location
            <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBwB_zhJiidOLS_rH8soC-W_f3Hcu9A91M" />-->
+           android:name="com.google.android.gms.version"
+           android:value="@integer/google_play_services_version" />
+
+
+          <meta-data
+           android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyBwB_zhJiidOLS_rH8soC-W_f3Hcu9A91M" />-->
 
         <activity
             android:name=".view.activity.LoginActivity"

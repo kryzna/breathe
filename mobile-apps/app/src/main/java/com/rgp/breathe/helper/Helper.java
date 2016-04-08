@@ -7,6 +7,7 @@ import java.util.Date;
  * Created by krish on 4/5/2016.
  */
 
+
 public class Helper {
 
     public static String getFormattedDate(String dateFormat) {
