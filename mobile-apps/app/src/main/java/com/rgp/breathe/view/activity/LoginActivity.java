@@ -11,16 +11,12 @@ import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
-
+import android.widget.*;
 import com.rgp.breathe.R;
 import com.rgp.breathe.database.SharedPreferencesHelper;
 
 public class LoginActivity extends AppCompatActivity {
+
     private static String TAG = LoginActivity.class.getSimpleName();
 
     private SharedPreferencesHelper sharedPreferencesHelper;
@@ -34,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private UserLoginTask mAuthTask = null;
     private ProgressDialog progressDialog;
     private SharedPreferences sharedPreferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -204,4 +201,5 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
 }

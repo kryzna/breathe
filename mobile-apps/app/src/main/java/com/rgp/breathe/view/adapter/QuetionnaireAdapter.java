@@ -10,16 +10,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
-
+import android.widget.*;
 import com.rgp.breathe.R;
+import com.rgp.breathe.dao.Choice;
+import com.rgp.breathe.dao.Question;
+import com.rgp.breathe.dao.QuestionType;
+import com.rgp.breathe.dao.Questionnaire;
 import com.rgp.breathe.helper.Helper;
-import com.rgp.breathe.model.Question;
-import com.rgp.breathe.model.Questionnaire;
 
 import java.util.List;
 
@@ -61,7 +58,9 @@ public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapte
     @Override
     public void onBindViewHolder(final QuetionnaireViewHolder holder, final int position) {
         final String title = questionnaireList.get(position).getTitle();
-        final String status = questionnaireList.get(position).getStatus();
+
+        //TODO: set and get status of questionnaire as per the number of questions addressed
+        final String status = "not completed";
 
         holder.questionnaireTitle.setText(title);
         holder.questionnaireStatus.setText(status);
@@ -76,9 +75,9 @@ public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapte
             @Override
             public void onClick(View v) {
                 if (status.contains("not completed")) {
-                    showQuestionsDialog(0, title, questionnaireList.get(position).getQuestionList());
+                    showQuestionsDialog(0, title, questionnaireList.get(position).getQuestions());
                 } else {
-                    showSubmitQuestionsDialog(title, questionnaireList.get(position).getQuestionList());
+                    showSubmitQuestionsDialog(title, questionnaireList.get(position).getQuestions());
                 }
             }
         });
@@ -133,11 +132,11 @@ public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapte
         questionnaireTitleView.setText(title);
 
         TextView questionContentView = (TextView) linearLayout.findViewById(R.id.question_content);
-        questionContentView.setText(questionList.get(questionNo).getQuestionContent());
+        questionContentView.setText(questionList.get(questionNo).getContent());
 
-        List<String> possibleAnswers = questionList.get(questionNo).getPossibleAnswers();
-        String questionType = questionList.get(questionNo).getQuestionType();
-        if ("RADIO".equalsIgnoreCase(questionType)) {
+        List<Choice> possibleAnswers = questionList.get(questionNo).getOptions();
+        String questionType = questionList.get(questionNo).getType().name();
+        if (QuestionType.RADIO.name().equalsIgnoreCase(questionType)) {
             linearLayout.addView(addAnswersInRadioFormat(possibleAnswers));
         } else {
             addAnswersInCheckBoxFormat(possibleAnswers, linearLayout);
@@ -189,11 +188,11 @@ public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapte
         helpDialog.show();
     }
 
-    private void addAnswersInCheckBoxFormat(List<String> possibleAnswers, LinearLayout linearLayout) {
+    private void addAnswersInCheckBoxFormat(List<Choice> possibleAnswers, LinearLayout linearLayout) {
         // when answer is of type checkbox
-        for (String pa : possibleAnswers) {
+        for (Choice pa : possibleAnswers) {
             AppCompatCheckBox compatCheckBox = new AppCompatCheckBox(context);
-            compatCheckBox.setText(pa);
+            compatCheckBox.setText(pa.getText());
             compatCheckBox.setLayoutParams(new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -201,14 +200,14 @@ public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapte
         }
     }
 
-    private RadioGroup addAnswersInRadioFormat(List<String> possibleAnswers) {
+    private RadioGroup addAnswersInRadioFormat(List<Choice> possibleAnswers) {
         final RadioButton[] radioButtons = new RadioButton[possibleAnswers.size()];
         RadioGroup rg = new RadioGroup(context); //create the RadioGroup
         rg.setOrientation(RadioGroup.VERTICAL);//or RadioGroup.VERTICAL
         int i = 0;
-        for (String pa : possibleAnswers) {
+        for (Choice pa : possibleAnswers) {
             radioButtons[i] = new AppCompatRadioButton(context);
-            radioButtons[i].setText(pa);
+            radioButtons[i].setText(pa.getText());
             rg.addView(radioButtons[i]);
             i++;
         }
