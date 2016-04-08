@@ -1,22 +1,17 @@
-import Functions.AndroidSetup;
-import Functions.Utility;
-import Functions.Xls_Reader;
-import PageObjects.LeftMenu;
-import PageObjects.LoginPage;
-import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.By;
+package com.edifecs.breathe.qa.testcases;
+
+import com.edifecs.breathe.qa.functions.Andriodsetup;
+import com.edifecs.breathe.qa.functions.Appiumserver;
+import com.edifecs.breathe.qa.functions.Utility;
+import com.edifecs.breathe.qa.functions.Excelreader;
+import com.edifecs.breathe.qa.pageobjects.LeftMenu;
+import com.edifecs.breathe.qa.pageobjects.LoginPage;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.util.Properties;
 
 /**
  * Created by amolverm on 3/29/2016.
@@ -25,18 +20,18 @@ public class TestLogin {
     WebDriverWait wait;
     LoginPage loginPage = new LoginPage();
     LeftMenu leftmenu = new LeftMenu();
-    Xls_Reader myxls;
-    AndroidSetup androidSetup = new AndroidSetup();
+    Excelreader myxls;
+    Andriodsetup andriodsetup = new Andriodsetup();
     @BeforeClass
-    public void startApp() throws IOException {
+    public void startApp() throws IOException, InterruptedException {
         System.out.println(System.getProperty("user.dir"));
         Utility.loadPropertyFile("config.properties");
-        myxls = new Xls_Reader(System.getProperty("user.dir")+Utility.getValueOf("testExcel"));
-        androidSetup.andySetup();
-        wait = new WebDriverWait(androidSetup.aDriver, 5);
-        loginPage.setLoginButton(androidSetup.aDriver);
-        loginPage.setPatientemailid(androidSetup.aDriver);
-        loginPage.setPatient_Password(androidSetup.aDriver);
+        myxls = new Excelreader(System.getProperty("user.dir")+Utility.getValueOf("testExcel"));
+        andriodsetup.andySetup();
+        wait = new WebDriverWait(andriodsetup.aDriver, 5);
+        loginPage.setLoginButton(andriodsetup.aDriver);
+        loginPage.setPatientemailid(andriodsetup.aDriver);
+        loginPage.setPatient_Password(andriodsetup.aDriver);
     }
 /*
     // This test case is to check if blank username and password were submitted
@@ -46,7 +41,7 @@ public class TestLogin {
         loginPage.enter_blankemail_id();
         loginPage.enter_blankpassword();
         loginPage.loginButtonClick();
-        wait = new WebDriverWait(androidSetup.aDriver, 5);
+        wait = new WebDriverWait(andriodsetup.aDriver, 5);
         // assert for message if user pass blank credentails
     }
 
@@ -57,7 +52,7 @@ public class TestLogin {
         loginPage.enter_blankemail_id();
         loginPage.enter_password();
         loginPage.loginButtonClick();
-        wait = new WebDriverWait(androidSetup.aDriver, 5);
+        wait = new WebDriverWait(andriodsetup.aDriver, 5);
         // assert for message if user pass blank username
     }
 
@@ -68,7 +63,7 @@ public class TestLogin {
         loginPage.enter_email_id();
         loginPage.enter_blankpassword();
         loginPage.loginButtonClick();
-        wait = new WebDriverWait(androidSetup.aDriver, 5);
+        wait = new WebDriverWait(andriodsetup.aDriver, 5);
         // assert for message if user pass blank password
     }
 */
@@ -80,9 +75,9 @@ public class TestLogin {
             loginPage.enter_email_id();
             loginPage.enter_password();
             loginPage.loginButtonClick();
-            wait = new WebDriverWait(androidSetup.aDriver, 5);
-            // androidSetup.aDriver.findElement(By.xpath("//android.widget.ImageButton[@content-desc='Open navigation drawer']")).click();
-            leftmenu.getleftnav(androidSetup.aDriver);
+            wait = new WebDriverWait(andriodsetup.aDriver, 5);
+            // andriodsetup.aDriver.findElement(By.xpath("//android.widget.ImageButton[@content-desc='Open navigation drawer']")).click();
+            leftmenu.getleftnav(andriodsetup.aDriver);
             leftmenu.leftnavclick();
         }
         catch(Exception e)
@@ -95,9 +90,9 @@ public class TestLogin {
     @Test(priority = 2)
     public void verifyUserName(){
         try {
-            leftmenu.setUserName(androidSetup.aDriver);
+            leftmenu.setUserName(andriodsetup.aDriver);
             assert (leftmenu.getUserName().getText().toString().equals(myxls.getCellData("UserData", "UserName", 2)));
-            wait = new WebDriverWait(androidSetup.aDriver, 5);
+            wait = new WebDriverWait(andriodsetup.aDriver, 5);
         }
         catch(Exception e)
         {
@@ -109,7 +104,7 @@ public class TestLogin {
     @Test(priority = 3)
     public void verifyUserEmail(){
         try {
-            leftmenu.setUserEmail(androidSetup.aDriver);
+            leftmenu.setUserEmail(andriodsetup.aDriver);
             assert (leftmenu.getUserEmail().getText().toString().equals(myxls.getCellData("UserData", "PatientEmailid", 2)));
         }
         catch(Exception e)
@@ -120,10 +115,13 @@ public class TestLogin {
 
     // -------------Need to add test cases for autologin functionality-----------------------------
 
-   /*  @AfterClass
+     @AfterClass
     public void teardown() throws IOException {
-        androidSetup.aDriver.quit();
+        andriodsetup.aDriver.quit();
+         Appiumserver.stopAppiumServer();
+
+
     }
-*/
+
 
 }

@@ -1,7 +1,7 @@
-package PageObjects;
+package com.edifecs.breathe.qa.pageobjects;
 
-import Functions.Utility;
-import Functions.Xls_Reader;
+import com.edifecs.breathe.qa.functions.Excelreader;
+import com.edifecs.breathe.qa.functions.Utility;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.*;
 
@@ -9,7 +9,7 @@ import org.openqa.selenium.*;
  * Created by amolverm on 3/29/2016.
  */
 public class LoginPage {
-    Xls_Reader myxls;
+    Excelreader myxls;
     public WebElement Patient_loginButton,Patient_signupLink,Patient_Emailid,Patient_Pwd;
     public void setLoginButton(AndroidDriver aDriver){Patient_loginButton = aDriver.findElement(By.id(("sign_in_button")));}
     public void setPatientemailid(AndroidDriver aDriver){Patient_Emailid = aDriver.findElement(By.id("input_email")); }
@@ -27,14 +27,14 @@ public class LoginPage {
     }
     public void enter_email_id(){
         Utility.loadPropertyFile("config.properties");
-        myxls = new Xls_Reader(System.getProperty("user.dir")+Utility.getValueOf("testExcel"));
+        myxls = new Excelreader(System.getProperty("user.dir")+Utility.getValueOf("testExcel"));
 
         Patient_Emailid.sendKeys(myxls.getCellData("UserData","PatientEmailid",2));
     }
 
     public void enter_password(){
         Utility.loadPropertyFile("config.properties");
-        myxls = new Xls_Reader(System.getProperty("user.dir")+Utility.getValueOf("testExcel"));
+        myxls = new Excelreader(System.getProperty("user.dir")+Utility.getValueOf("testExcel"));
         Patient_Pwd.sendKeys(myxls.getCellData("UserData","PatientPassword",2));
     }
 

@@ -1,11 +1,11 @@
-package Functions;
+package com.edifecs.breathe.qa.functions;
 
 import org.openqa.selenium.WebElement;
 
 /**
  * Created by amolverm on 3/29/2016.
  */
-public class StandardFunctions {
+public class Standardfunctions {
     public void click(WebElement webElement){
         webElement.click();
     }

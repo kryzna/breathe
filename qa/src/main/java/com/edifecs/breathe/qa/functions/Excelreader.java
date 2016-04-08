@@ -1,4 +1,4 @@
-package Functions;
+package com.edifecs.breathe.qa.functions;
 
 
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
@@ -16,7 +16,7 @@ import java.io.*;
 import java.util.Calendar;
 
 
-public class Xls_Reader {
+public class Excelreader {
 	public static String filename = "inputdata.xlsx";
 	public  String path;
 	public  FileInputStream fis = null;
@@ -26,7 +26,7 @@ public class Xls_Reader {
 	private XSSFRow row   =null;
 	private XSSFCell cell = null;
 
-	public Xls_Reader(String path) {
+	public Excelreader(String path) {
 
 		this.path=path;
 		try {
@@ -483,10 +483,10 @@ public class Xls_Reader {
 	public static void main(String arg[]) throws IOException{
 		
 		//System.out.println(filename);
-		Xls_Reader datatable = null;
+		Excelreader datatable = null;
 		
 
-			 datatable = new Xls_Reader("H:\\Student_Selenium_Workspaces\\Framework_Weekend\\src\\Framework_XL_Files\\Controller.xlsx");
+			 datatable = new Excelreader("H:\\Student_Selenium_Workspaces\\Framework_Weekend\\src\\Framework_XL_Files\\Controller.xlsx");
 				for(int col=0 ;col< datatable.getColumnCount("TC5"); col++){
 					System.out.println(datatable.getCellData("TC5", col, 1));
 				}

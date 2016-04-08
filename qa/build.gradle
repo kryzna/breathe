@@ -1,5 +1,9 @@
 apply plugin: 'java'
-apply plugin: 'maven'
+//apply plugin: 'pmd'
+
+
+
+//apply plugin: 'com.android.application'
 
 group = 'Breathe'
 version = '1.0-SNAPSHOT'
@@ -11,14 +15,18 @@ targetCompatibility = 1.5
 
 
 
+
 repositories {
         
-     maven { url "http://repo.maven.apache.org/maven2" }
-}
+     //maven { url "http://repo.maven.apache.org/maven2"
+    jcenter()}
+
 dependencies {
+   // classpath 'com.android.tools.build:gradle:1.0.1'
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version:'2.46.0'
     compile group: 'org.testng', name: 'testng', version:'6.9.8'
     compile group: 'com.github.genium-framework', name: 'Appium-Support', version:'1.0.2'
+    compile group:  'org.xerial', name: 'sqlite-jdbc', version: '3.8.10.1'
     compile group: 'io.appium', name: 'java-client', version:'2.1.0'
     compile group: 'org.apache.commons', name: 'commons-csv', version:'1.2'
     compile group: 'commons-io', name: 'commons-io', version:'2.4'
@@ -37,3 +45,4 @@ test {
         suites 'testng.xml'
     }
 }
+

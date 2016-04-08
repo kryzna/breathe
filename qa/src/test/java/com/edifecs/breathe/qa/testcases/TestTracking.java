@@ -1,10 +1,10 @@
-import Functions.AndroidSetup;
-import PageObjects.LeftMenu;
-import PageObjects.LoginPage;
-import PageObjects.Tracking;
-import org.openqa.selenium.By;
+package com.edifecs.breathe.qa.testcases;
+
+import com.edifecs.breathe.qa.functions.Andriodsetup;
+import com.edifecs.breathe.qa.pageobjects.LeftMenu;
+import com.edifecs.breathe.qa.pageobjects.LoginPage;
+import com.edifecs.breathe.qa.pageobjects.Tracking;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -16,7 +16,7 @@ import java.util.List;
  * Created by amolverm on 3/31/2016.
  */
 public class TestTracking {
-    AndroidSetup androidSetup = new AndroidSetup();
+    Andriodsetup andriodsetup = new Andriodsetup();
     LoginPage loginPage = new LoginPage();
     LeftMenu leftmenu = new LeftMenu();
     Tracking tracking = new Tracking();
@@ -24,37 +24,37 @@ public class TestTracking {
     @BeforeClass
     public void startApp() throws IOException {
         // This need to be commented if run trough TestNG TestSuite
-       // androidSetup.andySetup();
-       // loginPage.setLoginButton(androidSetup.aDriver);
+       // andriodsetup.andySetup();
+       // loginPage.setLoginButton(andriodsetup.aDriver);
       //  loginPage.loginButtonClick();
-       // leftmenu.getleftnav(androidSetup.aDriver);
+       // leftmenu.getleftnav(andriodsetup.aDriver);
        // leftmenu.leftnavclick();
-      // androidSetup.aDriver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id='com.rgp.breathe:id/nav_view']/android.support.v7.widget.RecyclerView//android.widget.CheckedTextView[contains(@text,'Tracking')]")).click();
-      //  androidSetup.aDriver.findElement(By.xpath("//android.widget.CheckedTextView[@text='Tracking']")).click();
+      // andriodsetup.aDriver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id='com.rgp.breathe:id/nav_view']/android.support.v7.widget.RecyclerView//android.widget.CheckedTextView[contains(@text,'Tracking')]")).click();
+      //  andriodsetup.aDriver.findElement(By.xpath("//android.widget.CheckedTextView[@text='Tracking']")).click();
    }
     @BeforeTest
     public void addRows() throws InterruptedException {
-        leftmenu.getleftnav(androidSetup.aDriver);
+        leftmenu.getleftnav(andriodsetup.aDriver);
         leftmenu.leftnavclick();
-        leftmenu.setLeftNavTracking(androidSetup.aDriver);
+        leftmenu.setLeftNavTracking(andriodsetup.aDriver);
         leftmenu.getLeftNavTracking().click();
 
-        tracking.setAddButton(androidSetup.aDriver);
+        tracking.setAddButton(andriodsetup.aDriver);
         tracking.clickAddButton();
-        tracking.setAddNew(androidSetup.aDriver);
+        tracking.setAddNew(andriodsetup.aDriver);
         tracking.clickAddNew();
         Thread.sleep(5000);
-        tracking.setSaveButton(androidSetup.aDriver);
+        tracking.setSaveButton(andriodsetup.aDriver);
         tracking.clickSaveButton();
         Thread.sleep(2000);
         tracking.clickAddButton();
         tracking.clickAddNew();
         Thread.sleep(8000);
-        tracking.setNumberPicker(androidSetup.aDriver);
+        tracking.setNumberPicker(andriodsetup.aDriver);
         tracking.getNumberPicker().click();
         tracking.clickSaveButton();
         Thread.sleep(2000);
-        tracking.setTrackingElements(androidSetup.aDriver);
+        tracking.setTrackingElements(andriodsetup.aDriver);
     }
     @Test
     // This test case is to check count of Peak Flow
@@ -78,7 +78,7 @@ public class TestTracking {
     }
   /*  @AfterClass
     public void teardown() throws IOException {
-        androidSetup.aDriver.quit();
+        andriodsetup.aDriver.quit();
     }
 */
 }

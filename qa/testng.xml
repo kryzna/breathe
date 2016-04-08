@@ -7,7 +7,7 @@
     <test name="test_Login">
         <classes>
             <!--//add classes below which needs to be executed-->
-            <class name="TestLogin">
+            <class name="com.edifecs.breathe.qa.testcases.TestLogin">
                 <methods>
                     <!--//add test cases below with method name, which needs to be executed-->
                     <include name="testValidLogin"/>
@@ -20,7 +20,7 @@
     <test name="test_HealtAssessment">
         <classes>
             <!--//add classes below which needs to be executed-->
-            <class name="TestHealthRiskAssessment">
+            <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
                 <methods>
                     <!--//add test cases below with method name, which needs to be executed-->
                     <include name="verifyHealthRiskAssessment_yes"/>
@@ -31,7 +31,7 @@
     <test name="test_tracking">
         <classes>
             <!--//add classes below which needs to be executed-->
-            <class name="TestTracking">
+            <class name="com.edifecs.breathe.qa.testcases.TestTracking">
                 <!--<methods>
                     &lt;!&ndash;//add test cases below with method name, which needs to be executed&ndash;&gt;
                     <include name="verifyRowCount"/>
