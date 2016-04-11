@@ -24,7 +24,8 @@ public class SettingsActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction().add(R.id.container, new FragmentSettings(this)).commit();
+            getFragmentManager().beginTransaction().add(R.id.container, new FragmentSettings(this))
+                    .commit();
         }
     }
 

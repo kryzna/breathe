@@ -33,9 +33,11 @@ public class FragmentHealthRiskAssesment extends Fragment {
     ProgressDialog progressDialog;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
         ((MainActivity) getActivity()).setActionBarTitle(getString(R.string.health_risk_assesment));
-        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_health_risk_assesment, null);
+        ViewGroup root =
+                (ViewGroup) inflater.inflate(R.layout.fragment_health_risk_assesment, null);
 
         mRecyclerView = (RecyclerView) root.findViewById(R.id.questionnaire_list_view);
         mRecyclerView.setHasFixedSize(true);
@@ -46,12 +48,12 @@ public class FragmentHealthRiskAssesment extends Fragment {
         new QuestionnaireService().execute();
         //TODO: Handle the delay in App, move the questionnaire fetching in Assessment Fragment.
         /*try {
-            Thread.sleep(5000L);
+        Thread.sleep(5000L);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+        e.printStackTrace();
         }*/
-       /* mAdapter = new QuetionnaireAdapter(getContext(), questionnaireList);
-        mRecyclerView.setAdapter(mAdapter);*/
+        /* mAdapter = new QuetionnaireAdapter(getContext(), questionnaireList);
+         mRecyclerView.setAdapter(mAdapter);*/
         return root;
     }
 
@@ -65,7 +67,8 @@ public class FragmentHealthRiskAssesment extends Fragment {
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new GsonHttpMessageConverter());
                 //TODO: Send Questionnaire query
-                Questionnaire questionnaire = restTemplate.getForObject(url, Questionnaire.class, "1");
+                Questionnaire questionnaire =
+                        restTemplate.getForObject(url, Questionnaire.class, "1");
                 List<Questionnaire> list = new ArrayList<Questionnaire>(1);
                 list.add(questionnaire);
                 questionnaireList = list;

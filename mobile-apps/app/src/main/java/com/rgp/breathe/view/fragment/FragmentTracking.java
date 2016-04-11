@@ -46,7 +46,8 @@ public class FragmentTracking extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
         // Set title bar
         ((MainActivity) getActivity()).setActionBarTitle(getString(R.string.tracking));
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_tracking, null);
@@ -71,12 +72,14 @@ public class FragmentTracking extends Fragment {
                     initializeData();
                     floatingActionButton.show();
                 } else if (position == 1) {
-                    readingSinceTextView.setText("No reading found Since " + Helper.getFormattedDate("dd.MM.yyyy"));
+                    readingSinceTextView.setText(
+                            "No reading found Since " + Helper.getFormattedDate("dd.MM.yyyy"));
                     mAdapter = new TrackerAdapter(getContext(), new ArrayList<PeakFlow>());
                     mRecyclerView.setAdapter(mAdapter);
                     floatingActionButton.hide();
                 } else if (position == 2) {
-                    readingSinceTextView.setText("No reading found Since " + Helper.getFormattedDate("dd.MM.yyyy"));
+                    readingSinceTextView.setText(
+                            "No reading found Since " + Helper.getFormattedDate("dd.MM.yyyy"));
                     mAdapter = new TrackerAdapter(getContext(), new ArrayList<PeakFlow>());
                     mRecyclerView.setAdapter(mAdapter);
                     floatingActionButton.hide();
@@ -111,7 +114,8 @@ public class FragmentTracking extends Fragment {
     }
 
     private void initializeAdapter() {
-        readingSinceTextView.setText(peakFlowList.size() + " reading Since " + Helper.getFormattedDate("dd.MM.yyyy"));
+        readingSinceTextView.setText(
+                peakFlowList.size() + " reading Since " + Helper.getFormattedDate("dd.MM.yyyy"));
         mAdapter = new TrackerAdapter(getContext(), peakFlowList);
         mRecyclerView.setAdapter(mAdapter);
     }

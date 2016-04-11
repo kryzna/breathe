@@ -1,4 +1,3 @@
-apply from: 'https://ecgit01.corp.edifecs.com/cdm/coding-standard/raw/master/coding-standard-android.gradle'
 apply plugin: 'com.android.application'
 
 group 'com.edifecs.cdm'
@@ -61,6 +60,36 @@ android {
     }
 }
 
+// -------------------- Code quality plugins ---------------------- //
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "com.diffplug.gradle.spotless:spotless:1.3.3"
+    }
+}
+apply plugin: "com.diffplug.gradle.spotless"
+sourceSets {
+    main {
+        java.srcDir file('src/main/java/src')
+    }
+    unitTest {
+        java.srcDir file('tests/java/')
+    }
+    automation {
+        java.srcDir file('src/androidTest/java/src')
+    }
+}
+
+spotless {
+    java {
+        eclipseFormatFile 'eclipse-java-google-style.xml'  // XML file dumped out by the Eclipse formatter
+    }
+}
+// ---------------------------------------------------------- //
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
