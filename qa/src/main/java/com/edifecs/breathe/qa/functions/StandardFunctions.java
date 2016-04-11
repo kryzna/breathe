@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 /**
  * Created by amolverm on 3/29/2016.
  */
-public class Standardfunctions {
+public class StandardFunctions {
     public void click(WebElement webElement){
         webElement.click();
     }
