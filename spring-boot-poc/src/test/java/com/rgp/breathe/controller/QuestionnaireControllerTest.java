@@ -1,4 +1,4 @@
-package com.rgp.breathe;
+package com.rgp.breathe.controller;
 
 import com.rgp.breathe.questionaire.controller.HealthController;
 import org.junit.Before;
@@ -20,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = MockServletContext.class)
 @WebAppConfiguration
-public class HelloControllerTest {
+public class QuestionnaireControllerTest {
 
 	private MockMvc mvc;
 

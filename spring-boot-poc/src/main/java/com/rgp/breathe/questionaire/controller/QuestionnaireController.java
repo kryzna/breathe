@@ -18,7 +18,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @RestController
 @RequestMapping("/questionnaire/")
 public class QuestionnaireController {
-    private final Logger logger = LoggerFactory.getLogger(QuestionnaireController.class);
+    private static Logger logger = LoggerFactory.getLogger(QuestionnaireController.class);
 
     @Autowired
     private QuestionnaireService questionnaireService;
@@ -33,7 +33,7 @@ public class QuestionnaireController {
     public ResponseEntity<RiskScore> receiveResponse(@RequestBody QuestionnaireResponse questionnaireResponse) {
         logger.info("Received response from questionnaireResponse = " + questionnaireResponse);
         RiskScore dummyRiskScore = new RiskScore();
-        dummyRiskScore.setScore(ThreadLocalRandom.current().nextDouble(1, 10));
+        dummyRiskScore.setScore(ThreadLocalRandom.current().nextDouble(0.5, 10));
 
         return new ResponseEntity<>(dummyRiskScore, HttpStatus.CREATED);
     }
