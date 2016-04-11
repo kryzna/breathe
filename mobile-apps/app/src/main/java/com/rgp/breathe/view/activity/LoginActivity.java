@@ -35,13 +35,13 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_login); 
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         sharedPreferencesHelper = new SharedPreferencesHelper(sharedPreferences);
-        if (sharedPreferencesHelper.ismAutoLogin()) {
+        /*if (sharedPreferencesHelper.ismAutoLogin()) {
             gotoMainScreen();
-        }
+        }*/
 
         mEmailView = (EditText) findViewById(R.id.input_email);
 
@@ -99,7 +99,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private boolean isEmailValid(String email) {
-        if (TextUtils.isEmpty(email)) {
+        /*if (TextUtils.isEmpty(email)) {
             mEmailView.setError(getString(R.string.error_field_required));
             return false;
         } else {
@@ -109,12 +109,13 @@ public class LoginActivity extends AppCompatActivity {
             } else {
                 return true;
             }
-        }
+        }*/
 
+        return true;
     }
 
     private boolean isPasswordValid(String password) {
-        if (TextUtils.isEmpty(password)) {
+        /*if (TextUtils.isEmpty(password)) {
             mPasswordView.setError(getString(R.string.error_field_required));
             return false;
         } else {
@@ -124,7 +125,8 @@ public class LoginActivity extends AppCompatActivity {
             } else {
                 return true;
             }
-        }
+        }*/
+        return true;
     }
 
     public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
@@ -148,7 +150,9 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected Boolean doInBackground(Void... params) {
             // TODO: attempt authentication against a network service.
-            String email = sharedPreferencesHelper.getmEmail();
+
+
+            /*String email = sharedPreferencesHelper.getmEmail();
             String pass = sharedPreferencesHelper.getmPassword();
             if (email.equals(mEmail)) {
                 if (pass.equals(mPassword)) {
@@ -160,7 +164,8 @@ public class LoginActivity extends AppCompatActivity {
             } else {
                 isUserValid = false;
                 return false;
-            }
+            }*/
+            return true;
         }
 
         @Override

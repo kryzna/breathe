@@ -116,10 +116,11 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private boolean isRegisterFormValid(String name, String email, String dob, String password) {
-        if (isNameValid(name) && isEmailValid(email) && isDOBValid(dob) && isPasswordValid(password)) {
+        /*if (isNameValid(name) && isEmailValid(email) && isDOBValid(dob) && isPasswordValid(password)) {
             return true;
         }
-        return false;
+        return false;*/
+        return true;
     }
 
     private boolean isNameValid(String name) {
@@ -191,7 +192,7 @@ public class RegisterActivity extends AppCompatActivity {
         protected Boolean doInBackground(Void... params) {
             progressDialog.show();
             // TODO: create user against a network service.
-            sharedPreferencesHelper.saveUserInfo(mUserName, mEmail, mDOB, mPassword);
+            //sharedPreferencesHelper.saveUserInfo(mUserName, mEmail, mDOB, mPassword);
             return true;
         }
 
