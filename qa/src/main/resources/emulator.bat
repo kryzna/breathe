@@ -1,0 +1,1 @@
+player --vm-name Samsung Galaxy S5 - 4.4.4 - API 19 - 1080*1920
