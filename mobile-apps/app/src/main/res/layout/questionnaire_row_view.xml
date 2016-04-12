@@ -32,8 +32,7 @@
                     android:layout_weight="1"
                     android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:textStyle="normal"
-                    android:text="Asthma assesment by NIC" />
+                    android:textStyle="normal"/>
             </LinearLayout>
 
             <LinearLayout
@@ -47,7 +46,7 @@
                     android:id="@+id/questionary_status_button"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="not completed"
+                    android:text="@string/questionnaire_not_completed"
                     android:textColor="@color/cyan"/>
             </LinearLayout>
         </RelativeLayout>

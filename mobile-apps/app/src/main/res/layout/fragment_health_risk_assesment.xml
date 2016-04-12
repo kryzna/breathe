@@ -12,13 +12,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="top|left"
-            android:text="Asthma Health Risk"
+            android:text="@string/health_risk_page_title"
             android:textSize="25sp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="Average (6.1 of 10)"
+            android:text="@string/health_risk_average_score"
             android:textColor="@color/light_orange"
             android:textSize="20sp" />
 
@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="Questionnaries"
+            android:text="@string/questionnaires"
             android:textSize="20sp" />
 
         <View
