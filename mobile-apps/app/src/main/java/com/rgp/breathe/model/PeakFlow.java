@@ -14,7 +14,8 @@ public class PeakFlow {
     private String geoLocation;
     private String peakFlowReading;
 
-    public PeakFlow(String dateTime, List<String> symptomsList,  List<String> triggersList, String geoLocation, String peakFlowReading) {
+    public PeakFlow(String dateTime, List<String> symptomsList, List<String> triggersList,
+            String geoLocation, String peakFlowReading) {
         this.dateTime = dateTime;
         this.symptomsList = symptomsList;
         this.triggersList = triggersList;
@@ -49,11 +50,11 @@ public class PeakFlow {
         this.symptomsList = symptomsList;
     }
 
-    public  List<String> getTriggersList() {
+    public List<String> getTriggersList() {
         return triggersList;
     }
 
-    public void setTriggersList( List<String> triggersList) {
+    public void setTriggersList(List<String> triggersList) {
         this.triggersList = triggersList;
     }
 

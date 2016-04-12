@@ -71,7 +71,8 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        sharedPreferencesHelper = new SharedPreferencesHelper(PreferenceManager.getDefaultSharedPreferences(this));
+        sharedPreferencesHelper =
+                new SharedPreferencesHelper(PreferenceManager.getDefaultSharedPreferences(this));
     }
 
 
@@ -106,18 +107,21 @@ public class RegisterActivity extends AppCompatActivity {
         int mMonth = mcurrentDate.get(Calendar.MONTH);
         int mDay = mcurrentDate.get(Calendar.DAY_OF_MONTH);
 
-        DatePickerDialog mDatePicker = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-            public void onDateSet(DatePicker datepicker, int selectedyear, int selectedmonth, int selectedday) {
-                mDateOfBirthView.setText(selectedday + "/" + (selectedmonth + 1) + "/" + selectedyear);
-            }
-        }, mYear, mMonth, mDay);
+        DatePickerDialog mDatePicker =
+                new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+                    public void onDateSet(DatePicker datepicker, int selectedyear,
+                            int selectedmonth, int selectedday) {
+                        mDateOfBirthView.setText(
+                                selectedday + "/" + (selectedmonth + 1) + "/" + selectedyear);
+                    }
+                }, mYear, mMonth, mDay);
         mDatePicker.setTitle("Select date");
         mDatePicker.show();
     }
 
     private boolean isRegisterFormValid(String name, String email, String dob, String password) {
         /*if (isNameValid(name) && isEmailValid(email) && isDOBValid(dob) && isPasswordValid(password)) {
-            return true;
+        return true;
         }
         return false;*/
         return true;
@@ -201,7 +205,8 @@ public class RegisterActivity extends AppCompatActivity {
             progressDialog.hide();
             mAuthTask = null;
             if (success) {
-                Toast.makeText(getApplicationContext(), "User created successfully", Toast.LENGTH_LONG);
+                Toast.makeText(getApplicationContext(), "User created successfully",
+                        Toast.LENGTH_LONG);
                 showSignInScreen();
             } else {
                 Toast.makeText(getApplicationContext(), "User already exist!", Toast.LENGTH_LONG);

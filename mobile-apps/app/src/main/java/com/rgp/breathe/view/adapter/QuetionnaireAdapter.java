@@ -23,7 +23,8 @@ import java.util.List;
 /**
  * Created by mdansari on 3/29/2016.
  */
-public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapter.QuetionnaireViewHolder> {
+public class QuetionnaireAdapter
+        extends RecyclerView.Adapter<QuetionnaireAdapter.QuetionnaireViewHolder> {
 
     private Context context;
     private List<Questionnaire> questionnaireList;
@@ -49,7 +50,8 @@ public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapte
     public QuetionnaireViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // create a new view
         this.parent = parent;
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.questionnaire_row_view, parent, false);
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.questionnaire_row_view, parent, false);
         QuetionnaireViewHolder quetionnaireViewHolder = new QuetionnaireViewHolder(view);
         return quetionnaireViewHolder;
     }
@@ -67,9 +69,11 @@ public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapte
 
         if (status.equalsIgnoreCase("completed")) {
             holder.questionnaireStatus.setTextColor(ContextCompat.getColor(context, R.color.cyan));
-            holder.questionnaireStatus.setText("completed on " + Helper.getFormattedDate("MM.dd.yyyy"));
+            holder.questionnaireStatus
+                    .setText("completed on " + Helper.getFormattedDate("MM.dd.yyyy"));
         } else {
-            holder.questionnaireStatus.setTextColor(ContextCompat.getColor(context, R.color.orange_red));
+            holder.questionnaireStatus
+                    .setTextColor(ContextCompat.getColor(context, R.color.orange_red));
         }
         holder.questionnaireStatus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,7 +81,8 @@ public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapte
                 if (status.contains("not completed")) {
                     showQuestionsDialog(0, title, questionnaireList.get(position).getQuestions());
                 } else {
-                    showSubmitQuestionsDialog(title, questionnaireList.get(position).getQuestions());
+                    showSubmitQuestionsDialog(title,
+                            questionnaireList.get(position).getQuestions());
                 }
             }
         });
@@ -91,7 +96,8 @@ public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapte
     private void showSubmitQuestionsDialog(String title, List<Question> questionList) {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
         alertDialog.setTitle(title);
-        alertDialog.setMessage("This Questionnaire set is already submitted.\n\n Do you want to edit it again?");
+        alertDialog.setMessage(
+                "This Questionnaire set is already submitted.\n\n Do you want to edit it again?");
         alertDialog.setPositiveButton("YES", new YesButtonClickListener(title, questionList));
         alertDialog.setNegativeButton("NO", new NoButtonClickListener());
         alertDialog.create();
@@ -125,10 +131,13 @@ public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapte
     }
 
 
-    private void showQuestionsDialog(final int questionNo, final String title, final List<Question> questionList) {
+    private void showQuestionsDialog(final int questionNo, final String title,
+            final List<Question> questionList) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        final LinearLayout linearLayout = (LinearLayout) LayoutInflater.from(parent.getContext()).inflate(R.layout.question_content, parent, false);
-        TextView questionnaireTitleView = (TextView) linearLayout.findViewById(R.id.questionnaire_title);
+        final LinearLayout linearLayout = (LinearLayout) LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.question_content, parent, false);
+        TextView questionnaireTitleView =
+                (TextView) linearLayout.findViewById(R.id.questionnaire_title);
         questionnaireTitleView.setText(title);
 
         TextView questionContentView = (TextView) linearLayout.findViewById(R.id.question_content);
@@ -161,8 +170,7 @@ public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapte
                         public void onClick(DialogInterface dialog, int id) {
                             //dialog.cancel();
                         }
-                    })
-                    .setNegativeButton("PREVIOUS", new DialogInterface.OnClickListener() {
+                    }).setNegativeButton("PREVIOUS", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             showQuestionsDialog(questionNo - 1, title, questionList);
                         }
@@ -176,8 +184,7 @@ public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapte
                         public void onClick(DialogInterface dialog, int id) {
                             showQuestionsDialog(questionNo + 1, title, questionList);
                         }
-                    })
-                    .setNegativeButton("PREVIOUS", new DialogInterface.OnClickListener() {
+                    }).setNegativeButton("PREVIOUS", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             showQuestionsDialog(questionNo - 1, title, questionList);
                         }
@@ -188,14 +195,15 @@ public class QuetionnaireAdapter extends RecyclerView.Adapter<QuetionnaireAdapte
         helpDialog.show();
     }
 
-    private void addAnswersInCheckBoxFormat(List<Choice> possibleAnswers, LinearLayout linearLayout) {
+    private void addAnswersInCheckBoxFormat(List<Choice> possibleAnswers,
+            LinearLayout linearLayout) {
         // when answer is of type checkbox
         for (Choice pa : possibleAnswers) {
             AppCompatCheckBox compatCheckBox = new AppCompatCheckBox(context);
             compatCheckBox.setText(pa.getText());
-            compatCheckBox.setLayoutParams(new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT));
+            compatCheckBox.setLayoutParams(
+                    new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT));
             linearLayout.addView(compatCheckBox);
         }
     }

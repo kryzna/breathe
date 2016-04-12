@@ -37,6 +37,7 @@ public class Questionnaire {
     public void setQuestions(List<Question> questions) {
         this.questions = questions;
     }
+
     public String getStatus() {
         return status;
     }

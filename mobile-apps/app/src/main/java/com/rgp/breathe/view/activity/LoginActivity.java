@@ -35,12 +35,12 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login); 
+        setContentView(R.layout.activity_login);
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         sharedPreferencesHelper = new SharedPreferencesHelper(sharedPreferences);
         /*if (sharedPreferencesHelper.ismAutoLogin()) {
-            gotoMainScreen();
+        gotoMainScreen();
         }*/
 
         mEmailView = (EditText) findViewById(R.id.input_email);
@@ -100,15 +100,15 @@ public class LoginActivity extends AppCompatActivity {
 
     private boolean isEmailValid(String email) {
         /*if (TextUtils.isEmpty(email)) {
-            mEmailView.setError(getString(R.string.error_field_required));
-            return false;
+        mEmailView.setError(getString(R.string.error_field_required));
+        return false;
         } else {
-            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                mEmailView.setError(getString(R.string.error_invalid_email));
-                return false;
-            } else {
-                return true;
-            }
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+        mEmailView.setError(getString(R.string.error_invalid_email));
+        return false;
+        } else {
+        return true;
+        }
         }*/
 
         return true;
@@ -116,15 +116,15 @@ public class LoginActivity extends AppCompatActivity {
 
     private boolean isPasswordValid(String password) {
         /*if (TextUtils.isEmpty(password)) {
-            mPasswordView.setError(getString(R.string.error_field_required));
-            return false;
+        mPasswordView.setError(getString(R.string.error_field_required));
+        return false;
         } else {
-            if (!(password.length() > 1)) {
-                mPasswordView.setError(getString(R.string.error_invalid_password));
-                return false;
-            } else {
-                return true;
-            }
+        if (!(password.length() > 1)) {
+        mPasswordView.setError(getString(R.string.error_invalid_password));
+        return false;
+        } else {
+        return true;
+        }
         }*/
         return true;
     }
@@ -156,10 +156,10 @@ public class LoginActivity extends AppCompatActivity {
             String pass = sharedPreferencesHelper.getmPassword();
             if (email.equals(mEmail)) {
                 if (pass.equals(mPassword)) {
-                    return true;
+              return true;
                 } else {
-                    isPassValid = false;
-                    return false;
+              isPassValid = false;
+              return false;
                 }
             } else {
                 isUserValid = false;
@@ -177,11 +177,13 @@ public class LoginActivity extends AppCompatActivity {
                 gotoMainScreen();
             } else {
                 if (!isUserValid) {
-                    Toast.makeText(LoginActivity.this, "User not exist, create user to log in.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this, "User not exist, create user to log in.",
+                            Toast.LENGTH_LONG).show();
                     mEmailView.setError("User not exist.");
                     mEmailView.requestFocus();
                 } else {
-                    Toast.makeText(LoginActivity.this, "Incorrect password.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this, "Incorrect password.", Toast.LENGTH_LONG)
+                            .show();
                     mPasswordView.setError(getString(R.string.error_incorrect_password));
                     mPasswordView.requestFocus();
                 }

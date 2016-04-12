@@ -6,6 +6,5 @@ package com.rgp.breathe.dao;
 public enum QuestionType {
     RADIO, CHECKBOX;
 
-    QuestionType() {
-    }
+    QuestionType() {}
 }

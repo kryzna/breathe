@@ -26,8 +26,8 @@ public class TestHealthRiskAssessment {
     @BeforeClass
     public void startApp() throws IOException, InterruptedException {
         Utility.loadPropertyFile("config.properties");
-        myxls = new Excelreader(System.getProperty("user.dir")+Utility.getValueOf("testExcel"));
-      // Need to commented if run through testng TestSuite
+        myxls = new Excelreader(System.getProperty("user.dir") + Utility.getValueOf("testExcel"));
+        // Need to commented if run through testng TestSuite
         andriodsetup.andySetup();
         loginPage.setLoginButton(andriodsetup.aDriver);
         loginPage.setPatientemailid(andriodsetup.aDriver);
@@ -48,35 +48,31 @@ public class TestHealthRiskAssessment {
 
     @Test(priority = 1)
     // TC1 - No option selected
-    public void verify_ifnothingselected(){
+    public void verify_ifnothingselected() {
         try {
 
 
-        }
-        catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @Test(priority = 2)
     // TC2 - If selected
-    public void verify_ifselected(){
+    public void verify_ifselected() {
         try {
 
 
-        }
-        catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
 
 
-  /*  @AfterClass
+    /*  @AfterClass
     public void teardown() throws IOException {
         andriodsetup.aDriver.quit();
     }
-*/
+    */
 }

@@ -25,7 +25,8 @@ import com.rgp.breathe.view.fragment.FragmentHealthRiskAssesment;
 import com.rgp.breathe.view.fragment.FragmentTracking;
 import com.rgp.breathe.view.fragment.TreatmentPlanFragment;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final int RESULT_SETTINGS = 1;
     private Toolbar toolbar;
@@ -45,10 +46,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        sharedPreferencesHelper = new SharedPreferencesHelper(PreferenceManager.getDefaultSharedPreferences(this));
+        sharedPreferencesHelper =
+                new SharedPreferencesHelper(PreferenceManager.getDefaultSharedPreferences(this));
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar,
+                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         mDrawerLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
 
