@@ -14,6 +14,8 @@
 - buildImage (builds a docker image - docker build . - needs a Dockerfile)
 - createContainer (create a container with the project name as the name of the container) - same as docker create (imagename)
 - startContainer (runs the created container - same as docker run -p 8080:8080 (imagename)
+- stopAndRemoveContainer - same as docker rm -f (containerID) or name
+- stopContainer - same as docker stop (containerID or name)
 
-# docker commands
-- https://docs.docker.com/engine/reference/commandline/cli/
+# docker commands reference
+- https://docs.docker.com/engine/reference/commandline/cli/ 
