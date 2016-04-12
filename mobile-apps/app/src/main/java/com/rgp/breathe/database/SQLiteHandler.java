@@ -38,10 +38,10 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_PEAKFLOW_TABLE = "CREATE TABLE " + TABLE_PEAKFLOW + "("
-                + KEY_ID + " INTEGER PRIMARY KEY," + KEY_PEAKFLOWREADING + " TEXT," + KEY_DATETIME + " DATETIME DEFAULT CURRENT_TIMESTAMP,"
-                + KEY_LOCATION + " TEXT," + KEY_SYMPTOMS + " TEXT,"
-                + KEY_TRIGGERS + " TEXT" + ")";
+        String CREATE_PEAKFLOW_TABLE = "CREATE TABLE " + TABLE_PEAKFLOW + "(" + KEY_ID
+                + " INTEGER PRIMARY KEY," + KEY_PEAKFLOWREADING + " TEXT," + KEY_DATETIME
+                + " DATETIME DEFAULT CURRENT_TIMESTAMP," + KEY_LOCATION + " TEXT," + KEY_SYMPTOMS
+                + " TEXT," + KEY_TRIGGERS + " TEXT" + ")";
         db.execSQL(CREATE_PEAKFLOW_TABLE);
 
         Log.d(TAG, "Database peakflow table created");
@@ -66,13 +66,16 @@ public class SQLiteHandler extends SQLiteOpenHelper {
     public List<PeakFlow> getPeakFlowList() {
         List<PeakFlow> peakFlowList = new ArrayList<>();
 
-        String selectQuery = "SELECT  peakflow_reading,  datetime(date_time, 'localtime') as Time, location FROM " + TABLE_PEAKFLOW + " ORDER BY " + KEY_DATETIME + " DESC";
+        String selectQuery =
+                "SELECT  peakflow_reading,  datetime(date_time, 'localtime') as Time, location FROM "
+                        + TABLE_PEAKFLOW + " ORDER BY " + KEY_DATETIME + " DESC";
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
         for (int i = 0; i < cursor.getCount(); i++) {
             cursor.moveToPosition(i);
-            peakFlowList.add(new PeakFlow(cursor.getString(0), cursor.getString(1), cursor.getString(2)));
+            peakFlowList.add(
+                    new PeakFlow(cursor.getString(0), cursor.getString(1), cursor.getString(2)));
         }
         cursor.close();
         db.close();

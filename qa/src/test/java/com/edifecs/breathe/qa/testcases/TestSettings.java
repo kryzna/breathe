@@ -20,10 +20,13 @@ public class TestSettings {
     RightMenu settings = new RightMenu();
     ExcelReader myxls;
     Andriodsetup andriodsetup = new Andriodsetup();
+
     @BeforeClass
     public void startApp() throws IOException, InterruptedException {
         Utility.loadPropertyFile("config.properties");
+
         myxls = new ExcelReader();
+
         andriodsetup.andySetup();
         wait = new WebDriverWait(andriodsetup.aDriver, 5);
         loginPage.setLoginButton(andriodsetup.aDriver);

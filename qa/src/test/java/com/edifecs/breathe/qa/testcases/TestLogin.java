@@ -22,6 +22,7 @@ public class TestLogin {
     LeftMenu leftmenu = new LeftMenu();
     ExcelReader myxls;
     Andriodsetup andriodsetup = new Andriodsetup();
+
     @BeforeClass
     public void startApp() throws IOException, InterruptedException {
         System.out.println(System.getProperty("user.dir"));
@@ -33,7 +34,8 @@ public class TestLogin {
         loginPage.setPatientemailid(andriodsetup.aDriver);
         loginPage.setPatient_Password(andriodsetup.aDriver);
     }
-/*
+
+    /*
     // This test case is to check if blank username and password were submitted
     @Test(priority = 1)
     public void testBlankLogin() throws InterruptedException {
@@ -44,7 +46,7 @@ public class TestLogin {
         wait = new WebDriverWait(andriodsetup.aDriver, 5);
         // assert for message if user pass blank credentails
     }
-
+    
     // This test case is to check if blank username was submitted
     @Test(priority = 1)
     public void testBlankUsernameLogin() throws InterruptedException {
@@ -55,7 +57,7 @@ public class TestLogin {
         wait = new WebDriverWait(andriodsetup.aDriver, 5);
         // assert for message if user pass blank username
     }
-
+    
     // This test case is to check if blank password was submitted
     @Test(priority = 1)
     public void testBlankPasswordLogin() throws InterruptedException {
@@ -66,7 +68,7 @@ public class TestLogin {
         wait = new WebDriverWait(andriodsetup.aDriver, 5);
         // assert for message if user pass blank password
     }
-*/
+    */
     // This test case is to check if valid credentails were submitted
     @Test(priority = 1)
     public void testValidLogin() throws InterruptedException {
@@ -79,46 +81,42 @@ public class TestLogin {
             // andriodsetup.aDriver.findElement(By.xpath("//android.widget.ImageButton[@content-desc='Open navigation drawer']")).click();
             leftmenu.getleftnav(andriodsetup.aDriver);
             leftmenu.leftnavclick();
-        }
-        catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     // This test case is to check if correct username got displayed or not
     @Test(priority = 2)
-    public void verifyUserName(){
+    public void verifyUserName() {
         try {
             leftmenu.setUserName(andriodsetup.aDriver);
-            assert (leftmenu.getUserName().getText().toString().equals(myxls.getCellData("UserData", "UserName", 2)));
+            assert (leftmenu.getUserName().getText().toString()
+                    .equals(myxls.getCellData("UserData", "UserName", 2)));
             wait = new WebDriverWait(andriodsetup.aDriver, 5);
-        }
-        catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     // This test case is to check if correct emailid got displayed or not
     @Test(priority = 3)
-    public void verifyUserEmail(){
+    public void verifyUserEmail() {
         try {
             leftmenu.setUserEmail(andriodsetup.aDriver);
-            assert (leftmenu.getUserEmail().getText().toString().equals(myxls.getCellData("UserData", "PatientEmailid", 2)));
-        }
-        catch(Exception e)
-        {
+            assert (leftmenu.getUserEmail().getText().toString()
+                    .equals(myxls.getCellData("UserData", "PatientEmailid", 2)));
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     // -------------Need to add test cases for autologin functionality-----------------------------
 
-     @AfterClass
+    @AfterClass
     public void teardown() throws IOException {
         andriodsetup.aDriver.quit();
-         Appiumserver.stopAppiumServer();
+        Appiumserver.stopAppiumServer();
 
 
     }

@@ -36,6 +36,7 @@ public class TestHealthRiskAssessment {
     @BeforeClass
     public void startApp() throws IOException, InterruptedException {
         Utility.loadPropertyFile("config.properties");
+
         myxls = new ExcelReader();
       // Need to commented if run through testng TestSuite
         andriodsetup.andySetup();
@@ -86,6 +87,26 @@ public class TestHealthRiskAssessment {
         }
         catch(AssertionError e)
         {
+
+    @Test(priority = 1)
+    // TC1 - No option selected
+    public void verify_ifnothingselected() {
+        try {
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test(priority = 2)
+    // TC2 - If selected
+    public void verify_ifselected() {
+        try {
+
+
+        } catch (Exception e) {
+
             e.printStackTrace();
         }
         standardFunctions.click(healthRiskAssesment.getElementNextButton());
@@ -98,9 +119,9 @@ public class TestHealthRiskAssessment {
         };
     }*/
 
-  /*  @AfterClass
+    /*  @AfterClass
     public void teardown() throws IOException {
         andriodsetup.aDriver.quit();
     }
-*/
+    */
 }

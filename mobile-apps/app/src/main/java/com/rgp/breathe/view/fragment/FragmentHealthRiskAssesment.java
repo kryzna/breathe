@@ -19,6 +19,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by mdansari on 3/28/2016.
@@ -33,9 +34,11 @@ public class FragmentHealthRiskAssesment extends Fragment {
     ProgressDialog progressDialog;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
         ((MainActivity) getActivity()).setActionBarTitle(getString(R.string.health_risk_assesment));
-        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_health_risk_assesment, null);
+        ViewGroup root =
+                (ViewGroup) inflater.inflate(R.layout.fragment_health_risk_assesment, null);
 
         mRecyclerView = (RecyclerView) root.findViewById(R.id.questionnaire_list_view);
         mRecyclerView.setHasFixedSize(true);
@@ -50,7 +53,7 @@ public class FragmentHealthRiskAssesment extends Fragment {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }*/
-       /* mAdapter = new QuetionnaireAdapter(getContext(), questionnaireList);
+        /* mAdapter = new QuetionnaireAdapter(getContext(), questionnaireList);
         mRecyclerView.setAdapter(mAdapter);*/
         return root;
     }
@@ -61,12 +64,14 @@ public class FragmentHealthRiskAssesment extends Fragment {
         @Override
         protected List<Questionnaire> doInBackground(Void... params) {
             try {
-                final String url = "http://10.64.34.44:8080/questionnaire/1";
+                final String url =
+                        "http://10.64.34.36:8080/questionnaire/{quesitonnaireId}?prefLang={prefLang}";
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new GsonHttpMessageConverter());
                 //TODO: Send Questionnaire query
-                Questionnaire questionnaire = restTemplate.getForObject(url, Questionnaire.class, "1");
-                List<Questionnaire> list = new ArrayList<Questionnaire>(1);
+                Questionnaire questionnaire = restTemplate.getForObject(url, Questionnaire.class,
+                        "1", Locale.getDefault().toString());
+                List<Questionnaire> list = new ArrayList<>(1);
                 list.add(questionnaire);
                 questionnaireList = list;
                 return list;

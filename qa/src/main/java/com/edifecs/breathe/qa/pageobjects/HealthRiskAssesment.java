@@ -18,11 +18,12 @@ public class HealthRiskAssesment {
     public static WebElement elementNextButton;
     List<WebElement> listAnswerOptions = new ArrayList<WebElement>();
 
-    public void getleftnav_HealtAssessment(AndroidDriver aDriver){
-        leftnav_Healthassessment=aDriver.findElement(By.xpath("//android.widget.CheckedTextView[@text='Health Risk Assesment']"));
+    public void getleftnav_HealtAssessment(AndroidDriver aDriver) {
+        leftnav_Healthassessment = aDriver.findElement(
+                By.xpath("//android.widget.CheckedTextView[@text='Health Risk Assesment']"));
     }
 
-    public void leftnavHealthAssessmentclick(){
+    public void leftnavHealthAssessmentclick() {
         leftnav_Healthassessment.click();
     }
 
@@ -75,8 +76,9 @@ public class HealthRiskAssesment {
         elementNextButton.click();
     }
 
-    public void getHealtAssessment_questionnairechoice_yes_radio1(AndroidDriver aDriver){
-        getHealtAssessment_questionnairechoice_yes_radio1=aDriver.findElement(By.xpath("//android.widget.RadioButton[@text='YES']"));
+    public void getHealtAssessment_questionnairechoice_yes_radio1(AndroidDriver aDriver) {
+        getHealtAssessment_questionnairechoice_yes_radio1 =
+                aDriver.findElement(By.xpath("//android.widget.RadioButton[@text='YES']"));
         getHealtAssessment_questionnairechoice_yes_radio1.click();
     }
 
@@ -87,8 +89,9 @@ public class HealthRiskAssesment {
         getHealtAssessment_questionnairechoice_next.click();
     }
 
-    public void getHealtAssessment_questionnairechoice_checkbox1(AndroidDriver aDriver){
-        getHealtAssessment_questionnairechoice_checkbox1=aDriver.findElement(By.xpath("//android.widget.CheckBox[@text='Two times a week or less']"));
+    public void getHealtAssessment_questionnairechoice_checkbox1(AndroidDriver aDriver) {
+        getHealtAssessment_questionnairechoice_checkbox1 = aDriver.findElement(
+                By.xpath("//android.widget.CheckBox[@text='Two times a week or less']"));
         getHealtAssessment_questionnairechoice_checkbox1.click();
     }
 

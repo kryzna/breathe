@@ -83,11 +83,11 @@ public class PeakFlowActivity extends AppCompatActivity {
     }
 
     private class FetchUserAddressTask extends AsyncTask<Void, Void, String> {
-        private FetchUserAddressTask() {
-        }
+        private FetchUserAddressTask() {}
 
         protected String doInBackground(Void... params) {
-            return LocationAddress.getAddressFromLatLang(locationListener.latitude, locationListener.longitude, getApplicationContext());
+            return LocationAddress.getAddressFromLatLang(locationListener.latitude,
+                    locationListener.longitude, getApplicationContext());
         }
 
         protected void onPostExecute(String s) {
@@ -98,7 +98,9 @@ public class PeakFlowActivity extends AppCompatActivity {
                 address2.setText(location[1]);
                 return;
             }
-            Toast.makeText(getApplicationContext(), "Unable to fetch address. Try again or change your setting!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),
+                    "Unable to fetch address. Try again or change your setting!", Toast.LENGTH_LONG)
+                    .show();
             address1.setText("");
             address2.setText("");
         }
@@ -143,7 +145,8 @@ public class PeakFlowActivity extends AppCompatActivity {
     private void savePeakflowInfo() {
         //final ProgressDialog loading = ProgressDialog.show(this, null, "Adding new entry...", false, false);
         StringBuilder peakflowReading = new StringBuilder();
-        peakflowReading.append(wheelReading1.getText()).append(wheelReading2.getText()).append(wheelReading3.getText()).append(" ml/s");
+        peakflowReading.append(wheelReading1.getText()).append(wheelReading2.getText())
+                .append(wheelReading3.getText()).append(" ml/s");
         String currentDateTime = Helper.getFormattedDate(DATE_TIME_FORMAT);
         String location = address2.getText().toString();
         PeakFlow peakFlow = new PeakFlow(peakflowReading.toString(), currentDateTime, location);

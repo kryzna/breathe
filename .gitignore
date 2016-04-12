@@ -48,4 +48,5 @@ crashlytics.properties
 crashlytics-build.properties
 
 #**/res          - Need resources for Android
-
+.gradle
+**/local.properties

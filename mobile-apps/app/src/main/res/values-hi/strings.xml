@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ब्रीथ</string>
+    <string name="action_settings">सेटिंग्स</string>
+    <string name="treatment_plan">ईलाज योजना</string>   
+    <string name="health_risk_assesment">स्वास्थ्य जोखिम मूल्यांकन</string>
+	<string name="alerts">चेतावनी</string>
+    <string name="tracking">नज़र रखना</string>
+	<string name="share_text">शेयर</string>
+	<string name="about_text">के बारे में</string>   
+
+    <string name="pref_send_report">क्रैश रिपोर्ट भेजें</string>
+    <string name="pref_user_name">सेट उपयोगकर्ता नाम</string>
+    <string name="pref_user_name_summary">अपने उपयोगकर्ता नाम सेट करें</string>
+
+    <string name="pref_user_profile">उपयोगकर्ता प्रोफ़ाइल</string>
+    <string name="pref_update_setting">सेटिंग अपडेट करें</string>
+
+    <string name="health_risk_page_title">दमा स्वास्थ्य जोखिम मूल्यांकन</string>
+    <string name="health_risk_average_score">औसत (6.1 of 10)</string>
+    <string name="questionnaires">प्रश्नावली</string>
+
+    <string name="questionnaire_not_completed">पूरा नहीं किया है</string>
+    <string name="questionnaire_completed">पूरा कर लिया है</string>
+</resources>

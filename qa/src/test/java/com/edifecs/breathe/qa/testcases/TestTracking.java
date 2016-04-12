@@ -20,18 +20,20 @@ public class TestTracking {
     LoginPage loginPage = new LoginPage();
     LeftMenu leftmenu = new LeftMenu();
     Tracking tracking = new Tracking();
-    List<WebElement> trackingsList,trackingsRowsListDateTime,trackingsRowsListPeakValue;
+    List<WebElement> trackingsList, trackingsRowsListDateTime, trackingsRowsListPeakValue;
+
     @BeforeClass
     public void startApp() throws IOException {
         // This need to be commented if run trough TestNG TestSuite
-       // andriodsetup.andySetup();
-       // loginPage.setLoginButton(andriodsetup.aDriver);
-      //  loginPage.loginButtonClick();
-       // leftmenu.getleftnav(andriodsetup.aDriver);
-       // leftmenu.leftnavclick();
-      // andriodsetup.aDriver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id='com.rgp.breathe:id/nav_view']/android.support.v7.widget.RecyclerView//android.widget.CheckedTextView[contains(@text,'Tracking')]")).click();
-      //  andriodsetup.aDriver.findElement(By.xpath("//android.widget.CheckedTextView[@text='Tracking']")).click();
-   }
+        // andriodsetup.andySetup();
+        // loginPage.setLoginButton(andriodsetup.aDriver);
+        //  loginPage.loginButtonClick();
+        // leftmenu.getleftnav(andriodsetup.aDriver);
+        // leftmenu.leftnavclick();
+        // andriodsetup.aDriver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id='com.rgp.breathe:id/nav_view']/android.support.v7.widget.RecyclerView//android.widget.CheckedTextView[contains(@text,'Tracking')]")).click();
+        //  andriodsetup.aDriver.findElement(By.xpath("//android.widget.CheckedTextView[@text='Tracking']")).click();
+    }
+
     @BeforeTest
     public void addRows() throws InterruptedException {
         leftmenu.getleftnav(andriodsetup.aDriver);
@@ -56,6 +58,7 @@ public class TestTracking {
         Thread.sleep(2000);
         tracking.setTrackingElements(andriodsetup.aDriver);
     }
+
     @Test
     // This test case is to check count of Peak Flow
 
@@ -65,7 +68,7 @@ public class TestTracking {
     }
 
     @Test
-    public void verifyLatestEntry(){
+    public void verifyLatestEntry() {
         trackingsRowsListDateTime = tracking.getTrackingRowsDateTime();
         trackingsRowsListPeakValue = tracking.getTrackingRowsPeakValue();
         //System.out.println(trackingsList.get(0).findElement(By.className("android.widget.LinearLayout")).findElement(By.className("android.widget.TextView")).getText().toString());
@@ -76,9 +79,9 @@ public class TestTracking {
         //System.out.println(trackingsRowsListPeakValue.get(0).getText().toString());
         //System.out.println(trackingsRowsListPeakValue.get(1).getText().toString());
     }
-  /*  @AfterClass
+    /*  @AfterClass
     public void teardown() throws IOException {
         andriodsetup.aDriver.quit();
     }
-*/
+    */
 }
