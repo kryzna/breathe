@@ -7,7 +7,7 @@
 
 - set DOCKER_TLS_VERIFY=1
 - set DOCKER_HOST=tcp://192.168.99.100:2376 (this will be different on each machine)
-- set DOCKER_CERT_PATH=C:\Users\krish.seetharaman\.docker\machine\machines\default (change the name according to your login)
+- set DOCKER_CERT_PATH=C:\Users\krish.seetharaman\\.docker\machine\machines\default (change the name according to your login)
 - set DOCKER_MACHINE_NAME=default
 
 # Available gradle tasks
@@ -16,4 +16,4 @@
 - startContainer (runs the created container - same as docker run -p 8080:8080 (imagename)
 
 # docker commands
-- https://docs.docker.com/engine/reference/commandline/cli/ 
+- https://docs.docker.com/engine/reference/commandline/cli/
