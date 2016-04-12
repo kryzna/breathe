@@ -35,10 +35,12 @@ public class TreatmentEventAdapter2 extends BaseExpandableListAdapter {
     }
 
     @Override
-    public View getChildView(int groupPosition, final int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
+    public View getChildView(int groupPosition, final int childPosition, boolean isLastChild,
+            View convertView, ViewGroup parent) {
         final String[] childText = (String[]) getChild(groupPosition, childPosition);
         if (convertView == null) {
-            LayoutInflater inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater =
+                    (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.treatment_event_list_item, null);
         }
         TextView txtListChild = (TextView) convertView.findViewById(R.id.lblListItem);
@@ -57,8 +59,8 @@ public class TreatmentEventAdapter2 extends BaseExpandableListAdapter {
     @Override
     public int getChildrenCount(int groupPosition) {
 
-        List<String[]> childList =  this.listData.get(groupPosition).getContentList();
-        if(childList != null){
+        List<String[]> childList = this.listData.get(groupPosition).getContentList();
+        if (childList != null) {
             return childList.size();
         }
         return 0;
@@ -78,10 +80,12 @@ public class TreatmentEventAdapter2 extends BaseExpandableListAdapter {
     }
 
     @Override
-    public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
+    public View getGroupView(int groupPosition, boolean isExpanded, View convertView,
+            ViewGroup parent) {
         String headerTitle = (String) getGroup(groupPosition);
         if (convertView == null) {
-            LayoutInflater inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater =
+                    (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.treatment_event_list_group, null);
         }
 

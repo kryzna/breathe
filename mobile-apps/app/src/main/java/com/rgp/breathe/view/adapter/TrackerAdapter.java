@@ -27,7 +27,8 @@ public class TrackerAdapter extends RecyclerView.Adapter<TrackerAdapter.TrackVie
 
     @Override
     public TrackViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.tracking_row_view, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.tracking_row_view,
+                parent, false);
         TrackViewHolder trackViewHolder = new TrackViewHolder(view);
         return trackViewHolder;
     }

@@ -9,7 +9,7 @@ public class TreatmentEvent {
     private boolean detailsAvailable;
     List<String[]> contentList;
 
-    public TreatmentEvent(String eventName, boolean detailsAvailable, List<String[]> contentList){
+    public TreatmentEvent(String eventName, boolean detailsAvailable, List<String[]> contentList) {
         this.eventName = eventName;
         this.detailsAvailable = detailsAvailable;
         this.contentList = contentList;

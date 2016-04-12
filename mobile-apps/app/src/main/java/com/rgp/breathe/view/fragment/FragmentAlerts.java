@@ -20,7 +20,8 @@ public class FragmentAlerts extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
         // Set title bar
         ((MainActivity) getActivity()).setActionBarTitle(getString(R.string.alerts));
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_alerts, null);

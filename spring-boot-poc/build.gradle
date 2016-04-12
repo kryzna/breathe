@@ -4,16 +4,21 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
+        jcenter()
 	}
 	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") 
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath 'com.bmuschko:gradle-docker-plugin:2.6.8'
 	}
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'spring-boot' 
+apply plugin: 'spring-boot'
+apply plugin: 'com.bmuschko.docker-remote-api'
+
+
 
 jar {
 	baseName = 'demo'
@@ -66,4 +71,91 @@ eclipse {
 
 task wrapper(type: Wrapper) {
 	gradleVersion = '2.9'
+}
+
+test {
+	testLogging.showStandardStreams = true
+// listen to events in the test execution lifecycle
+   beforeTest { descriptor ->
+      logger.lifecycle("Running test: $descriptor")
+   }
+
+   // listen to standard out and standard error of the test JVM(s)
+   onOutput { descriptor, event ->
+      logger.lifecycle("Test: $descriptor, $event.message")
+   }
+}
+
+import com.bmuschko.gradle.docker.tasks.image.Dockerfile
+import com.bmuschko.gradle.docker.tasks.image.DockerBuildImage
+import com.bmuschko.gradle.docker.tasks.container.*
+
+
+docker {
+    url = 'https://192.168.99.100:2376'
+    certPath = new File('C:/Users/krish.seetharaman/.docker/machine/machines/default')
+}
+
+task dockerfolder {
+    doLast {
+        mkdir('build/docker')
+    }
+}
+task buildImage(type: DockerBuildImage, dependsOn: [dockerfolder, build]) {
+    doFirst {
+        copy {
+          from '/src/main/docker/Dockerfile'
+          into 'build/docker'
+        }
+
+      copy {
+        from jar
+        into 'build/docker'
+      }
+    }
+
+    inputDir = project.file('build/docker')
+    tag = 'edifecs/springbootpoc:latest'
+}
+task stopAndRemoveContainer(type: Exec) {
+
+    group = 'Docker'
+
+      commandLine 'cmd', '/c', "docker rm -f $project.name"
+
+      standardOutput = new ByteArrayOutputStream()
+
+      ext.output = {
+        return standardOutput.toString()
+      }
+
+   // targetContainerId { createMyAppContainer.getContainerId() }
+}
+task createContainer(type: DockerCreateContainer) {
+    dependsOn buildImage
+    targetImageId { buildImage.getImageId() }
+    containerName = project.name
+    portBindings = ['8080:8080']
+}
+
+
+
+task startContainer(type: DockerStartContainer) {
+    dependsOn createContainer
+    targetContainerId { createContainer.getContainerId() }
+}
+
+task stopContainer(type: Exec) {
+
+    group = 'Docker'
+
+      commandLine 'cmd', '/c', "docker stop $project.name"
+
+      standardOutput = new ByteArrayOutputStream()
+
+      ext.output = {
+        return standardOutput.toString()
+      }
+
+   // targetContainerId { createMyAppContainer.getContainerId() }
 }

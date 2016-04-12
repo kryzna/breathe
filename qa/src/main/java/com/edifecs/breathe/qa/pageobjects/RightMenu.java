@@ -11,13 +11,14 @@ import org.openqa.selenium.WebElement;
 public class RightMenu {
 
     Excelreader myxls;
-    public WebElement btn_Rightmenu,lnk_Settings;
+    public WebElement btn_Rightmenu, lnk_Settings;
 
     public void setRightmenuLink(AndroidDriver aDriver) {
-        btn_Rightmenu = aDriver.findElement(By.xpath("//android.widget.ImageView[@content-desc='More options']"));
+        btn_Rightmenu = aDriver
+                .findElement(By.xpath("//android.widget.ImageView[@content-desc='More options']"));
     }
 
-    public void RightmenuLinkClick(){
+    public void RightmenuLinkClick() {
         btn_Rightmenu.click();
     }
 
@@ -25,7 +26,7 @@ public class RightMenu {
         lnk_Settings = aDriver.findElement(By.xpath("//android.widget.TextView[@text='Settings']"));
     }
 
-    public void SettingsLinkClick(){
+    public void SettingsLinkClick() {
         lnk_Settings.click();
     }
 
