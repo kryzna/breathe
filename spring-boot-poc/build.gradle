@@ -19,6 +19,7 @@ apply plugin: 'spring-boot'
 apply plugin: 'com.bmuschko.docker-remote-api'
 
 
+
 jar {
 	baseName = 'demo'
 	version = '0.0.1-SNAPSHOT'
@@ -93,9 +94,7 @@ import com.bmuschko.gradle.docker.tasks.container.*
 docker {
     url = 'https://192.168.99.100:2376'
     certPath = new File('C:/Users/krish.seetharaman/.docker/machine/machines/default')
-
 }
-
 
 task dockerfolder {
     doLast {
@@ -116,13 +115,13 @@ task buildImage(type: DockerBuildImage, dependsOn: [dockerfolder, build]) {
     }
 
     inputDir = project.file('build/docker')
-    tag = 'kryzna/demo:latest'
+    tag = 'edifecs/springbootpoc:latest'
 }
 task stopAndRemoveContainer(type: Exec) {
 
     group = 'Docker'
 
-      commandLine 'cmd', '/c', 'docker rm -f springbootpoc'
+      commandLine 'cmd', '/c', "docker rm -f $project.name"
 
       standardOutput = new ByteArrayOutputStream()
 
@@ -135,7 +134,7 @@ task stopAndRemoveContainer(type: Exec) {
 task createContainer(type: DockerCreateContainer) {
     dependsOn buildImage
     targetImageId { buildImage.getImageId() }
-    containerName = "springbootpoc"
+    containerName = project.name
     portBindings = ['8080:8080']
 }
 
@@ -150,7 +149,7 @@ task stopContainer(type: Exec) {
 
     group = 'Docker'
 
-      commandLine 'cmd', '/c', 'docker stop springbootpoc'
+      commandLine 'cmd', '/c', "docker stop $project.name"
 
       standardOutput = new ByteArrayOutputStream()
 
