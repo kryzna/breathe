@@ -33,6 +33,15 @@
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="normal"/>
+                <TextView
+                    android:id="@+id/questionnaire_score"
+                    android:gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/light_orange"
+                    android:textSize="15sp"
+                    android:textStyle="normal"/>
             </LinearLayout>
 
             <LinearLayout

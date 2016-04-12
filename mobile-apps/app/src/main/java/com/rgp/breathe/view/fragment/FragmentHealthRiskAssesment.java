@@ -19,6 +19,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by mdansari on 3/28/2016.
@@ -48,12 +49,12 @@ public class FragmentHealthRiskAssesment extends Fragment {
         new QuestionnaireService().execute();
         //TODO: Handle the delay in App, move the questionnaire fetching in Assessment Fragment.
         /*try {
-        Thread.sleep(5000L);
+            Thread.sleep(5000L);
         } catch (InterruptedException e) {
-        e.printStackTrace();
+            e.printStackTrace();
         }*/
         /* mAdapter = new QuetionnaireAdapter(getContext(), questionnaireList);
-         mRecyclerView.setAdapter(mAdapter);*/
+        mRecyclerView.setAdapter(mAdapter);*/
         return root;
     }
 
@@ -63,13 +64,14 @@ public class FragmentHealthRiskAssesment extends Fragment {
         @Override
         protected List<Questionnaire> doInBackground(Void... params) {
             try {
-                final String url = "http://10.64.34.44:8080/questionnaire/1";
+                final String url =
+                        "http://10.64.34.36:8080/questionnaire/{quesitonnaireId}?prefLang={prefLang}";
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new GsonHttpMessageConverter());
                 //TODO: Send Questionnaire query
-                Questionnaire questionnaire =
-                        restTemplate.getForObject(url, Questionnaire.class, "1");
-                List<Questionnaire> list = new ArrayList<Questionnaire>(1);
+                Questionnaire questionnaire = restTemplate.getForObject(url, Questionnaire.class,
+                        "1", Locale.getDefault().toString());
+                List<Questionnaire> list = new ArrayList<>(1);
                 list.add(questionnaire);
                 questionnaireList = list;
                 return list;

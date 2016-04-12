@@ -42,8 +42,8 @@
     <string name="health_risk_page_title">Asthma Health Risk Assesment</string>
     <string name="health_risk_average_score">Average (6.1 of 10)</string>
     <string name="questionnaires">Questionnaires</string>
-    <string name="questionnaire_not_completed">not completed</string>
-    <string name="questionnaire_completed">completed</string>
+    <string name="questionnaire_not_completed">Not Completed</string>
+    <string name="questionnaire_completed">Completed</string>
 
 
     <string-array name="tracking_spiner_array">

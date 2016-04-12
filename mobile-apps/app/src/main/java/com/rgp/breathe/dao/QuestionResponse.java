@@ -13,8 +13,9 @@ public class QuestionResponse {
         return question;
     }
 
-    public void setQuestion(Question question) {
+    public QuestionResponse withQuestion(Question question) {
         this.question = question;
+        return this;
     }
 
     public List<Choice> getAnswers() {
