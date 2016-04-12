@@ -18,4 +18,8 @@
 - stopContainer - same as docker stop (containerID or name)
 
 # docker commands reference
-- https://docs.docker.com/engine/reference/commandline/cli/ 
+- https://docs.docker.com/engine/reference/commandline/cli/
+
+# Accessing the service
+- once docker container is running, you can access service.
+- example - http://http://192.168.99.100:8080/questionnaire/1
