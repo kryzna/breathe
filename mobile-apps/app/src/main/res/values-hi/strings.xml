@@ -10,9 +10,6 @@
 	<string name="about_text">के बारे में</string>   
 
     <string name="pref_send_report">क्रैश रिपोर्ट भेजें</string>
-    <string name="pref_send_report_summary">Helps to fix bugs</string>
-    <string name="pref_sync_frequency">Sync frequency</string>
-    <string name="pref_sync_frequency_summary">Set the sync frequency</string>
     <string name="pref_user_name">सेट उपयोगकर्ता नाम</string>
     <string name="pref_user_name_summary">अपने उपयोगकर्ता नाम सेट करें</string>
 
