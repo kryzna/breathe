@@ -11,10 +11,12 @@ import java.util.logging.Logger;
 public class Utility {
 
     private static Properties prop = new Properties();
+
     public static void loadPropertyFile(String PropertyFileName) {
         try {
             String PFileName = PropertyFileName;
-            InputStream inputStream = new FileInputStream(System.getProperty("user.dir")+ "\\" +  PFileName);
+            InputStream inputStream =
+                    new FileInputStream(System.getProperty("user.dir") + "\\" + PFileName);
             prop.load(inputStream);
         } catch (IOException ex) {
             Logger.getLogger(Utility.class.getName()).log(Level.SEVERE, null, ex);
@@ -34,10 +36,10 @@ public class Utility {
             probuilder.directory(currDir);
             Process process = probuilder.start();
 
-            BufferedReader inputStream
-                    = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            BufferedReader errorStream
-                    = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+            BufferedReader inputStream =
+                    new BufferedReader(new InputStreamReader(process.getInputStream()));
+            BufferedReader errorStream =
+                    new BufferedReader(new InputStreamReader(process.getErrorStream()));
 
             // reading output of the command
             int inputLine = 0;
