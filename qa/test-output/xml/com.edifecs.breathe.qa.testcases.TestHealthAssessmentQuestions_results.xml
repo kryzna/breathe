@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test_HealtAssessment"
+           tests="6"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="4.889">
+  <properties />
+  
+  
+            <testcase name="verifyAnswerOptionsCount" time="0.839" classname="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" />
+                <testcase name="verifyQuestionTitle" time="0.039" classname="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" />
+                <testcase name="verifyQuestionTitle" time="0.057" classname="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" />
+                <testcase name="verifyAnswerOptionsCount" time="3.675" classname="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" />
+                <testcase name="verifyQuestionTitle" time="0.026" classname="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" />
+                <testcase name="verifyAnswerOptionsCount" time="0.253" classname="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" />
+      
+</testsuite>

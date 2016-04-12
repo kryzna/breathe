@@ -16,7 +16,7 @@ public class Andriodsetup {
     Process p;
     Properties prop;
     public void andySetup() throws IOException, InterruptedException {
-        Appiumserver.startAppiumServer(p);
+        //Appiumserver.startAppiumServer(p);
        // System.out.println("coming in andriod setup");
         Utility.loadPropertyFile("config.properties");
         prop = new Properties();
@@ -36,13 +36,13 @@ public class Andriodsetup {
         //define the type of mobile device or emulator to use
         capabilities.setCapability("deviceName","My Emulator");
         //This capability is used to reset the app’s state before the session starts;
-        capabilities.setCapability("noreset","false");
+        //capabilities.setCapability("noreset","true");
         //this will delete the entire simulator folder
        // capabilities.setCapability("fullReset","true");
         //used to set the language on the simulator/emulator
         capabilities.setCapability("locale","en");
         //used to start in a certain orientation in simulator/emulator
-        capabilities.setCapability("orientation","LANDSCAPE");
+        //capabilities.setCapability("orientation","LANDSCAPE");
         //used to set the mobile OS platform.
         capabilities.setCapability("platformName","Android");
         //Appium will install the app binary on the appropriate device

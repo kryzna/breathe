@@ -1,7 +1,7 @@
 package com.edifecs.breathe.qa.testcases;
 
 import com.edifecs.breathe.qa.functions.Andriodsetup;
-import com.edifecs.breathe.qa.functions.Excelreader;
+import com.edifecs.breathe.qa.functions.ExcelReader;
 import com.edifecs.breathe.qa.functions.Utility;
 import com.edifecs.breathe.qa.pageobjects.LoginPage;
 import com.edifecs.breathe.qa.pageobjects.RightMenu;
@@ -18,12 +18,12 @@ public class TestSettings {
     WebDriverWait wait;
     LoginPage loginPage = new LoginPage();
     RightMenu settings = new RightMenu();
-    Excelreader myxls;
+    ExcelReader myxls;
     Andriodsetup andriodsetup = new Andriodsetup();
     @BeforeClass
     public void startApp() throws IOException, InterruptedException {
         Utility.loadPropertyFile("config.properties");
-        myxls = new Excelreader(System.getProperty("user.dir")+Utility.getValueOf("testExcel"));
+        myxls = new ExcelReader();
         andriodsetup.andySetup();
         wait = new WebDriverWait(andriodsetup.aDriver, 5);
         loginPage.setLoginButton(andriodsetup.aDriver);

@@ -1,6 +1,6 @@
 package com.edifecs.breathe.qa.pageobjects;
 
-import com.edifecs.breathe.qa.functions.Excelreader;
+import com.edifecs.breathe.qa.functions.ExcelReader;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
  */
 public class RightMenu {
 
-    Excelreader myxls;
+    ExcelReader myxls;
     public WebElement btn_Rightmenu,lnk_Settings;
 
     public void setRightmenuLink(AndroidDriver aDriver) {

@@ -4,40 +4,38 @@
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
     </listeners>
-    <test name="test_Login">
+    <!--<test name="test_Login">
         <classes>
-            <!--//add classes below which needs to be executed-->
+            &lt;!&ndash;//add classes below which needs to be executed&ndash;&gt;
             <class name="com.edifecs.breathe.qa.testcases.TestLogin">
                 <methods>
-                    <!--//add test cases below with method name, which needs to be executed-->
+                    &lt;!&ndash;//add test cases below with method name, which needs to be executed&ndash;&gt;
                     <include name="testValidLogin"/>
                     <include name="verifyUserName"/>
                     <include name="verifyUserEmail"/>
                 </methods>
             </class>
         </classes>
-    </test>
+    </test>-->
     <test name="test_HealtAssessment">
         <classes>
             <!--//add classes below which needs to be executed-->
+
             <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
-                <methods>
-                    <!--//add test cases below with method name, which needs to be executed-->
-                    <include name="verifyHealthRiskAssessment_yes"/>
-                </methods>
             </class>
+            <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions"></class>
         </classes>
     </test>
-    <test name="test_tracking">
+    <!--<test name="test_tracking">
         <classes>
-            <!--//add classes below which needs to be executed-->
+            &lt;!&ndash;//add classes below which needs to be executed&ndash;&gt;
             <class name="com.edifecs.breathe.qa.testcases.TestTracking">
-                <!--<methods>
+                &lt;!&ndash;<methods>
                     &lt;!&ndash;//add test cases below with method name, which needs to be executed&ndash;&gt;
                     <include name="verifyRowCount"/>
-                </methods>-->
+                </methods>&ndash;&gt;
             </class>
         </classes>
-    </test>
+    </test>-->
 
 </suite>

@@ -2,8 +2,8 @@ package com.edifecs.breathe.qa.testcases;
 
 import com.edifecs.breathe.qa.functions.Andriodsetup;
 import com.edifecs.breathe.qa.functions.Appiumserver;
+import com.edifecs.breathe.qa.functions.ExcelReader;
 import com.edifecs.breathe.qa.functions.Utility;
-import com.edifecs.breathe.qa.functions.Excelreader;
 import com.edifecs.breathe.qa.pageobjects.LeftMenu;
 import com.edifecs.breathe.qa.pageobjects.LoginPage;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,13 +20,13 @@ public class TestLogin {
     WebDriverWait wait;
     LoginPage loginPage = new LoginPage();
     LeftMenu leftmenu = new LeftMenu();
-    Excelreader myxls;
+    ExcelReader myxls;
     Andriodsetup andriodsetup = new Andriodsetup();
     @BeforeClass
     public void startApp() throws IOException, InterruptedException {
         System.out.println(System.getProperty("user.dir"));
         Utility.loadPropertyFile("config.properties");
-        myxls = new Excelreader(System.getProperty("user.dir")+Utility.getValueOf("testExcel"));
+        myxls = new ExcelReader();
         andriodsetup.andySetup();
         wait = new WebDriverWait(andriodsetup.aDriver, 5);
         loginPage.setLoginButton(andriodsetup.aDriver);

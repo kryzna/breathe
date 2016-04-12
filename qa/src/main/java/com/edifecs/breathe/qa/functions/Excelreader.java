@@ -16,7 +16,7 @@ import java.io.*;
 import java.util.Calendar;
 
 
-public class Excelreader {
+public class ExcelReader {
 	public static String filename = "inputdata.xlsx";
 	public  String path;
 	public  FileInputStream fis = null;
@@ -26,9 +26,9 @@ public class Excelreader {
 	private XSSFRow row   =null;
 	private XSSFCell cell = null;
 
-	public Excelreader(String path) {
-
-		this.path=path;
+	public ExcelReader() {
+		Utility.loadPropertyFile("config.properties");
+		path=System.getProperty("user.dir")+Utility.getValueOf("testExcel");
 		try {
 			fis = new FileInputStream(path);
 			workbook = new XSSFWorkbook(fis);
@@ -380,6 +380,7 @@ public class Excelreader {
 		
 		
 	}
+
 	// removes a column and all the contents
 	public boolean removeColumn(String sheetName, int colNum) {
 		try{
@@ -447,6 +448,25 @@ public class Excelreader {
 		
 		
 	}
+
+	// returns number of columns in a sheet	starting from a specific column
+	public int getColumnCount(String sheetName, int rowNum){
+		// check if sheet exists
+		if(!isSheetExist(sheetName))
+			return -1;
+
+		sheet = workbook.getSheet(sheetName);
+		row = sheet.getRow(rowNum);
+
+		if(row==null)
+			return -1;
+		System.out.println("lastCellNum: " + row.getLastCellNum());
+		System.out.println("Difference: " + (row.getLastCellNum()-6));
+		return (row.getLastCellNum()-6);
+
+
+
+	}
 	//String sheetName, String testCaseName,String keyword ,String URL,String message
 	public boolean addHyperLink(String sheetName,String screenShotColName,String testCaseName,int index,String url,String message){
 		//System.out.println("ADDING addHyperLink******************");
@@ -468,6 +488,7 @@ public class Excelreader {
 
 		return true; 
 	}
+
 	public int getCellRowNum(String sheetName,String colName,String cellValue){
 		
 		for(int i=2;i<=getRowCount(sheetName);i++){
@@ -483,10 +504,10 @@ public class Excelreader {
 	public static void main(String arg[]) throws IOException{
 		
 		//System.out.println(filename);
-		Excelreader datatable = null;
+		ExcelReader datatable = null;
 		
 
-			 datatable = new Excelreader("H:\\Student_Selenium_Workspaces\\Framework_Weekend\\src\\Framework_XL_Files\\Controller.xlsx");
+			 datatable = new ExcelReader("H:\\Student_Selenium_Workspaces\\Framework_Weekend\\src\\Framework_XL_Files\\Controller.xlsx");
 				for(int col=0 ;col< datatable.getColumnCount("TC5"); col++){
 					System.out.println(datatable.getCellData("TC5", col, 1));
 				}
