@@ -129,3 +129,9 @@ android.testOptions.unitTests.all {
         events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
     }
 }
+
+android {
+    lintOptions{
+        disable 'MissingTranslation'
+    }
+}
