@@ -29,7 +29,7 @@ public class TestHealthRiskAssessment {
     Andriodsetup andriodsetup = new Andriodsetup();
     StandardFunctions standardFunctions = new StandardFunctions();
     public static List<WebElement> listAnswersOptions = new ArrayList<WebElement>();
-    public static WebElement elementQuestionTitle;
+    public static WebElement elementQuestionTitle,elementQuestionnaireTitle;
     int questionsCount;
     public static int questionNumber=2;
 
@@ -60,11 +60,12 @@ public class TestHealthRiskAssessment {
         Thread.sleep(3000);
         healthRiskAssesment.setElementQuestionTitle(andriodsetup.aDriver);
         elementQuestionTitle = healthRiskAssesment.getElementQuestionTitle();
-        healthRiskAssesment.setListAnswerOptions(andriodsetup.aDriver);
-        listAnswersOptions = healthRiskAssesment.getListAnswerOptions();
-        System.out.println(listAnswersOptions.size());
+
+        //System.out.println(listAnswersOptions.size());
         questionsCount = myxls.getRowCount("RiskAssessment");
         healthRiskAssesment.setElementNextButton(andriodsetup.aDriver);
+        healthRiskAssesment.setElementQuestionnaireTitle(Andriodsetup.aDriver);
+        elementQuestionnaireTitle = healthRiskAssesment.getElementQuestionnaireTitle();
     }
 
 
@@ -72,7 +73,7 @@ public class TestHealthRiskAssessment {
     // TC2 - If selected
     public void verifyQuestionTitle(){
         try {
-            assert (standardFunctions.getText(elementQuestionTitle).toString().equals("this"));
+            assert (standardFunctions.getText(elementQuestionnaireTitle).toString().equals("Asthma Questionnaire for Beginners"));
         }
         catch(Exception e)
         {

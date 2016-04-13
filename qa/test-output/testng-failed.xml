@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TmpSuite]">
+  <test name="TmpTest(failed)">
+    <classes>
+      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
+        <methods>
+          <include name="startApp"/>
+          <include name="verifyQuestionTitle"/>
+        </methods>
+      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
+    </classes>
+  </test> <!-- TmpTest(failed) -->
+</suite> <!-- Failed suite [TmpSuite] -->

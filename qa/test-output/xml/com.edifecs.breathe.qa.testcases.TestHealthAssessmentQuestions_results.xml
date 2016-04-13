@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="test_HealtAssessment"
+<<<<<<< HEAD
            tests="6"
            failures="3"
            errors="0"
            skipped="0"
            time="0.067">
+=======
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="12.027">
+>>>>>>> a3337f4e8f884608db559e954208a04e1bd45ad0
   <properties />
             <testcase name="verifyAnswerOptionsCount" time="0.001" classname="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
                 <failure type="java.lang.AssertionError"
@@ -122,8 +130,15 @@
           </testcase>
   
   
+<<<<<<< HEAD
             <testcase name="verifyQuestionTitle" time="0.053" classname="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" />
                 <testcase name="verifyQuestionTitle" time="0.010" classname="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" />
                 <testcase name="verifyQuestionTitle" time="0.003" classname="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" />
+=======
+            <testcase name="verifyAnswerOptionsCount" time="7.397" classname="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" />
+                <testcase name="verifyQuestionTitle" time="0.080" classname="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" />
+                <testcase name="verifyAnswersText" time="0.491" classname="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" />
+                <testcase name="verifyRadioAnswerSelection" time="4.059" classname="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" />
+>>>>>>> a3337f4e8f884608db559e954208a04e1bd45ad0
       
 </testsuite>

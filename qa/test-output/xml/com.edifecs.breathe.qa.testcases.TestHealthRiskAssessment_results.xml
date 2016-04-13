@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="test_HealtAssessment"
+<<<<<<< HEAD
            tests="2"
            failures="1"
            errors="0"
@@ -77,6 +78,16 @@ Session ID: 75fb581d-94a9-453e-bef3-249704165841
             <testcase name="verifyQuestionTitle" time="0.0" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
           <skipped />
     </testcase>
+=======
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.053">
+  <properties />
+>>>>>>> a3337f4e8f884608db559e954208a04e1bd45ad0
   
   
+            <testcase name="verifyQuestionTitle" time="0.053" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment" />
+      
 </testsuite>

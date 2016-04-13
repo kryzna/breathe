@@ -12,11 +12,12 @@ import java.util.List;
  */
 public class HealthRiskAssesment {
 
-    public WebElement leftnav_Healthassessment,setAssessmentStartButton,
+    public WebElement leftnav_Healthassessment,setAssessmentStartButton,elementQuestionnaireTitle,
             getHealtAssessment_questionnairechoice_yes_radio1,getHealtAssessment_questionnairechoice_next,
             getHealtAssessment_questionnairechoice_checkbox1,text_HealtAssessment_completed,elementQuestionTitle;
     public static WebElement elementNextButton,getHealtAssessmentSubmit;
-    List<WebElement> listAnswerOptions = new ArrayList<WebElement>();
+    public static List<WebElement> listAnswerOptions = new ArrayList<WebElement>();
+
 
     public void getleftnav_HealtAssessment(AndroidDriver aDriver) {
         leftnav_Healthassessment = aDriver.findElement(
@@ -63,12 +64,27 @@ public class HealthRiskAssesment {
         return elementQuestionTitle;
     }
 
+    public void setElementQuestionnaireTitle(AndroidDriver aDriver){
+        elementQuestionnaireTitle = aDriver.findElement(By.id("com.rgp.breathe:id/questionnaire_title"));
+    }
+
+    public WebElement getElementQuestionnaireTitle(){
+        return elementQuestionnaireTitle;
+    }
     //set list of answer choices to the list
-    public void setListAnswerOptions(AndroidDriver aDriver){
+    public static void setListAnswerOptions(AndroidDriver aDriver){
         listAnswerOptions=aDriver.findElements(By.xpath("//android.widget.RadioGroup/android.widget.RadioButton"));
     }
 
-    public List<WebElement> getListAnswerOptions(){
+    public static List<WebElement> getListAnswerOptions(){
+        return listAnswerOptions;
+    }
+
+    public static void setListCheckboxAnswerOptions(AndroidDriver aDriver){
+        listAnswerOptions=aDriver.findElements(By.xpath("//android.widget.LinearLayout/android.widget.CheckBox"));
+    }
+
+    public static List<WebElement> getListCheckboxAnswerOptions(){
         return listAnswerOptions;
     }
 
