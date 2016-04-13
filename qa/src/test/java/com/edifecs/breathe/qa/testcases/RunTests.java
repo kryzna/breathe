@@ -1,5 +1,6 @@
 package com.edifecs.breathe.qa.testcases;
 
+import com.edifecs.breathe.qa.functions.ExcelReader;
 import org.testng.TestNG;
 import org.testng.xml.XmlClass;
 import org.testng.xml.XmlSuite;
@@ -13,6 +14,7 @@ import java.util.List;
  */
 public class RunTests {
     public static void main(String[] args) {
+        ExcelReader excelReader = new ExcelReader();
 
 /*// Create object of TestNG Class
         TestNG runner=new TestNG();
@@ -33,31 +35,31 @@ public class RunTests {
         XmlSuite suite = new XmlSuite();
         List<XmlSuite> suites = new ArrayList<XmlSuite>();
         suite.setName("TmpSuite");
+        List<XmlTest> listXmlTests = new ArrayList<XmlTest>();
 
+        //XmlTest test = new XmlTest();
         XmlTest test = new XmlTest(suite,0);
         test.setName("TmpTest");
         List<XmlClass> classes = new ArrayList<XmlClass>();
         classes.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment"));
-        classes.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions"));
         test.setXmlClasses(classes) ;
 
-        //suites.add(suite);
-
-        XmlTest test2 = new XmlTest(suite,1);
-        test2.setName("TmpTest2");
-        List<XmlClass> classes2 = new ArrayList<XmlClass>();
-        classes2.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions"));
-        test2.setXmlClasses(classes2) ;
-
-        XmlTest test3 = new XmlTest(suite,2);
-        test3.setName("TmpTest3");
-        List<XmlClass> classes3 = new ArrayList<XmlClass>();
-        classes3.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions"));
-        test3.setXmlClasses(classes3) ;
+        int questionsCount = excelReader.getRowCount("RiskAssessment");
+        for(int i=1;i<questionsCount;i++) {
+            XmlTest newTest = new XmlTest(suite,i);
+            newTest.setName("Test"+i);
+            List<XmlClass> newClasses = new ArrayList<XmlClass>();
+            newClasses.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions"));
+            newTest.setXmlClasses(newClasses) ;
+        }
 
         suites.add(suite);
         TestNG tng = new TestNG();
         tng.setXmlSuites(suites);
-        tng.run();
+        try {
+            tng.run();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
