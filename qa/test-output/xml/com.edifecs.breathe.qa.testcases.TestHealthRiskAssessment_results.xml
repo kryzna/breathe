@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="0.108">
+           time="0.218">
   <properties />
-            <testcase name="verifybuttonstatus" time="0.108" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
+            <testcase name="verifybuttonstatus" time="0.218" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
                 <failure type="java.lang.AssertionError"
                   message="expected [Not Completed] but found [NOT COMPLETED]"
               >
