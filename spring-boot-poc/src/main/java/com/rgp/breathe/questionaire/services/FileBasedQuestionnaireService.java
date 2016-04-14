@@ -8,7 +8,9 @@ import org.springframework.stereotype.Service;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -16,21 +18,20 @@ import java.util.Set;
  */
 @Service
 public class FileBasedQuestionnaireService {
-    private Set<String> availableLanguages = new HashSet<>();
+    private Map<String, String> availableLanguages = new HashMap<>();
 
     public FileBasedQuestionnaireService() {
-        availableLanguages.add("en");
-        availableLanguages.add("en-us");
-        availableLanguages.add("hi");
-        availableLanguages.add("hi-in");
+        availableLanguages.put("en", "en");
+        availableLanguages.put("en-us", "en");
+        availableLanguages.put("en_us", "en");
+        availableLanguages.put("hi", "hi");
+        availableLanguages.put("hi-in", "hi");
+        availableLanguages.put("hi_in", "hi");
     }
 
     public Questionnaire read(String language) throws IOException {
-        if (language == null || language.isEmpty() || !availableLanguages.contains(language.toLowerCase())) {
-            language = "en";
-        }
         ObjectMapper mapper = new ObjectMapper();
-        Questionnaire questionnaire = mapper.readValue(new InputStreamReader(FileBasedQuestionnaireService.class.getClassLoader().getResourceAsStream("questionnaire_" + language + ".json"), "UTF-8"), Questionnaire.class);
+        Questionnaire questionnaire = mapper.readValue(new InputStreamReader(FileBasedQuestionnaireService.class.getClassLoader().getResourceAsStream("questionnaire_" + availableLanguages.getOrDefault(language.toLowerCase(), "en") + ".json"), "UTF-8"), Questionnaire.class);
         return questionnaire;
     }
 }
