@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TmpTest28"
+<testsuite name="Scenario1_Test5"
            tests="2"
            failures="1"
            errors="0"
            skipped="0"
-           time="0.498">
+           time="0.689">
   <properties />
-            <testcase name="verifyscore" time="0.436" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
+            <testcase name="verifyscore" time="0.527" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
                 <failure type="java.lang.AssertionError"
-                  message="expected [3.0] but found [3.42]"
+                  message="expected [3.0] but found [6.57]"
               >
-<![CDATA[java.lang.AssertionError: expected [3.0] but found [3.42]
+<![CDATA[java.lang.AssertionError: expected [3.0] but found [6.57]
   org.testng.Assert.fail(Assert.java:94)
   org.testng.Assert.failNotEquals(Assert.java:496)
   org.testng.Assert.assertEquals(Assert.java:125)
   org.testng.Assert.assertEquals(Assert.java:167)
-  com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit.verifyscore(TestHealthRiskAssessmentSubmit.java:38)
+  com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit.verifyscore(TestHealthRiskAssessmentSubmit.java:39)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -37,7 +37,7 @@
   org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
   org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
   org.testng.TestNG.run(TestNG.java:1024)
-  com.edifecs.breathe.qa.testcases.RunTests.main(RunTests.java:100)
+  com.edifecs.breathe.qa.testcases.RunTests.main(RunTests.java:102)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -49,6 +49,6 @@
           </testcase>
   
   
-            <testcase name="verifybuttonstatus" time="0.062" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit" />
+            <testcase name="verifybuttonstatus" time="0.162" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit" />
       
 </testsuite>

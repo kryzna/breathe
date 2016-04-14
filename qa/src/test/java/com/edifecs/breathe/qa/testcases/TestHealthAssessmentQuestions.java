@@ -28,10 +28,10 @@ public class TestHealthAssessmentQuestions {
     public void setBeforeTest(){
         healthRiskAssesment.setElementQuestionTitle(Andriodsetup.aDriver);
         elementQuestionTitle = healthRiskAssesment.getElementQuestionTitle();
-        if(excelReader.getCellData("RiskAssessment","Type",TestHealthRiskAssessment.questionNumber).toString().equals("r")) {
+        if(excelReader.getCellData("RiskAssessment","Type",TestStartHealthRiskAssessment.questionNumber).toString().equals("r")) {
             HealthRiskAssesment.setListAnswerOptions(Andriodsetup.aDriver);
             TestHealthRiskAssessment.listAnswersOptions = HealthRiskAssesment.getListAnswerOptions();
-        } else if(excelReader.getCellData("RiskAssessment","Type",TestHealthRiskAssessment.questionNumber).toString().equals("c")) {
+        } else if(excelReader.getCellData("RiskAssessment","Type",TestStartHealthRiskAssessment.questionNumber).toString().equals("c")) {
             HealthRiskAssesment.setListCheckboxAnswerOptions(Andriodsetup.aDriver);
             TestHealthRiskAssessment.listAnswersOptions = HealthRiskAssesment.getListCheckboxAnswerOptions();
         }
@@ -43,10 +43,10 @@ public class TestHealthAssessmentQuestions {
     @Test(priority = 1)
     public static void verifyQuestionTitle() throws InterruptedException {
         try {
-            Qweight = Double.parseDouble(excelReader.getCellData("RiskAssessment", "Qweight", TestHealthRiskAssessment.questionNumber));
-            questionTitle=excelReader.getCellData("RiskAssessment","Title",TestHealthRiskAssessment.questionNumber);
+            Qweight = Double.parseDouble(excelReader.getCellData("RiskAssessment", "Qweight", TestStartHealthRiskAssessment.questionNumber));
+            questionTitle=excelReader.getCellData("RiskAssessment","Title",TestStartHealthRiskAssessment.questionNumber);
             System.out.println(questionTitle);
-            System.out.println(StandardFunctions.getText(elementQuestionTitle));
+            System.out.println(StandardFunctions.getText(elementQuestionTitle).toString());
             Assert.assertEquals(StandardFunctions.getText(elementQuestionTitle).toString(),questionTitle);
             //assert (StandardFunctions.getText(TestHealthRiskAssessment.elementQuestionTitle).toString().equals(questionTitle));
         }
@@ -61,10 +61,10 @@ public class TestHealthAssessmentQuestions {
     @Test(priority = 2)
     public void verifyAnswerOptionsCount() throws InterruptedException {
         try {
-            expectedAnswerCount = excelReader.getColumnCount("RiskAssessment", TestHealthRiskAssessment.questionNumber)/2;
+            expectedAnswerCount = excelReader.getColumnCount("RiskAssessment", TestStartHealthRiskAssessment.questionNumber)/2;
             System.out.println(expectedAnswerCount);
             actualAnswerCount = TestHealthRiskAssessment.listAnswersOptions.size();
-            assert (actualAnswerCount==expectedAnswerCount);
+            Assert.assertEquals(actualAnswerCount,expectedAnswerCount);
 
         }
         catch(Exception e)
@@ -81,9 +81,9 @@ public class TestHealthAssessmentQuestions {
         int i;
         try{
             for(i=1;i<=5;i++) {
-                expectedAnswerText=excelReader.getCellData("RiskAssessment", "choice"+i, TestHealthRiskAssessment.questionNumber);
+                expectedAnswerText=excelReader.getCellData("RiskAssessment", "choice"+i, TestStartHealthRiskAssessment.questionNumber);
                 actualAnswerText=TestHealthRiskAssessment.listAnswersOptions.get(i-1).getText().toString();
-                assert (TestHealthRiskAssessment.listAnswersOptions.get(i-1).getText().toString().equals(excelReader.getCellData("RiskAssessment", "choice"+i, TestHealthRiskAssessment.questionNumber)));
+                Assert.assertEquals(TestHealthRiskAssessment.listAnswersOptions.get(i-1).getText().toString(),excelReader.getCellData("RiskAssessment", "choice"+i, TestStartHealthRiskAssessment.questionNumber));
 
             }
         }   catch (Exception e){
@@ -95,11 +95,19 @@ public class TestHealthAssessmentQuestions {
 
     //checking weather the answer is getting selected or not
     @Test(priority = 4)
-    public void verifyRadioAnswerSelection() throws InterruptedException {
-        int radioSelectionNumber = 2;
-        TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber-1).click();
-        Aweight = Double.parseDouble(excelReader.getCellData("RiskAssessment", "cweight"+weightcount, TestHealthRiskAssessment.questionNumber));
-        assert (TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber-1).getAttribute("checked").toString().equals("true"));
+    public void verifyRadioAnswerSelection(){
+        int radioSelectionNumber=0;
+        try {
+            radioSelectionNumber = Double.valueOf(excelReader.getCellData("RiskScenarios", "scenario" + TestStartHealthRiskAssessment.scenarioNumber, TestStartHealthRiskAssessment.questionNumber + 1)).intValue();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        System.out.println("Selection: "+radioSelectionNumber);
+        if(radioSelectionNumber>0) {
+            TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber - 1).click();
+            Aweight = Double.parseDouble(excelReader.getCellData("RiskAssessment", "cweight" + weightcount, TestStartHealthRiskAssessment.questionNumber));
+            Assert.assertEquals(TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber - 1).getAttribute("checked").toString(), "true");
+        }
 
     }
 
@@ -107,7 +115,7 @@ public class TestHealthAssessmentQuestions {
     public void moveToNextQuestion(){
       WebElement elementNextButton =   HealthRiskAssesment.getElementNextButton();
         StandardFunctions.click(elementNextButton);
-        TestHealthRiskAssessment.questionNumber=TestHealthRiskAssessment.questionNumber+1;
+        TestStartHealthRiskAssessment.questionNumber=TestStartHealthRiskAssessment.questionNumber+1;
         weightcount++;
         riskscore = Qweight*Aweight;
         System.out.println(riskscore);
