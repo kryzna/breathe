@@ -22,7 +22,6 @@ public class TestHealthAssessmentQuestions {
     public static double Aweight = 0;
     private int weightcount = 1;
     public static double riskscore = 0.0;
-    public static double riskscorefinal = 0.0;
 
     @BeforeClass
     public void setBeforeTest(){
@@ -61,7 +60,7 @@ public class TestHealthAssessmentQuestions {
     @Test(priority = 2)
     public void verifyAnswerOptionsCount() throws InterruptedException {
         try {
-            expectedAnswerCount = excelReader.getColumnCount("RiskAssessment", TestStartHealthRiskAssessment.questionNumber)/2;
+            expectedAnswerCount = excelReader.getColumnCount("RiskAssessment", TestStartHealthRiskAssessment.questionNumber-1)/2;
             System.out.println(expectedAnswerCount);
             actualAnswerCount = TestHealthRiskAssessment.listAnswersOptions.size();
             Assert.assertEquals(actualAnswerCount,expectedAnswerCount);
@@ -80,7 +79,7 @@ public class TestHealthAssessmentQuestions {
     public void verifyAnswersText() throws InterruptedException {
         int i;
         try{
-            for(i=1;i<=5;i++) {
+            for(i=1;i<=expectedAnswerCount;i++) {
                 expectedAnswerText=excelReader.getCellData("RiskAssessment", "choice"+i, TestStartHealthRiskAssessment.questionNumber);
                 actualAnswerText=TestHealthRiskAssessment.listAnswersOptions.get(i-1).getText().toString();
                 Assert.assertEquals(TestHealthRiskAssessment.listAnswersOptions.get(i-1).getText().toString(),excelReader.getCellData("RiskAssessment", "choice"+i, TestStartHealthRiskAssessment.questionNumber));
@@ -101,6 +100,11 @@ public class TestHealthAssessmentQuestions {
         String checkboxSelectionNumbers;
         if(questionType.equals("c")){
             System.out.println("It's a checkbox based question:");
+            for(int i=0;i<expectedAnswerCount;i++) {
+                if(TestHealthRiskAssessment.listAnswersOptions.get(i).getAttribute("checked").toString().equals("true")){
+                    TestHealthRiskAssessment.listAnswersOptions.get(i).click();
+                }
+            }
             checkboxSelectionNumbers = excelReader.getCellData("RiskScenarios", "scenario" + TestStartHealthRiskAssessment.scenarioNumber, TestStartHealthRiskAssessment.questionNumber + 1);
             System.out.println(checkboxSelectionNumbers);
             String[] checkboxSelectionNumber = checkboxSelectionNumbers.split(",");
@@ -142,8 +146,8 @@ public class TestHealthAssessmentQuestions {
         weightcount++;
         riskscore = Qweight*Aweight;
         System.out.println(riskscore);
-        riskscorefinal = riskscorefinal+riskscore;
-        System.out.println(riskscorefinal);
+        TestStartHealthRiskAssessment.riskscorefinal = TestStartHealthRiskAssessment.riskscorefinal+riskscore;
+        System.out.println(TestStartHealthRiskAssessment.riskscorefinal);
     }
 
    /* @Factory

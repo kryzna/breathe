@@ -83,7 +83,7 @@ public class TestHealthRiskAssessment {
             healthRiskAssesment.setAssessmentStartButton(Andriodsetup.aDriver);
             System.out.println(healthRiskAssesment.getAssessmentStartButtonText());
             System.out.println("Updated date===="+Utility.getFormattedDate("MM.dd.yyyy"));
-            Assert.assertEquals("NOT COMPLETED",healthRiskAssesment.getAssessmentStartButtonText());
+            Assert.assertEquals(healthRiskAssesment.getAssessmentStartButtonText(),"Not Completed");
         }
         catch(Exception e)
         {

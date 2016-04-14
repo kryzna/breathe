@@ -24,6 +24,7 @@ import java.util.List;
  */
 public class TestHealthRiskAssessmentSubmit {
     Date dt = new Date();
+    public static ExcelReader excelReader = new ExcelReader();
     @BeforeClass
     public void startscore() throws IOException, InterruptedException {}
     HealthRiskAssesment healthRiskAssesment = new HealthRiskAssesment();
@@ -32,11 +33,11 @@ public class TestHealthRiskAssessmentSubmit {
         try {
             System.out.println("------------Veirfying score-----------------------");
 
-            System.out.println("Expected: ---"+TestHealthAssessmentQuestions.riskscorefinal);
+            System.out.println("Expected: ---"+TestStartHealthRiskAssessment.riskscorefinal);
             healthRiskAssesment.setQuestionairescore(Andriodsetup.aDriver);
             healthRiskAssesment.getQuestionairescore();
             System.out.println("Actual ---"+healthRiskAssesment.getQuestionairescore());
-            Assert.assertEquals(healthRiskAssesment.getQuestionairescore(),TestHealthAssessmentQuestions.riskscorefinal);
+            Assert.assertEquals(healthRiskAssesment.getQuestionairescore(),TestStartHealthRiskAssessment.riskscorefinal);
         }
         catch(Exception e)
         {
@@ -45,17 +46,26 @@ public class TestHealthRiskAssessmentSubmit {
         }
     }
     @Test(priority = 2)
-    public void verifybuttonstatus(){
-        try {
-            System.out.println("------------Veirfying Button Status-----------------------");
-            healthRiskAssesment.setAssessmentStartButton(Andriodsetup.aDriver);
-            System.out.println(healthRiskAssesment.getAssessmentStartButtonText());
-            System.out.println("Updated date===="+Utility.getFormattedDate("MM.dd.yyyy"));
-            Assert.assertEquals("Completed "+Utility.getFormattedDate("MM.dd.yyyy"),healthRiskAssesment.getAssessmentStartButtonText());
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
+    public void verifybuttonstatus() {
+        if (excelReader.getCellData("RiskScenarios", "scenario" + TestStartHealthRiskAssessment.scenarioNumber, 2).toString().equals("c")) {
+            try {
+                System.out.println("------------Veirfying Button Status-----------------------");
+                healthRiskAssesment.setAssessmentStartButton(Andriodsetup.aDriver);
+                System.out.println(healthRiskAssesment.getAssessmentStartButtonText());
+                System.out.println("Updated date====" + Utility.getFormattedDate("MM.dd.yyyy"));
+                Assert.assertEquals("Completed " + Utility.getFormattedDate("MM.dd.yyyy"), healthRiskAssesment.getAssessmentStartButtonText(),"Assessment completion status mismatched");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else if (excelReader.getCellData("RiskScenarios", "scenario" + TestStartHealthRiskAssessment.scenarioNumber, 2).toString().equals("n")){
+            try {
+                System.out.println("------------Veirfying Button Status-----------------------");
+                healthRiskAssesment.setAssessmentStartButton(Andriodsetup.aDriver);
+                System.out.println(healthRiskAssesment.getAssessmentStartButtonText());
+                Assert.assertEquals(healthRiskAssesment.getAssessmentStartButtonText(),"Not Completed","Assessment completion status mismatched");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
     @AfterClass
