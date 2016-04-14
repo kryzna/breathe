@@ -24,10 +24,14 @@ import java.util.List;
  */
 public class TestHealthRiskAssessmentSubmit {
     Date dt = new Date();
-    ExcelReader reader = new ExcelReader();
-    @BeforeClass
-    public void startscore() throws IOException, InterruptedException {}
     HealthRiskAssesment healthRiskAssesment = new HealthRiskAssesment();
+    ExcelReader myxls;
+    @BeforeClass
+    public void startscore() throws IOException, InterruptedException {
+        Utility.loadPropertyFile("config.properties");
+        myxls = new ExcelReader();
+    }
+
     @Test(priority = 1)
     public void verifyscore(){
         try {
@@ -67,7 +71,7 @@ public class TestHealthRiskAssessmentSubmit {
             System.out.println("------------Veirfying Questionaire Title-----------------------");
             healthRiskAssesment.setElementQuestionnaireTitle(Andriodsetup.aDriver);
             StandardFunctions.getText(healthRiskAssesment.getElementQuestionnaireTitle());
-            Assert.assertEquals(StandardFunctions.getText(healthRiskAssesment.getElementQuestionnaireTitle()),reader.getCellData("Questionnaries","Questionaire Title",2));
+            Assert.assertEquals(StandardFunctions.getText(healthRiskAssesment.getElementQuestionnaireTitle()),myxls.getCellData("Questionnaries","QuestionaireTitle",2));
         } catch (Exception e) {
             e.printStackTrace();
         }

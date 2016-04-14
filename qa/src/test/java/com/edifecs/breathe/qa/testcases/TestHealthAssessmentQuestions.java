@@ -113,7 +113,7 @@ public class TestHealthAssessmentQuestions {
 
     @AfterClass
     public void moveToNextQuestion(){
-      WebElement elementNextButton =   HealthRiskAssesment.getElementNextButton();
+        WebElement elementNextButton =   HealthRiskAssesment.getElementNextButton();
         StandardFunctions.click(elementNextButton);
         TestStartHealthRiskAssessment.questionNumber=TestStartHealthRiskAssessment.questionNumber+1;
         weightcount++;
