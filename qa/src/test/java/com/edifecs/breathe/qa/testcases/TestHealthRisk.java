@@ -30,7 +30,7 @@ public class TestHealthRisk {
         Utility.loadPropertyFile("config.properties");
       //  myxls = new ExcelReader(System.getProperty("user.dir") + Utility.getValueOf("testExcel"));
         // Need to commented if run through testng TestSuite
-        andriodsetup.andySetup();
+        //andriodsetup.andySetup();
         loginPage.setLoginButton(andriodsetup.aDriver);
         loginPage.setPatientemailid(andriodsetup.aDriver);
         loginPage.setPatient_Password(andriodsetup.aDriver);

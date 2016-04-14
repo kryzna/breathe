@@ -34,6 +34,9 @@ public class TestHealthRiskAssessmentSubmit {
     @Test(priority = 1,invocationCount = 1)
     public void verifyscore(){
         try {
+            System.out.println("verifying score");
+            System.out.println(healthRiskAssesment.getQuestionairescore());
+            System.out.println(myscore);
             Assert.assertEquals(healthRiskAssesment.getQuestionairescore(),myscore);
             System.out.println("Score Matched");
         }

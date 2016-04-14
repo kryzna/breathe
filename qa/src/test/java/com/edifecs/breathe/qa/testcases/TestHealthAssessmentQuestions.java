@@ -5,6 +5,7 @@ import com.edifecs.breathe.qa.functions.StandardFunctions;
 import com.edifecs.breathe.qa.pageobjects.HealthRiskAssesment;
 import com.edifecs.breathe.qa.functions.Andriodsetup;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 /**
@@ -41,7 +42,8 @@ public class TestHealthAssessmentQuestions {
             questionTitle=excelReader.getCellData("RiskAssessment","Title",TestHealthRiskAssessment.questionNumber);
             System.out.println(questionTitle);
             System.out.println(StandardFunctions.getText(TestHealthRiskAssessment.elementQuestionTitle));
-            assert (StandardFunctions.getText(TestHealthRiskAssessment.elementQuestionTitle).toString().equals(questionTitle));
+            Assert.assertEquals(StandardFunctions.getText(TestHealthRiskAssessment.elementQuestionTitle).toString(),questionTitle);
+            //assert (StandardFunctions.getText(TestHealthRiskAssessment.elementQuestionTitle).toString().equals(questionTitle));
         }
         catch(Exception e)
         {
@@ -83,11 +85,11 @@ public class TestHealthAssessmentQuestions {
 
     //checking weather the answer is getting selected or not
     @Test(priority = 4)
-    public void verifyRadioAnswerSelection(){
-        int radioSelectionNumber = 2;
-        TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber-1).click();
+    public void verifyAnswerSelection(){
+        int selectionNumber = 2;
+        TestHealthRiskAssessment.listAnswersOptions.get(selectionNumber-1).click();
         Aweight = Double.parseDouble(excelReader.getCellData("RiskAssessment", "cweight"+weightcount, TestHealthRiskAssessment.questionNumber));
-        assert (TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber-1).getAttribute("checked").toString().equals("true"));
+        assert (TestHealthRiskAssessment.listAnswersOptions.get(selectionNumber-1).getAttribute("checked").toString().equals("true"));
     }
 
     @AfterClass
