@@ -46,7 +46,7 @@ public class RunTests {
         classes.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment"));
         test.setXmlClasses(classes) ;
 
-        XmlTest testStart = new XmlTest(suite);
+        /*XmlTest testStart = new XmlTest(suite);
         testStart.setName("testStart");
         List<XmlClass> classesStart = new ArrayList<XmlClass>();
         classesStart.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment"));
@@ -67,19 +67,21 @@ public class RunTests {
         test1.setName("TmpTest28");
         List<XmlClass> classes1 = new ArrayList<XmlClass>();
         classes1.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit"));
-        test1.setXmlClasses(classes1) ;
+        test1.setXmlClasses(classes1) ;*/
 
 
-        /*for(int scenario=1;scenario<=scenarioCount;scenario++) {
-        XmlTest test = new XmlTest(suite);
-        test.setName("Scenario" + scenario+"_Test1");
-        List<XmlClass> classes = new ArrayList<XmlClass>();
-        classes.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment"));
-        test.setXmlClasses(classes) ;
+        int scenarioCount = excelReader.getColumnCount("RiskScenarios")-1;
+        for(int scenario=1;scenario<=scenarioCount;scenario++) {
+            XmlTest testStart = new XmlTest(suite);
+            testStart.setName("Scenario" + scenario + "_Test1");
+            List<XmlClass> classesStart = new ArrayList<XmlClass>();
+            classesStart.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment"));
+            testStart.setXmlClasses(classesStart);
+            ;
             int questionsCount = excelReader.getRowCount("RiskAssessment");
             for (int i = 1; i < questionsCount; i++) {
                 XmlTest newTest = new XmlTest(suite);
-                newTest.setName("Scenario" + scenario+"_Test" + (i+1));
+                newTest.setName("Scenario" + scenario + "_Test" + (i + 1));
                 List<XmlClass> newClasses = new ArrayList<XmlClass>();
                 newClasses.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions"));
                 newTest.setXmlClasses(newClasses);
@@ -87,11 +89,11 @@ public class RunTests {
 
 
             XmlTest test1 = new XmlTest(suite);
-            test1.setName("Scenario" + scenario+"_Test5");
+            test1.setName("Scenario" + scenario + "_Test5");
             List<XmlClass> classes1 = new ArrayList<XmlClass>();
             classes1.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit"));
             test1.setXmlClasses(classes1);
-        */
+        }
 
         suites.add(suite);
         TestNG tng = new TestNG();

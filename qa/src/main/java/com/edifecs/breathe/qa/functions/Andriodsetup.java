@@ -43,9 +43,9 @@ public class Andriodsetup {
         //this will delete the entire simulator folder
         // capabilities.setCapability("fullReset","true");
         //used to set the language on the simulator/emulator
-        capabilities.setCapability("locale", "en");
+        //capabilities.setCapability("locale", "en");
         //used to start in a certain orientation in simulator/emulator
-        capabilities.setCapability("orientation", "PORTRAIT");
+        //capabilities.setCapability("orientation", "PORTRAIT");
         //used to set the mobile OS platform.
         capabilities.setCapability("platformName", "Android");
         //Appium will install the app binary on the appropriate device

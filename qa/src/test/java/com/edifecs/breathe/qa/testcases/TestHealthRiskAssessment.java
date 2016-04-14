@@ -9,6 +9,8 @@ import com.edifecs.breathe.qa.pageobjects.LeftMenu;
 import com.edifecs.breathe.qa.pageobjects.LoginPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
@@ -31,7 +33,7 @@ public class TestHealthRiskAssessment {
     public static List<WebElement> listAnswersOptions = new ArrayList<WebElement>();
     public static WebElement elementQuestionnaireTitle;
     int questionsCount;
-    public static int questionNumber=2;
+    //public static int questionNumber=2;
 
     @BeforeClass
     public void startApp() throws IOException, InterruptedException {
@@ -67,6 +69,21 @@ public class TestHealthRiskAssessment {
     public void verifyQuestionTitle(){
         try {
             assert (standardFunctions.getText(elementQuestionnaireTitle).toString().equals("Asthma Questionnaire for Beginners"));
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    @Test(priority = 2)
+    public void verifybuttonstatus(){
+        try {
+            System.out.println("------------Veirfying Button Status Initially-----------------------");
+            healthRiskAssesment.setAssessmentStartButton(Andriodsetup.aDriver);
+            System.out.println(healthRiskAssesment.getAssessmentStartButtonText());
+            System.out.println("Updated date===="+Utility.getFormattedDate("MM.dd.yyyy"));
+            Assert.assertEquals("NOT COMPLETED",healthRiskAssesment.getAssessmentStartButtonText());
         }
         catch(Exception e)
         {
