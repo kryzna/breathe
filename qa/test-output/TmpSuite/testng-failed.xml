@@ -1,123 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [TmpSuite]">
-  <test name="TmpTest(failed)">
-    <classes>
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
-        <methods>
-          <include name="verifyQuestionTitle"/>
-          <include name="startApp"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
-        <methods>
-          <include name="startscore"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <methods>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
-    </classes>
-  </test> <!-- TmpTest(failed) -->
-  <test name="Test1(failed)">
-    <classes>
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
-        <methods>
-          <include name="startApp"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
-        <methods>
-          <include name="startscore"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <methods>
-          <include name="verifyAnswersText"/>
-          <include name="verifyAnswerOptionsCount"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="verifyQuestionTitle"/>
-          <include name="verifyRadioAnswerSelection"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
-    </classes>
-  </test> <!-- Test1(failed) -->
-  <test name="Test2(failed)">
-    <classes>
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
-        <methods>
-          <include name="startApp"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
-        <methods>
-          <include name="startscore"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <methods>
-          <include name="verifyAnswersText"/>
-          <include name="verifyAnswerOptionsCount"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="verifyQuestionTitle"/>
-          <include name="verifyRadioAnswerSelection"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
-    </classes>
-  </test> <!-- Test2(failed) -->
-  <test name="Test3(failed)">
-    <classes>
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
-        <methods>
-          <include name="startApp"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
-        <methods>
-          <include name="startscore"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <methods>
-          <include name="verifyAnswersText"/>
-          <include name="verifyAnswerOptionsCount"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="verifyQuestionTitle"/>
-          <include name="verifyRadioAnswerSelection"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
-    </classes>
-  </test> <!-- Test3(failed) -->
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
   <test name="TmpTest28(failed)">
     <classes>
+      <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
+        <methods>
+          <include name="setBeforeTest"/>
+          <include name="setBeforeTest"/>
+          <include name="setBeforeTest"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+        </methods>
+      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
       <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
         <methods>
           <include name="startApp"/>
         </methods>
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
+      <class name="com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment">
+        <methods>
+          <include name="startQuesttionaire"/>
+        </methods>
+      </class> <!-- com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment -->
       <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
         <methods>
           <include name="verifyscore"/>
           <include name="startscore"/>
         </methods>
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <methods>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </classes>
   </test> <!-- TmpTest28(failed) -->
 </suite> <!-- Failed suite [TmpSuite] -->

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test_HealtAssessment"
+<testsuite name="TmpTest"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="0.016">
+           time="0.000">
   <properties />
   
   
-            <testcase name="verifyQuestionTitle" time="0.016" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment" />
+            <testcase name="verifyQuestionTitle" time="0.000" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment" />
       
 </testsuite>

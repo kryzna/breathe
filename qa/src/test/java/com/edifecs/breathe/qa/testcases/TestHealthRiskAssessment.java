@@ -29,7 +29,7 @@ public class TestHealthRiskAssessment {
     Andriodsetup andriodsetup = new Andriodsetup();
     StandardFunctions standardFunctions = new StandardFunctions();
     public static List<WebElement> listAnswersOptions = new ArrayList<WebElement>();
-    public static WebElement elementQuestionTitle,elementQuestionnaireTitle;
+    public static WebElement elementQuestionnaireTitle;
     int questionsCount;
     public static int questionNumber=2;
 
@@ -54,17 +54,10 @@ public class TestHealthRiskAssessment {
 
         healthRiskAssesment.getleftnav_HealtAssessment(andriodsetup.aDriver);
         healthRiskAssesment.leftnavHealthAssessmentclick();
-        healthRiskAssesment.setAssessmentStartButton(andriodsetup.aDriver);
-        WebElement assessmentStartButton = healthRiskAssesment.getAssessmentStartButton();
-        standardFunctions.click(assessmentStartButton);
         Thread.sleep(3000);
-        healthRiskAssesment.setElementQuestionTitle(andriodsetup.aDriver);
-        elementQuestionTitle = healthRiskAssesment.getElementQuestionTitle();
 
         //System.out.println(listAnswersOptions.size());
         questionsCount = myxls.getRowCount("RiskAssessment");
-        healthRiskAssesment.setElementNextButton(andriodsetup.aDriver);
-        healthRiskAssesment.setElementQuestionnaireTitle(Andriodsetup.aDriver);
         elementQuestionnaireTitle = healthRiskAssesment.getElementQuestionnaireTitle();
     }
 
