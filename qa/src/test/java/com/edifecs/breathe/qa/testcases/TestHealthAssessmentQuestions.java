@@ -35,59 +35,66 @@ public class TestHealthAssessmentQuestions {
 
     //checking the title of the question
     @Test(priority = 1)
-    public static void verifyQuestionTitle(){
+    public static void verifyQuestionTitle() throws InterruptedException {
         try {
             Qweight = Double.parseDouble(excelReader.getCellData("RiskAssessment", "Qweight", TestHealthRiskAssessment.questionNumber));
             questionTitle=excelReader.getCellData("RiskAssessment","Title",TestHealthRiskAssessment.questionNumber);
             System.out.println(questionTitle);
             System.out.println(StandardFunctions.getText(TestHealthRiskAssessment.elementQuestionTitle));
             assert (StandardFunctions.getText(TestHealthRiskAssessment.elementQuestionTitle).toString().equals(questionTitle));
+
         }
         catch(Exception e)
         {
             e.printStackTrace();
+
         }
     }
 
     //Checking the number of answer options for a question
     @Test(priority = 2)
-    public void verifyAnswerOptionsCount(){
+    public void verifyAnswerOptionsCount() throws InterruptedException {
         try {
             expectedAnswerCount = excelReader.getColumnCount("RiskAssessment", TestHealthRiskAssessment.questionNumber)/2;
             System.out.println(expectedAnswerCount);
             actualAnswerCount = TestHealthRiskAssessment.listAnswersOptions.size();
             assert (actualAnswerCount==expectedAnswerCount);
+
         }
         catch(Exception e)
         {
             System.out.println("Expected: "+expectedAnswerCount+" and Actual: "+actualAnswerCount);
             e.printStackTrace();
+
         }
     }
 
     //checking for all the answer options text for the question
     @Test(priority = 3)
-    public void verifyAnswersText(){
+    public void verifyAnswersText() throws InterruptedException {
         int i;
         try{
             for(i=1;i<=5;i++) {
                 expectedAnswerText=excelReader.getCellData("RiskAssessment", "choice"+i, TestHealthRiskAssessment.questionNumber);
                 actualAnswerText=TestHealthRiskAssessment.listAnswersOptions.get(i-1).getText().toString();
                 assert (TestHealthRiskAssessment.listAnswersOptions.get(i-1).getText().toString().equals(excelReader.getCellData("RiskAssessment", "choice"+i, TestHealthRiskAssessment.questionNumber)));
+
             }
         }   catch (Exception e){
             System.out.println("Expected: "+expectedAnswerText+" and Actual: "+actualAnswerText);
             e.printStackTrace();
+
         }
     }
 
     //checking weather the answer is getting selected or not
     @Test(priority = 4)
-    public void verifyRadioAnswerSelection(){
+    public void verifyRadioAnswerSelection() throws InterruptedException {
         int radioSelectionNumber = 2;
         TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber-1).click();
         Aweight = Double.parseDouble(excelReader.getCellData("RiskAssessment", "cweight"+weightcount, TestHealthRiskAssessment.questionNumber));
         assert (TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber-1).getAttribute("checked").toString().equals("true"));
+
     }
 
     @AfterClass
@@ -97,7 +104,9 @@ public class TestHealthAssessmentQuestions {
         TestHealthRiskAssessment.questionNumber=TestHealthRiskAssessment.questionNumber+1;
         weightcount++;
         riskscore = Qweight*Aweight;
+        System.out.println(riskscore);
         riskscorefinal = riskscorefinal+riskscore;
+        System.out.println(riskscorefinal);
     }
 
    /* @Factory

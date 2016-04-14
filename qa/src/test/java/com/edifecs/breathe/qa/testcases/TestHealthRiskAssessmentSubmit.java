@@ -15,31 +15,45 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
  * Created by rohikris on 3/31/2016.
  */
 public class TestHealthRiskAssessmentSubmit {
-    HealthRiskAssesment healthRiskAssesment = new HealthRiskAssesment();
-    double myscore = TestHealthAssessmentQuestions.riskscorefinal;
-
+    Date dt = new Date();
     @BeforeClass
-    public void startscore() throws IOException, InterruptedException {
-        healthRiskAssesment.setQuestionairescore(Andriodsetup.aDriver);
-        healthRiskAssesment.getQuestionairescore();
-    }
-
-
-    @Test(priority = 1,invocationCount = 1)
+    public void startscore() throws IOException, InterruptedException {}
+    HealthRiskAssesment healthRiskAssesment = new HealthRiskAssesment();
+    @Test(priority = 1)
     public void verifyscore(){
         try {
-            Assert.assertEquals(healthRiskAssesment.getQuestionairescore(),myscore);
-            System.out.println("Score Matched");
+            System.out.println("------------Veirfying score-----------------------");
+
+            System.out.println("Expected: ---"+TestHealthAssessmentQuestions.riskscorefinal);
+            healthRiskAssesment.setQuestionairescore(Andriodsetup.aDriver);
+            healthRiskAssesment.getQuestionairescore();
+            System.out.println("Actual ---"+healthRiskAssesment.getQuestionairescore());
+            Assert.assertEquals(healthRiskAssesment.getQuestionairescore(),TestHealthAssessmentQuestions.riskscorefinal);
         }
         catch(Exception e)
         {
-            System.out.println("Score not Matched");
+
+            e.printStackTrace();
+        }
+    }
+    @Test(priority = 2)
+    public void verifybuttonstatus(){
+        try {
+            System.out.println("------------Veirfying Button Status-----------------------");
+            healthRiskAssesment.setAssessmentStartButton(Andriodsetup.aDriver);
+            System.out.println(healthRiskAssesment.getAssessmentStartButtonText());
+            System.out.println("Updated date===="+Utility.getFormattedDate("MM.dd.yyyy"));
+            Assert.assertEquals("Completed "+Utility.getFormattedDate("MM.dd.yyyy"),healthRiskAssesment.getAssessmentStartButtonText());
+        }
+        catch(Exception e)
+        {
             e.printStackTrace();
         }
     }

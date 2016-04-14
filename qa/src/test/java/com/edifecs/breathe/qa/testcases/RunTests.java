@@ -36,7 +36,8 @@ public class RunTests {
         List<XmlSuite> suites = new ArrayList<XmlSuite>();
         suite.setName("TmpSuite");
         List<XmlTest> listXmlTests = new ArrayList<XmlTest>();
-
+        suite.addListener("org.uncommons.reportng.HTMLReporter");
+        suite.addListener("org.uncommons.reportng.JUnitXMLReporter");
         //XmlTest test = new XmlTest();
         XmlTest test = new XmlTest(suite,0);
         test.setName("TmpTest");
