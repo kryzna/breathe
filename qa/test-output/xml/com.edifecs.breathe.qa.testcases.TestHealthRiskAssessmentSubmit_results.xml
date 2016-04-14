@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Scenario1_Test5"
+<testsuite name="Scenario3_Test5"
            tests="2"
            failures="1"
            errors="0"
            skipped="0"
-           time="0.689">
+           time="0.717">
   <properties />
-            <testcase name="verifyscore" time="0.527" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
+            <testcase name="verifyscore" time="0.647" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
                 <failure type="java.lang.AssertionError"
-                  message="expected [3.0] but found [6.57]"
+                  message="expected [9.0] but found [1.49]"
               >
-<![CDATA[java.lang.AssertionError: expected [3.0] but found [6.57]
+<![CDATA[java.lang.AssertionError: expected [9.0] but found [1.49]
   org.testng.Assert.fail(Assert.java:94)
   org.testng.Assert.failNotEquals(Assert.java:496)
   org.testng.Assert.assertEquals(Assert.java:125)
@@ -49,6 +49,6 @@
           </testcase>
   
   
-            <testcase name="verifybuttonstatus" time="0.162" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit" />
+            <testcase name="verifybuttonstatus" time="0.070" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit" />
       
 </testsuite>

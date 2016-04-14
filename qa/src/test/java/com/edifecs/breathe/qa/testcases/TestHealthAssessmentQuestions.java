@@ -96,19 +96,42 @@ public class TestHealthAssessmentQuestions {
     //checking weather the answer is getting selected or not
     @Test(priority = 4)
     public void verifyRadioAnswerSelection(){
-        int radioSelectionNumber=0;
-        try {
-            radioSelectionNumber = Double.valueOf(excelReader.getCellData("RiskScenarios", "scenario" + TestStartHealthRiskAssessment.scenarioNumber, TestStartHealthRiskAssessment.questionNumber + 1)).intValue();
-        } catch (Exception e){
-            e.printStackTrace();
+        String questionType = excelReader.getCellData("RiskAssessment", "Type", TestStartHealthRiskAssessment.questionNumber).toString();
+        System.out.println(questionType);
+        String checkboxSelectionNumbers;
+        if(questionType.equals("c")){
+            System.out.println("It's a checkbox based question:");
+            checkboxSelectionNumbers = excelReader.getCellData("RiskScenarios", "scenario" + TestStartHealthRiskAssessment.scenarioNumber, TestStartHealthRiskAssessment.questionNumber + 1);
+            System.out.println(checkboxSelectionNumbers);
+            String[] checkboxSelectionNumber = checkboxSelectionNumbers.split(",");
+            System.out.println(checkboxSelectionNumber.length);
+            if(checkboxSelectionNumber.length<2){
+                if(Double.valueOf(checkboxSelectionNumber[0]).intValue()>0) {
+                    TestHealthRiskAssessment.listAnswersOptions.get(Double.valueOf(checkboxSelectionNumber[0]).intValue() - 1).click();
+                    Aweight = Double.parseDouble(excelReader.getCellData("RiskAssessment", "cweight" + weightcount, TestStartHealthRiskAssessment.questionNumber));
+                    //Assert.assertEquals(TestHealthRiskAssessment.listAnswersOptions.get(Double.valueOf(checkboxSelectionNumber[0]).intValue() - 1).getAttribute("checked").toString(), "true");
+                }
+            } else if(checkboxSelectionNumber.length>1) {
+                for (int i = 0; i < checkboxSelectionNumber.length; i++) {
+                    TestHealthRiskAssessment.listAnswersOptions.get(Integer.parseInt(checkboxSelectionNumber[i]) - 1).click();
+                    Aweight = Double.parseDouble(excelReader.getCellData("RiskAssessment", "cweight" + weightcount, TestStartHealthRiskAssessment.questionNumber));
+                    //Assert.assertEquals(TestHealthRiskAssessment.listAnswersOptions.get(Integer.parseInt(checkboxSelectionNumber[i]) - 1).getAttribute("checked").toString(), "true");
+                }
+            }
+        } else if(questionType.equals("r")) {
+            int radioSelectionNumber = 0;
+            try {
+                radioSelectionNumber = Double.valueOf(excelReader.getCellData("RiskScenarios", "scenario" + TestStartHealthRiskAssessment.scenarioNumber, TestStartHealthRiskAssessment.questionNumber + 1)).intValue();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            System.out.println("Selection: " + radioSelectionNumber);
+            if (radioSelectionNumber > 0) {
+                TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber - 1).click();
+                Aweight = Double.parseDouble(excelReader.getCellData("RiskAssessment", "cweight" + weightcount, TestStartHealthRiskAssessment.questionNumber));
+                Assert.assertEquals(TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber - 1).getAttribute("checked").toString(), "true");
+            }
         }
-        System.out.println("Selection: "+radioSelectionNumber);
-        if(radioSelectionNumber>0) {
-            TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber - 1).click();
-            Aweight = Double.parseDouble(excelReader.getCellData("RiskAssessment", "cweight" + weightcount, TestStartHealthRiskAssessment.questionNumber));
-            Assert.assertEquals(TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber - 1).getAttribute("checked").toString(), "true");
-        }
-
     }
 
     @AfterClass
