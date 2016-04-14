@@ -16,10 +16,11 @@ public class TestHealthAssessmentQuestions {
     private static String questionTitle;
     private int expectedAnswerCount,actualAnswerCount;
     private String expectedAnswerText,actualAnswerText;
-    public static  int Qweight = 0;
-    public static int Aweight = 0;
+    public static  double Qweight = 0;
+    public static double Aweight = 0;
     private int weightcount = 1;
-    public static int riskscore = 0;
+    public static double riskscore = 0.0;
+    public static double riskscorefinal = 0.0;
 
     @BeforeClass
     public void setBeforeTest(){
@@ -32,11 +33,11 @@ public class TestHealthAssessmentQuestions {
         }
     }
 
+    //checking the title of the question
     @Test(priority = 1)
-    // TC2 - If selected
     public static void verifyQuestionTitle(){
         try {
-            Qweight = Integer.parseInt(excelReader.getCellData("RiskAssessment", "Qweight", TestHealthRiskAssessment.questionNumber));
+            Qweight = Double.parseDouble(excelReader.getCellData("RiskAssessment", "Qweight", TestHealthRiskAssessment.questionNumber));
             questionTitle=excelReader.getCellData("RiskAssessment","Title",TestHealthRiskAssessment.questionNumber);
             System.out.println(questionTitle);
             System.out.println(StandardFunctions.getText(TestHealthRiskAssessment.elementQuestionTitle));
@@ -48,8 +49,8 @@ public class TestHealthAssessmentQuestions {
         }
     }
 
+    //Checking the number of answer options for a question
     @Test(priority = 2)
-    // TC1 - No option selected
     public void verifyAnswerOptionsCount(){
         try {
             expectedAnswerCount = excelReader.getColumnCount("RiskAssessment", TestHealthRiskAssessment.questionNumber)/2;
@@ -64,6 +65,7 @@ public class TestHealthAssessmentQuestions {
         }
     }
 
+    //checking for all the answer options text for the question
     @Test(priority = 3)
     public void verifyAnswersText(){
         int i;
@@ -79,24 +81,23 @@ public class TestHealthAssessmentQuestions {
         }
     }
 
+    //checking weather the answer is getting selected or not
     @Test(priority = 4)
     public void verifyRadioAnswerSelection(){
         int radioSelectionNumber = 2;
         TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber-1).click();
-        Aweight = Integer.parseInt(excelReader.getCellData("RiskAssessment", "cweight"+weightcount, TestHealthRiskAssessment.questionNumber));
+        Aweight = Double.parseDouble(excelReader.getCellData("RiskAssessment", "cweight"+weightcount, TestHealthRiskAssessment.questionNumber));
         assert (TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber-1).getAttribute("checked").toString().equals("true"));
     }
-    public static int riskcalculation()
-    {
-        riskscore = Qweight*Aweight;
-        return riskscore;
-    }
+
     @AfterClass
     public void moveToNextQuestion(){
       WebElement elementNextButton =   HealthRiskAssesment.getElementNextButton();
         StandardFunctions.click(elementNextButton);
         TestHealthRiskAssessment.questionNumber=TestHealthRiskAssessment.questionNumber+1;
         weightcount++;
+        riskscore = Qweight*Aweight;
+        riskscorefinal = riskscorefinal+riskscore;
     }
 
    /* @Factory
