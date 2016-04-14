@@ -92,8 +92,8 @@ import com.bmuschko.gradle.docker.tasks.container.*
 
 
 docker {
-    url = 'https://192.168.99.100:2376'
-    certPath = new File('C:/Users/krish.seetharaman/.docker/machine/machines/default')
+    url = 'https://192.168.99.101:3376'
+    //certPath = new File('C:/Users/krish.seetharaman/.docker/machine/machines/default')
 }
 
 task dockerfolder {
@@ -104,7 +104,7 @@ task dockerfolder {
 task buildImage(type: DockerBuildImage, dependsOn: [dockerfolder, build]) {
     doFirst {
         copy {
-          from '/src/main/docker/Dockerfile'
+          from 'src/main/docker/Dockerfile'
           into 'build/docker'
         }
 
