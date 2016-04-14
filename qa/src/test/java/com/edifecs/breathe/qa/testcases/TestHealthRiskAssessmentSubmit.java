@@ -23,6 +23,7 @@ import java.util.List;
  */
 public class TestHealthRiskAssessmentSubmit {
     Date dt = new Date();
+    ExcelReader reader = new ExcelReader();
     @BeforeClass
     public void startscore() throws IOException, InterruptedException {}
     HealthRiskAssesment healthRiskAssesment = new HealthRiskAssesment();
@@ -54,6 +55,19 @@ public class TestHealthRiskAssessmentSubmit {
         }
         catch(Exception e)
         {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Test(priority = 3)
+    public void verifyQuestionairetitle() {
+        try {
+            System.out.println("------------Veirfying Questionaire Title-----------------------");
+            healthRiskAssesment.setElementQuestionnaireTitle(Andriodsetup.aDriver);
+            StandardFunctions.getText(healthRiskAssesment.getElementQuestionnaireTitle());
+            Assert.assertEquals(StandardFunctions.getText(healthRiskAssesment.getElementQuestionnaireTitle()),reader.getCellData("Questionnaries","Questionaire Title",2));
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

@@ -1,6 +1,8 @@
 package com.edifecs.breathe.qa.functions;
 
 import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -65,6 +67,10 @@ public class Utility {
             System.err.println("Exception occured: \n");
             System.err.println(e.getMessage());
         }
+    }
+    public static String getFormattedDate(String dateformat) {
+        SimpleDateFormat sdf = new SimpleDateFormat(dateformat);
+        return sdf.format(new Date());
     }
 
 }
