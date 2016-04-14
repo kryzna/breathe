@@ -15,8 +15,9 @@ public class HealthRiskAssesment {
     public WebElement leftnav_Healthassessment,setAssessmentStartButton,elementQuestionnaireTitle,
             getHealtAssessment_questionnairechoice_yes_radio1,getHealtAssessment_questionnairechoice_next,
             getHealtAssessment_questionnairechoice_checkbox1,text_HealtAssessment_completed,elementQuestionTitle;
-    public static WebElement elementNextButton;
+    public static WebElement elementNextButton,getHealtAssessmentSubmit,questionairescore;
     public static List<WebElement> listAnswerOptions = new ArrayList<WebElement>();
+
 
     public void getleftnav_HealtAssessment(AndroidDriver aDriver) {
         leftnav_Healthassessment = aDriver.findElement(
@@ -102,12 +103,28 @@ public class HealthRiskAssesment {
     public void getHealtAssessment_questionnairechoice_next(AndroidDriver aDriver){
         getHealtAssessment_questionnairechoice_next=aDriver.findElement(By.id("android:id/button1"));
         getHealtAssessment_questionnairechoice_next.click();
+
+    }
+
+    //next button on the assessment question activity
+    public void getHealtAssessmentSubmit(AndroidDriver aDriver){
+        getHealtAssessmentSubmit=aDriver.findElement(By.id("android:id/buttonSubmit"));
     }
 
     public void getHealtAssessment_questionnairechoice_checkbox1(AndroidDriver aDriver) {
         getHealtAssessment_questionnairechoice_checkbox1 = aDriver.findElement(
                 By.xpath("//android.widget.CheckBox[@text='Two times a week or less']"));
         getHealtAssessment_questionnairechoice_checkbox1.click();
+    }
+    public void setQuestionairescore(AndroidDriver aDriver)
+    {
+        questionairescore = aDriver.findElement(By.id("com.rgp.breathe:id/questionnaire_score"));
+
+    }
+    public double getQuestionairescore()
+    {
+        double score =   Double.parseDouble(questionairescore.getText());
+        return score;
     }
 
 }

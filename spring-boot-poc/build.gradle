@@ -139,7 +139,6 @@ task createContainer(type: DockerCreateContainer) {
 }
 
 
-
 task startContainer(type: DockerStartContainer) {
     dependsOn createContainer
     targetContainerId { createContainer.getContainerId() }

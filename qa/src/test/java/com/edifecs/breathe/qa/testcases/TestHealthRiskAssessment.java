@@ -51,6 +51,7 @@ public class TestHealthRiskAssessment {
         leftmenu.leftnavclick();
 
         // Need to open Health Assessment link
+
         healthRiskAssesment.getleftnav_HealtAssessment(andriodsetup.aDriver);
         healthRiskAssesment.leftnavHealthAssessmentclick();
         healthRiskAssesment.setAssessmentStartButton(andriodsetup.aDriver);

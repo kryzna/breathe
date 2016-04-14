@@ -52,6 +52,12 @@ public class RunTests {
             newClasses.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions"));
             newTest.setXmlClasses(newClasses) ;
         }
+         XmlTest test1 = new XmlTest(suite,4);
+         test1.setName("TmpTest28");
+         List<XmlClass> classes1 = new ArrayList<XmlClass>();
+         classes1.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit"));
+         test1.setXmlClasses(classes1) ;
+
 
         /*for(int i=2;i<=scenarioCount;i++) {
             XmlTest newTest = new XmlTest(suite,i);

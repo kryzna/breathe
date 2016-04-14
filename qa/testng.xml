@@ -26,6 +26,14 @@
             <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions"></class>
         </classes>
     </test>
+    <test name="test_HealtAssessmentscore">
+        <classes>
+            <!--//add classes below which needs to be executed-->
+
+            <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
+            </class>
+        </classes>
+    </test>
     <!--<test name="test_tracking">
         <classes>
             &lt;!&ndash;//add classes below which needs to be executed&ndash;&gt;

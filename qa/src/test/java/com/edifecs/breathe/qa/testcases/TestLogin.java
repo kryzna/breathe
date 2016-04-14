@@ -116,7 +116,7 @@ public class TestLogin {
     @AfterClass
     public void teardown() throws IOException {
         andriodsetup.aDriver.quit();
-        Appiumserver.stopAppiumServer();
+      //  Appiumserver.stopAppiumServer();
 
 
     }

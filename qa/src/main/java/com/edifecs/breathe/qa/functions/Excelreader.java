@@ -3,7 +3,6 @@ package com.edifecs.breathe.qa.functions;
 
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
-import org.apache.poi.hssf.usermodel.HSSFHyperlink;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -53,7 +52,7 @@ public class ExcelReader {
 	}
 	
 	// returns the data from a cell
-	public String getCellData(String sheetName,String colName,int rowNum){
+	public String getCellData(String sheetName, String colName, int rowNum){
 		try{
 			if(rowNum <=0)
 				return "";
