@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.169">
+           time="0.204">
   <properties />
   
   
-            <testcase name="verifyQuestionTitle" time="0.001" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment" />
-                <testcase name="verifybuttonstatus" time="0.168" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment" />
+            <testcase name="verifybuttonstatus" time="0.204" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment" />
+                <testcase name="verifyQuestionTitle" time="0.000" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment" />
       
 </testsuite>

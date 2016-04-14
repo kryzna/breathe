@@ -138,6 +138,16 @@ public class TestHealthAssessmentQuestions {
         }
     }
 
+    @Test
+    public void verifySubmitButton(){
+        int currentQuestionNumber = TestStartHealthRiskAssessment.questionNumber-1;
+        int totalQuestions = excelReader.getRowCount("RiskAssessment")-1;
+        if(currentQuestionNumber==totalQuestions){
+            WebElement elementSubmitButton =   HealthRiskAssesment.getElementNextButton();
+            Assert.assertEquals(elementSubmitButton.getText().toString(),"SUBMIT","Submit button not present");
+        }
+    }
+
     @AfterClass
     public void moveToNextQuestion(){
       WebElement elementNextButton =   HealthRiskAssesment.getElementNextButton();
