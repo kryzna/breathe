@@ -43,7 +43,7 @@ public class RunTests {
         List<XmlClass> classes = new ArrayList<XmlClass>();
         classes.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment"));
         test.setXmlClasses(classes) ;
-
+        int scenarioCount = excelReader.getColumnCount("RiskScenarios");
         int questionsCount = excelReader.getRowCount("RiskAssessment");
         for(int i=1;i<questionsCount;i++) {
             XmlTest newTest = new XmlTest(suite,i);
@@ -52,6 +52,14 @@ public class RunTests {
             newClasses.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions"));
             newTest.setXmlClasses(newClasses) ;
         }
+
+        /*for(int i=2;i<=scenarioCount;i++) {
+            XmlTest newTest = new XmlTest(suite,i);
+            newTest.setName("Test"+i);
+            List<XmlClass> newClasses = new ArrayList<XmlClass>();
+            newClasses.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions"));
+            newTest.setXmlClasses(newClasses) ;
+        }*/
 
         suites.add(suite);
         TestNG tng = new TestNG();
