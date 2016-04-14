@@ -12,7 +12,8 @@ import org.testng.annotations.*;
  * Created by amolverm on 4/11/2016.
  */
 public class TestHealthAssessmentQuestions {
-    //HealthRiskAssesment healthRiskAssesment = new HealthRiskAssesment();
+    HealthRiskAssesment healthRiskAssesment = new HealthRiskAssesment();
+    public static WebElement elementQuestionTitle;
     public static ExcelReader excelReader = new ExcelReader();
     private static String questionTitle;
     private int expectedAnswerCount,actualAnswerCount;
@@ -25,6 +26,8 @@ public class TestHealthAssessmentQuestions {
 
     @BeforeClass
     public void setBeforeTest(){
+        healthRiskAssesment.setElementQuestionTitle(Andriodsetup.aDriver);
+        elementQuestionTitle = healthRiskAssesment.getElementQuestionTitle();
         if(excelReader.getCellData("RiskAssessment","Type",TestHealthRiskAssessment.questionNumber).toString().equals("r")) {
             HealthRiskAssesment.setListAnswerOptions(Andriodsetup.aDriver);
             TestHealthRiskAssessment.listAnswersOptions = HealthRiskAssesment.getListAnswerOptions();
@@ -32,6 +35,8 @@ public class TestHealthAssessmentQuestions {
             HealthRiskAssesment.setListCheckboxAnswerOptions(Andriodsetup.aDriver);
             TestHealthRiskAssessment.listAnswersOptions = HealthRiskAssesment.getListCheckboxAnswerOptions();
         }
+        healthRiskAssesment.setElementNextButton(Andriodsetup.aDriver);
+        healthRiskAssesment.setElementQuestionnaireTitle(Andriodsetup.aDriver);
     }
 
     //checking the title of the question
@@ -41,8 +46,8 @@ public class TestHealthAssessmentQuestions {
             Qweight = Double.parseDouble(excelReader.getCellData("RiskAssessment", "Qweight", TestHealthRiskAssessment.questionNumber));
             questionTitle=excelReader.getCellData("RiskAssessment","Title",TestHealthRiskAssessment.questionNumber);
             System.out.println(questionTitle);
-            System.out.println(StandardFunctions.getText(TestHealthRiskAssessment.elementQuestionTitle));
-            Assert.assertEquals(StandardFunctions.getText(TestHealthRiskAssessment.elementQuestionTitle).toString(),questionTitle);
+            System.out.println(StandardFunctions.getText(elementQuestionTitle));
+            Assert.assertEquals(StandardFunctions.getText(elementQuestionTitle).toString(),questionTitle);
             //assert (StandardFunctions.getText(TestHealthRiskAssessment.elementQuestionTitle).toString().equals(questionTitle));
         }
         catch(Exception e)

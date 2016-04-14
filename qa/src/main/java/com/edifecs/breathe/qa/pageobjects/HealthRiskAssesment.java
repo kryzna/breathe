@@ -127,4 +127,10 @@ public class HealthRiskAssesment {
         return score;
     }
 
+    public String getAssessmentStartButtonText(){
+        String s = setAssessmentStartButton.getText();
+        return  s;
+    }
+
+
 }

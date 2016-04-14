@@ -40,15 +40,22 @@ public class RunTests {
         //XmlTest test = new XmlTest();
         suite.addListener("org.uncommons.reportng.HTMLReporter");
         suite.addListener("org.uncommons.reportng.JUnitXMLReporter");
-        XmlTest test = new XmlTest(suite,0);
+        XmlTest test = new XmlTest(suite);
         test.setName("TmpTest");
         List<XmlClass> classes = new ArrayList<XmlClass>();
         classes.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment"));
         test.setXmlClasses(classes) ;
+
+        XmlTest testStart = new XmlTest(suite);
+        testStart.setName("testStart");
+        List<XmlClass> classesStart = new ArrayList<XmlClass>();
+        classesStart.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment"));
+        testStart.setXmlClasses(classesStart);
+
         int scenarioCount = excelReader.getColumnCount("RiskScenarios");
         int questionsCount = excelReader.getRowCount("RiskAssessment");
         for(int i=1;i<questionsCount;i++) {
-            XmlTest newTest = new XmlTest(suite,i);
+            XmlTest newTest = new XmlTest(suite);
             newTest.setName("Test"+i);
             List<XmlClass> newClasses = new ArrayList<XmlClass>();
             newClasses.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions"));
@@ -56,7 +63,7 @@ public class RunTests {
         }
 
 
-        XmlTest test1 = new XmlTest(suite,4);
+        XmlTest test1 = new XmlTest(suite);
         test1.setName("TmpTest28");
         List<XmlClass> classes1 = new ArrayList<XmlClass>();
         classes1.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit"));

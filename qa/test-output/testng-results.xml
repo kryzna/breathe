@@ -1,124 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="14" passed="13">
+<testng-results skipped="0" failed="1" total="16" passed="15">
   <reporter-output>
   </reporter-output>
-  <suite name="TmpSuite" duration-ms="54180" started-at="2016-04-14T11:00:36Z" finished-at="2016-04-14T11:01:31Z">
+  <suite name="TmpSuite" duration-ms="55544" started-at="2016-04-14T11:49:27Z" finished-at="2016-04-14T11:50:23Z">
     <groups>
     </groups>
-    <test name="TmpTest" duration-ms="48609" started-at="2016-04-14T11:00:36Z" finished-at="2016-04-14T11:01:25Z">
+    <test name="TmpTest" duration-ms="47618" started-at="2016-04-14T11:49:27Z" finished-at="2016-04-14T11:50:15Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
-        <test-method status="PASS" signature="startApp()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment@af4e3b6]" name="startApp" is-config="true" duration-ms="48599" started-at="2016-04-14T16:30:36Z" finished-at="2016-04-14T16:31:25Z">
+        <test-method status="PASS" signature="startApp()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment@46872b3e]" name="startApp" is-config="true" duration-ms="47608" started-at="2016-04-14T17:19:27Z" finished-at="2016-04-14T17:20:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApp -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment@af4e3b6]" name="verifyQuestionTitle" duration-ms="0" started-at="2016-04-14T16:31:25Z" finished-at="2016-04-14T16:31:25Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment@46872b3e]" name="verifyQuestionTitle" duration-ms="0" started-at="2016-04-14T17:20:15Z" finished-at="2016-04-14T17:20:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
     </test> <!-- TmpTest -->
-    <test name="Test1" duration-ms="1286" started-at="2016-04-14T11:01:25Z" finished-at="2016-04-14T11:01:26Z">
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@238258f1]" name="setBeforeTest" is-config="true" duration-ms="113" started-at="2016-04-14T16:31:25Z" finished-at="2016-04-14T16:31:25Z">
+    <test name="testStart" duration-ms="312" started-at="2016-04-14T11:50:15Z" finished-at="2016-04-14T11:50:15Z">
+      <class name="com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment">
+        <test-method status="PASS" signature="startQuesttionaire()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@48e55177]" name="startQuesttionaire" is-config="true" duration-ms="311" started-at="2016-04-14T17:20:15Z" finished-at="2016-04-14T17:20:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setBeforeTest -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@238258f1]" name="verifyQuestionTitle" duration-ms="56" started-at="2016-04-14T16:31:25Z" finished-at="2016-04-14T16:31:25Z">
+        </test-method> <!-- startQuesttionaire -->
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@48e55177]" name="verifyQuestionTitle" duration-ms="0" started-at="2016-04-14T17:20:15Z" finished-at="2016-04-14T17:20:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
-        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@238258f1]" name="verifyAnswerOptionsCount" duration-ms="1" started-at="2016-04-14T16:31:25Z" finished-at="2016-04-14T16:31:25Z">
+      </class> <!-- com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment -->
+    </test> <!-- testStart -->
+    <test name="Test1" duration-ms="2424" started-at="2016-04-14T11:50:15Z" finished-at="2016-04-14T11:50:18Z">
+      <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
+        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@5a6363a8]" name="setBeforeTest" is-config="true" duration-ms="1178" started-at="2016-04-14T17:20:15Z" finished-at="2016-04-14T17:20:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBeforeTest -->
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@5a6363a8]" name="verifyQuestionTitle" duration-ms="72" started-at="2016-04-14T17:20:16Z" finished-at="2016-04-14T17:20:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyQuestionTitle -->
+        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@5a6363a8]" name="verifyAnswerOptionsCount" duration-ms="1" started-at="2016-04-14T17:20:17Z" finished-at="2016-04-14T17:20:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerOptionsCount -->
-        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@238258f1]" name="verifyAnswersText" duration-ms="186" started-at="2016-04-14T16:31:25Z" finished-at="2016-04-14T16:31:25Z">
+        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@5a6363a8]" name="verifyAnswersText" duration-ms="215" started-at="2016-04-14T17:20:17Z" finished-at="2016-04-14T17:20:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswersText -->
-        <test-method status="PASS" signature="verifyRadioAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@238258f1]" name="verifyRadioAnswerSelection" duration-ms="169" started-at="2016-04-14T16:31:25Z" finished-at="2016-04-14T16:31:26Z">
+        <test-method status="PASS" signature="verifyRadioAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@5a6363a8]" name="verifyRadioAnswerSelection" duration-ms="164" started-at="2016-04-14T17:20:17Z" finished-at="2016-04-14T17:20:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRadioAnswerSelection -->
-        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@238258f1]" name="moveToNextQuestion" is-config="true" duration-ms="759" started-at="2016-04-14T16:31:26Z" finished-at="2016-04-14T16:31:26Z">
+        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@5a6363a8]" name="moveToNextQuestion" is-config="true" duration-ms="792" started-at="2016-04-14T17:20:17Z" finished-at="2016-04-14T17:20:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- moveToNextQuestion -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </test> <!-- Test1 -->
-    <test name="Test2" duration-ms="1999" started-at="2016-04-14T11:01:26Z" finished-at="2016-04-14T11:01:28Z">
+    <test name="Test2" duration-ms="2382" started-at="2016-04-14T11:50:18Z" finished-at="2016-04-14T11:50:20Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6ce6c876]" name="setBeforeTest" is-config="true" duration-ms="652" started-at="2016-04-14T16:31:26Z" finished-at="2016-04-14T16:31:27Z">
+        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@eb98506]" name="setBeforeTest" is-config="true" duration-ms="1117" started-at="2016-04-14T17:20:18Z" finished-at="2016-04-14T17:20:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBeforeTest -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6ce6c876]" name="verifyQuestionTitle" duration-ms="75" started-at="2016-04-14T16:31:27Z" finished-at="2016-04-14T16:31:27Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@eb98506]" name="verifyQuestionTitle" duration-ms="49" started-at="2016-04-14T17:20:19Z" finished-at="2016-04-14T17:20:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
-        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6ce6c876]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-14T16:31:27Z" finished-at="2016-04-14T16:31:27Z">
+        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@eb98506]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-14T17:20:19Z" finished-at="2016-04-14T17:20:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerOptionsCount -->
-        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6ce6c876]" name="verifyAnswersText" duration-ms="184" started-at="2016-04-14T16:31:27Z" finished-at="2016-04-14T16:31:27Z">
+        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@eb98506]" name="verifyAnswersText" duration-ms="241" started-at="2016-04-14T17:20:19Z" finished-at="2016-04-14T17:20:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswersText -->
-        <test-method status="PASS" signature="verifyRadioAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6ce6c876]" name="verifyRadioAnswerSelection" duration-ms="241" started-at="2016-04-14T16:31:27Z" finished-at="2016-04-14T16:31:27Z">
+        <test-method status="PASS" signature="verifyRadioAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@eb98506]" name="verifyRadioAnswerSelection" duration-ms="179" started-at="2016-04-14T17:20:19Z" finished-at="2016-04-14T17:20:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRadioAnswerSelection -->
-        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6ce6c876]" name="moveToNextQuestion" is-config="true" duration-ms="844" started-at="2016-04-14T16:31:27Z" finished-at="2016-04-14T16:31:28Z">
+        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@eb98506]" name="moveToNextQuestion" is-config="true" duration-ms="793" started-at="2016-04-14T17:20:19Z" finished-at="2016-04-14T17:20:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- moveToNextQuestion -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </test> <!-- Test2 -->
-    <test name="Test3" duration-ms="1781" started-at="2016-04-14T11:01:28Z" finished-at="2016-04-14T11:01:30Z">
+    <test name="Test3" duration-ms="2280" started-at="2016-04-14T11:50:20Z" finished-at="2016-04-14T11:50:22Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4d9d68fe]" name="setBeforeTest" is-config="true" duration-ms="554" started-at="2016-04-14T16:31:28Z" finished-at="2016-04-14T16:31:29Z">
+        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@459467a6]" name="setBeforeTest" is-config="true" duration-ms="1135" started-at="2016-04-14T17:20:20Z" finished-at="2016-04-14T17:20:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBeforeTest -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4d9d68fe]" name="verifyQuestionTitle" duration-ms="83" started-at="2016-04-14T16:31:29Z" finished-at="2016-04-14T16:31:29Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@459467a6]" name="verifyQuestionTitle" duration-ms="46" started-at="2016-04-14T17:20:21Z" finished-at="2016-04-14T17:20:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
-        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4d9d68fe]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-14T16:31:29Z" finished-at="2016-04-14T16:31:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAnswerOptionsCount -->
-        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4d9d68fe]" name="verifyAnswersText" duration-ms="115" started-at="2016-04-14T16:31:29Z" finished-at="2016-04-14T16:31:29Z">
+        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@459467a6]" name="verifyAnswersText" duration-ms="98" started-at="2016-04-14T17:20:21Z" finished-at="2016-04-14T17:20:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswersText -->
-        <test-method status="PASS" signature="verifyRadioAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4d9d68fe]" name="verifyRadioAnswerSelection" duration-ms="173" started-at="2016-04-14T16:31:29Z" finished-at="2016-04-14T16:31:29Z">
+        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@459467a6]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-14T17:20:21Z" finished-at="2016-04-14T17:20:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAnswerOptionsCount -->
+        <test-method status="PASS" signature="verifyRadioAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@459467a6]" name="verifyRadioAnswerSelection" duration-ms="134" started-at="2016-04-14T17:20:21Z" finished-at="2016-04-14T17:20:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRadioAnswerSelection -->
-        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4d9d68fe]" name="moveToNextQuestion" is-config="true" duration-ms="855" started-at="2016-04-14T16:31:29Z" finished-at="2016-04-14T16:31:30Z">
+        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@459467a6]" name="moveToNextQuestion" is-config="true" duration-ms="864" started-at="2016-04-14T17:20:22Z" finished-at="2016-04-14T17:20:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- moveToNextQuestion -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </test> <!-- Test3 -->
-    <test name="TmpTest28" duration-ms="478" started-at="2016-04-14T11:01:30Z" finished-at="2016-04-14T11:01:31Z">
+    <test name="TmpTest28" duration-ms="500" started-at="2016-04-14T11:50:22Z" finished-at="2016-04-14T11:50:23Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
-        <test-method status="PASS" signature="startscore()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@51aa39ff]" name="startscore" is-config="true" duration-ms="435" started-at="2016-04-14T16:31:30Z" finished-at="2016-04-14T16:31:31Z">
+        <test-method status="PASS" signature="startscore()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@7439825d]" name="startscore" is-config="true" duration-ms="0" started-at="2016-04-14T17:20:22Z" finished-at="2016-04-14T17:20:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startscore -->
-        <test-method status="FAIL" signature="verifyscore()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@51aa39ff]" name="verifyscore" duration-ms="41" started-at="2016-04-14T16:31:31Z" finished-at="2016-04-14T16:31:31Z">
+        <test-method status="FAIL" signature="verifyscore()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@7439825d]" name="verifyscore" duration-ms="436" started-at="2016-04-14T17:20:22Z" finished-at="2016-04-14T17:20:23Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [0.0] but found [8.82]]]>
+              <![CDATA[expected [3.0] but found [3.42]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [0.0] but found [8.82]
+              <![CDATA[java.lang.AssertionError: expected [3.0] but found [3.42]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:167)
-	at com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit.verifyscore(TestHealthRiskAssessmentSubmit.java:40)
+	at com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit.verifyscore(TestHealthRiskAssessmentSubmit.java:38)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -140,7 +152,7 @@
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
 	at org.testng.TestNG.run(TestNG.java:1024)
-	at com.edifecs.breathe.qa.testcases.RunTests.main(RunTests.java:93)
+	at com.edifecs.breathe.qa.testcases.RunTests.main(RunTests.java:100)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -152,6 +164,10 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyscore -->
+        <test-method status="PASS" signature="verifybuttonstatus()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@7439825d]" name="verifybuttonstatus" duration-ms="62" started-at="2016-04-14T17:20:23Z" finished-at="2016-04-14T17:20:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifybuttonstatus -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
     </test> <!-- TmpTest28 -->
   </suite> <!-- TmpSuite -->

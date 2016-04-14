@@ -7,17 +7,6 @@
   </listeners>
   <test name="TmpTest28(failed)">
     <classes>
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
-        <methods>
-          <include name="verifyscore"/>
-          <include name="startscore"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
-        <methods>
-          <include name="startApp"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
       <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
         <methods>
           <include name="setBeforeTest"/>
@@ -28,6 +17,22 @@
           <include name="moveToNextQuestion"/>
         </methods>
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
+      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
+        <methods>
+          <include name="startApp"/>
+        </methods>
+      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
+      <class name="com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment">
+        <methods>
+          <include name="startQuesttionaire"/>
+        </methods>
+      </class> <!-- com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment -->
+      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
+        <methods>
+          <include name="verifyscore"/>
+          <include name="startscore"/>
+        </methods>
+      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
     </classes>
   </test> <!-- TmpTest28(failed) -->
 </suite> <!-- Failed suite [TmpSuite] -->
