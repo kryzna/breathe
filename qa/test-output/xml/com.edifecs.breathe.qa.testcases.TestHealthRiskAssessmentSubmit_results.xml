@@ -4,13 +4,13 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="0.927">
+           time="0.560">
   <properties />
-            <testcase name="verifyscore" time="0.690" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
+            <testcase name="verifyscore" time="0.456" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
                 <failure type="java.lang.AssertionError"
-                  message="expected [3.0] but found [9.92]"
+                  message="expected [3.0] but found [3.5]"
               >
-<![CDATA[java.lang.AssertionError: expected [3.0] but found [9.92]
+<![CDATA[java.lang.AssertionError: expected [3.0] but found [3.5]
   org.testng.Assert.fail(Assert.java:94)
   org.testng.Assert.failNotEquals(Assert.java:496)
   org.testng.Assert.assertEquals(Assert.java:125)
@@ -49,6 +49,6 @@
           </testcase>
   
   
-            <testcase name="verifybuttonstatus" time="0.237" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit" />
+            <testcase name="verifybuttonstatus" time="0.104" classname="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit" />
       
 </testsuite>

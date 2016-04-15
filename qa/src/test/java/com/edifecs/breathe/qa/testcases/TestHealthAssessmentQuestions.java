@@ -4,6 +4,7 @@ import com.edifecs.breathe.qa.functions.ExcelReader;
 import com.edifecs.breathe.qa.functions.StandardFunctions;
 import com.edifecs.breathe.qa.pageobjects.HealthRiskAssesment;
 import com.edifecs.breathe.qa.functions.Andriodsetup;
+import org.apache.tools.ant.taskdefs.condition.And;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -94,7 +95,7 @@ public class TestHealthAssessmentQuestions {
 
     //checking weather the answer is getting selected or not
     @Test(priority = 4)
-    public void verifyRadioAnswerSelection(){
+    public void verifyAnswerSelection(){
         String questionType = excelReader.getCellData("RiskAssessment", "Type", TestStartHealthRiskAssessment.questionNumber).toString();
         System.out.println(questionType);
         String checkboxSelectionNumbers;
@@ -138,13 +139,24 @@ public class TestHealthAssessmentQuestions {
         }
     }
 
-    @Test
+    @Test(priority = 5)
     public void verifySubmitButton(){
         int currentQuestionNumber = TestStartHealthRiskAssessment.questionNumber-1;
         int totalQuestions = excelReader.getRowCount("RiskAssessment")-1;
         if(currentQuestionNumber==totalQuestions){
             WebElement elementSubmitButton =   HealthRiskAssesment.getElementNextButton();
             Assert.assertEquals(elementSubmitButton.getText().toString(),"SUBMIT","Submit button not present");
+        }
+    }
+
+    @Test(priority = 6)
+    public void verifyPreviousButton() throws InterruptedException {
+        int currentQuestionNumber = TestStartHealthRiskAssessment.questionNumber-1;
+        int totalQuestions = excelReader.getRowCount("RiskAssessment")-1;
+        if(currentQuestionNumber>1 && currentQuestionNumber<=totalQuestions){
+            healthRiskAssesment.setElementPreviousButton(Andriodsetup.aDriver);
+            WebElement elementPreviousButton =   HealthRiskAssesment.getElementPreviousButton();
+            Assert.assertEquals(elementPreviousButton.getText().toString(),"PREVIOUS","Previous button not present");
         }
     }
 

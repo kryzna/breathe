@@ -5,84 +5,8 @@
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
-  <test name="Scenario1_Test4(failed)">
-    <classes>
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
-        <methods>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
-        <methods>
-          <include name="startApp"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
-      <class name="com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment">
-        <methods>
-          <include name="startQuesttionaire"/>
-          <include name="startQuesttionaire"/>
-          <include name="startQuesttionaire"/>
-          <include name="startQuesttionaire"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <methods>
-          <include name="verifySubmitButton"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
-    </classes>
-  </test> <!-- Scenario1_Test4(failed) -->
   <test name="Scenario1_Test5(failed)">
     <classes>
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
-        <methods>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="verifyscore"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
-        <methods>
-          <include name="startApp"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
       <class name="com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment">
         <methods>
           <include name="startQuesttionaire"/>
@@ -119,86 +43,28 @@
           <include name="moveToNextQuestion"/>
         </methods>
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
+      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
+        <methods>
+          <include name="nextScenario"/>
+          <include name="nextScenario"/>
+          <include name="nextScenario"/>
+          <include name="nextScenario"/>
+          <include name="verifyscore"/>
+          <include name="startscore"/>
+          <include name="startscore"/>
+          <include name="startscore"/>
+          <include name="startscore"/>
+        </methods>
+      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
+      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
+        <methods>
+          <include name="startApp"/>
+        </methods>
+      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
     </classes>
   </test> <!-- Scenario1_Test5(failed) -->
-  <test name="Scenario2_Test4(failed)">
-    <classes>
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
-        <methods>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
-        <methods>
-          <include name="startApp"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
-      <class name="com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment">
-        <methods>
-          <include name="startQuesttionaire"/>
-          <include name="startQuesttionaire"/>
-          <include name="startQuesttionaire"/>
-          <include name="startQuesttionaire"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <methods>
-          <include name="verifySubmitButton"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
-    </classes>
-  </test> <!-- Scenario2_Test4(failed) -->
   <test name="Scenario2_Test5(failed)">
     <classes>
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
-        <methods>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="verifyscore"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
-        <methods>
-          <include name="startApp"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
       <class name="com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment">
         <methods>
           <include name="startQuesttionaire"/>
@@ -235,27 +101,28 @@
           <include name="moveToNextQuestion"/>
         </methods>
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
+      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
+        <methods>
+          <include name="nextScenario"/>
+          <include name="nextScenario"/>
+          <include name="nextScenario"/>
+          <include name="nextScenario"/>
+          <include name="verifyscore"/>
+          <include name="startscore"/>
+          <include name="startscore"/>
+          <include name="startscore"/>
+          <include name="startscore"/>
+        </methods>
+      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
+      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
+        <methods>
+          <include name="startApp"/>
+        </methods>
+      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
     </classes>
   </test> <!-- Scenario2_Test5(failed) -->
-  <test name="Scenario3_Test4(failed)">
+  <test name="Scenario3_Test5(failed)">
     <classes>
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
-        <methods>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
-        <methods>
-          <include name="startApp"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
       <class name="com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment">
         <methods>
           <include name="startQuesttionaire"/>
@@ -266,19 +133,6 @@
       </class> <!-- com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment -->
       <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
         <methods>
-          <include name="verifySubmitButton"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
           <include name="setBeforeTest"/>
           <include name="setBeforeTest"/>
           <include name="setBeforeTest"/>
@@ -291,12 +145,20 @@
           <include name="setBeforeTest"/>
           <include name="setBeforeTest"/>
           <include name="setBeforeTest"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
         </methods>
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
-    </classes>
-  </test> <!-- Scenario3_Test4(failed) -->
-  <test name="Scenario3_Test5(failed)">
-    <classes>
       <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
         <methods>
           <include name="nextScenario"/>
@@ -315,63 +177,10 @@
           <include name="startApp"/>
         </methods>
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
-      <class name="com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment">
-        <methods>
-          <include name="startQuesttionaire"/>
-          <include name="startQuesttionaire"/>
-          <include name="startQuesttionaire"/>
-          <include name="startQuesttionaire"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <methods>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </classes>
   </test> <!-- Scenario3_Test5(failed) -->
-  <test name="Scenario4_Test4(failed)">
+  <test name="Scenario4_Test5(failed)">
     <classes>
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
-        <methods>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="nextScenario"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-          <include name="startscore"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
-        <methods>
-          <include name="startApp"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
       <class name="com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment">
         <methods>
           <include name="startQuesttionaire"/>
@@ -382,19 +191,6 @@
       </class> <!-- com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment -->
       <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
         <methods>
-          <include name="verifySubmitButton"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
           <include name="setBeforeTest"/>
           <include name="setBeforeTest"/>
           <include name="setBeforeTest"/>
@@ -407,12 +203,20 @@
           <include name="setBeforeTest"/>
           <include name="setBeforeTest"/>
           <include name="setBeforeTest"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
+          <include name="moveToNextQuestion"/>
         </methods>
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
-    </classes>
-  </test> <!-- Scenario4_Test4(failed) -->
-  <test name="Scenario4_Test5(failed)">
-    <classes>
       <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
         <methods>
           <include name="nextScenario"/>
@@ -432,42 +236,6 @@
           <include name="startApp"/>
         </methods>
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
-      <class name="com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment">
-        <methods>
-          <include name="startQuesttionaire"/>
-          <include name="startQuesttionaire"/>
-          <include name="startQuesttionaire"/>
-          <include name="startQuesttionaire"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment -->
-      <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <methods>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="setBeforeTest"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-          <include name="moveToNextQuestion"/>
-        </methods>
-      </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </classes>
   </test> <!-- Scenario4_Test5(failed) -->
 </suite> <!-- Failed suite [TmpSuite] -->
