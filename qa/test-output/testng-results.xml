@@ -1,159 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="7" total="90" passed="83">
+<testng-results skipped="0" failed="5" total="90" passed="85">
   <reporter-output>
   </reporter-output>
-  <suite name="TmpSuite" duration-ms="71599" started-at="2016-04-15T11:15:47Z" finished-at="2016-04-15T11:16:58Z">
+  <suite name="TmpSuite" duration-ms="72502" started-at="2016-04-15T11:34:10Z" finished-at="2016-04-15T11:35:22Z">
     <groups>
     </groups>
-    <test name="TmpTest" duration-ms="26387" started-at="2016-04-15T11:15:47Z" finished-at="2016-04-15T11:16:13Z">
+    <test name="TmpTest" duration-ms="26042" started-at="2016-04-15T11:34:10Z" finished-at="2016-04-15T11:34:36Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment">
-        <test-method status="PASS" signature="startApp()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment@66447828]" name="startApp" is-config="true" duration-ms="26277" started-at="2016-04-15T16:45:47Z" finished-at="2016-04-15T16:46:13Z">
+        <test-method status="PASS" signature="startApp()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment@192cbe8c]" name="startApp" is-config="true" duration-ms="25911" started-at="2016-04-15T17:04:10Z" finished-at="2016-04-15T17:04:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApp -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment@66447828]" name="verifyQuestionTitle" duration-ms="0" started-at="2016-04-15T16:46:13Z" finished-at="2016-04-15T16:46:13Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment@192cbe8c]" name="verifyQuestionTitle" duration-ms="0" started-at="2016-04-15T17:04:35Z" finished-at="2016-04-15T17:04:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
-        <test-method status="PASS" signature="verifybuttonstatus()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment@66447828]" name="verifybuttonstatus" duration-ms="101" started-at="2016-04-15T16:46:13Z" finished-at="2016-04-15T16:46:13Z">
+        <test-method status="PASS" signature="verifybuttonstatus()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment@192cbe8c]" name="verifybuttonstatus" duration-ms="122" started-at="2016-04-15T17:04:35Z" finished-at="2016-04-15T17:04:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifybuttonstatus -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment -->
     </test> <!-- TmpTest -->
-    <test name="Scenario1_Test1" duration-ms="277" started-at="2016-04-15T11:16:13Z" finished-at="2016-04-15T11:16:13Z">
+    <test name="Scenario1_Test1" duration-ms="308" started-at="2016-04-15T11:34:36Z" finished-at="2016-04-15T11:34:36Z">
       <class name="com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment">
-        <test-method status="PASS" signature="startQuesttionaire()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@613fdb15]" name="startQuesttionaire" is-config="true" duration-ms="277" started-at="2016-04-15T16:46:13Z" finished-at="2016-04-15T16:46:13Z">
+        <test-method status="PASS" signature="startQuesttionaire()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@27487194]" name="startQuesttionaire" is-config="true" duration-ms="308" started-at="2016-04-15T17:04:36Z" finished-at="2016-04-15T17:04:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startQuesttionaire -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@613fdb15]" name="verifyQuestionTitle" duration-ms="0" started-at="2016-04-15T16:46:13Z" finished-at="2016-04-15T16:46:13Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@27487194]" name="verifyQuestionTitle" duration-ms="0" started-at="2016-04-15T17:04:36Z" finished-at="2016-04-15T17:04:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment -->
     </test> <!-- Scenario1_Test1 -->
-    <test name="Scenario1_Test2" duration-ms="2361" started-at="2016-04-15T11:16:13Z" finished-at="2016-04-15T11:16:16Z">
+    <test name="Scenario1_Test2" duration-ms="2555" started-at="2016-04-15T11:34:36Z" finished-at="2016-04-15T11:34:38Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@22033a02]" name="setBeforeTest" is-config="true" duration-ms="1140" started-at="2016-04-15T16:46:13Z" finished-at="2016-04-15T16:46:15Z">
+        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@1d56ac0]" name="setBeforeTest" is-config="true" duration-ms="1161" started-at="2016-04-15T17:04:36Z" finished-at="2016-04-15T17:04:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBeforeTest -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@22033a02]" name="verifyQuestionTitle" duration-ms="91" started-at="2016-04-15T16:46:15Z" finished-at="2016-04-15T16:46:15Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@1d56ac0]" name="verifyQuestionTitle" duration-ms="48" started-at="2016-04-15T17:04:37Z" finished-at="2016-04-15T17:04:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
-        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@22033a02]" name="verifyAnswersText" duration-ms="196" started-at="2016-04-15T16:46:15Z" finished-at="2016-04-15T16:46:15Z">
+        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@1d56ac0]" name="verifyAnswersText" duration-ms="413" started-at="2016-04-15T17:04:37Z" finished-at="2016-04-15T17:04:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswersText -->
-        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@22033a02]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T16:46:15Z" finished-at="2016-04-15T16:46:15Z">
+        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@1d56ac0]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T17:04:37Z" finished-at="2016-04-15T17:04:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerOptionsCount -->
-        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@22033a02]" name="verifyAnswerSelection" duration-ms="702" started-at="2016-04-15T16:46:15Z" finished-at="2016-04-15T16:46:16Z">
+        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@1d56ac0]" name="verifyAnswerSelection" duration-ms="672" started-at="2016-04-15T17:04:38Z" finished-at="2016-04-15T17:04:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerSelection -->
-        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@22033a02]" name="verifySubmitButton" duration-ms="0" started-at="2016-04-15T16:46:16Z" finished-at="2016-04-15T16:46:16Z">
+        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@1d56ac0]" name="verifySubmitButton" duration-ms="0" started-at="2016-04-15T17:04:38Z" finished-at="2016-04-15T17:04:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySubmitButton -->
-        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@22033a02]" name="moveToNextQuestion" is-config="true" duration-ms="231" started-at="2016-04-15T16:46:16Z" finished-at="2016-04-15T16:46:16Z">
+        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@1d56ac0]" name="moveToNextQuestion" is-config="true" duration-ms="261" started-at="2016-04-15T17:04:38Z" finished-at="2016-04-15T17:04:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- moveToNextQuestion -->
-        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@22033a02]" name="verifyPreviousButton" duration-ms="0" started-at="2016-04-15T16:46:16Z" finished-at="2016-04-15T16:46:16Z">
+        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@1d56ac0]" name="verifyPreviousButton" duration-ms="0" started-at="2016-04-15T17:04:38Z" finished-at="2016-04-15T17:04:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPreviousButton -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </test> <!-- Scenario1_Test2 -->
-    <test name="Scenario1_Test3" duration-ms="2346" started-at="2016-04-15T11:16:16Z" finished-at="2016-04-15T11:16:18Z">
+    <test name="Scenario1_Test3" duration-ms="2603" started-at="2016-04-15T11:34:38Z" finished-at="2016-04-15T11:34:41Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@31ea763]" name="setBeforeTest" is-config="true" duration-ms="1107" started-at="2016-04-15T16:46:16Z" finished-at="2016-04-15T16:46:17Z">
+        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@517f562e]" name="setBeforeTest" is-config="true" duration-ms="1185" started-at="2016-04-15T17:04:38Z" finished-at="2016-04-15T17:04:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBeforeTest -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@31ea763]" name="verifyQuestionTitle" duration-ms="44" started-at="2016-04-15T16:46:17Z" finished-at="2016-04-15T16:46:17Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@517f562e]" name="verifyQuestionTitle" duration-ms="73" started-at="2016-04-15T17:04:40Z" finished-at="2016-04-15T17:04:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
-        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@31ea763]" name="verifyAnswersText" duration-ms="245" started-at="2016-04-15T16:46:17Z" finished-at="2016-04-15T16:46:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAnswersText -->
-        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@31ea763]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T16:46:17Z" finished-at="2016-04-15T16:46:17Z">
+        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@517f562e]" name="verifyAnswerOptionsCount" duration-ms="1" started-at="2016-04-15T17:04:40Z" finished-at="2016-04-15T17:04:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerOptionsCount -->
-        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@31ea763]" name="verifyAnswerSelection" duration-ms="645" started-at="2016-04-15T16:46:17Z" finished-at="2016-04-15T16:46:18Z">
+        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@517f562e]" name="verifyAnswersText" duration-ms="344" started-at="2016-04-15T17:04:40Z" finished-at="2016-04-15T17:04:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAnswersText -->
+        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@517f562e]" name="verifyAnswerSelection" duration-ms="654" started-at="2016-04-15T17:04:40Z" finished-at="2016-04-15T17:04:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerSelection -->
-        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@31ea763]" name="verifySubmitButton" duration-ms="0" started-at="2016-04-15T16:46:18Z" finished-at="2016-04-15T16:46:18Z">
+        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@517f562e]" name="verifySubmitButton" duration-ms="1" started-at="2016-04-15T17:04:41Z" finished-at="2016-04-15T17:04:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySubmitButton -->
-        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@31ea763]" name="verifyPreviousButton" duration-ms="53" started-at="2016-04-15T16:46:18Z" finished-at="2016-04-15T16:46:18Z">
+        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@517f562e]" name="verifyPreviousButton" duration-ms="73" started-at="2016-04-15T17:04:41Z" finished-at="2016-04-15T17:04:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPreviousButton -->
-        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@31ea763]" name="moveToNextQuestion" is-config="true" duration-ms="251" started-at="2016-04-15T16:46:18Z" finished-at="2016-04-15T16:46:18Z">
+        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@517f562e]" name="moveToNextQuestion" is-config="true" duration-ms="272" started-at="2016-04-15T17:04:41Z" finished-at="2016-04-15T17:04:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- moveToNextQuestion -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </test> <!-- Scenario1_Test3 -->
-    <test name="Scenario1_Test4" duration-ms="2898" started-at="2016-04-15T11:16:18Z" finished-at="2016-04-15T11:16:21Z">
+    <test name="Scenario1_Test4" duration-ms="3178" started-at="2016-04-15T11:34:41Z" finished-at="2016-04-15T11:34:44Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4b7df2ba]" name="setBeforeTest" is-config="true" duration-ms="1116" started-at="2016-04-15T16:46:18Z" finished-at="2016-04-15T16:46:19Z">
+        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@39cab80e]" name="setBeforeTest" is-config="true" duration-ms="1192" started-at="2016-04-15T17:04:41Z" finished-at="2016-04-15T17:04:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBeforeTest -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4b7df2ba]" name="verifyQuestionTitle" duration-ms="34" started-at="2016-04-15T16:46:19Z" finished-at="2016-04-15T16:46:19Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@39cab80e]" name="verifyQuestionTitle" duration-ms="63" started-at="2016-04-15T17:04:42Z" finished-at="2016-04-15T17:04:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
-        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4b7df2ba]" name="verifyAnswersText" duration-ms="202" started-at="2016-04-15T16:46:19Z" finished-at="2016-04-15T16:46:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAnswersText -->
-        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4b7df2ba]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T16:46:19Z" finished-at="2016-04-15T16:46:19Z">
+        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@39cab80e]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T17:04:42Z" finished-at="2016-04-15T17:04:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerOptionsCount -->
-        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4b7df2ba]" name="verifyAnswerSelection" duration-ms="844" started-at="2016-04-15T16:46:19Z" finished-at="2016-04-15T16:46:20Z">
+        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@39cab80e]" name="verifyAnswersText" duration-ms="290" started-at="2016-04-15T17:04:42Z" finished-at="2016-04-15T17:04:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAnswersText -->
+        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@39cab80e]" name="verifyAnswerSelection" duration-ms="936" started-at="2016-04-15T17:04:43Z" finished-at="2016-04-15T17:04:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerSelection -->
-        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4b7df2ba]" name="verifySubmitButton" duration-ms="494" started-at="2016-04-15T16:46:20Z" finished-at="2016-04-15T16:46:21Z">
+        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@39cab80e]" name="verifySubmitButton" duration-ms="470" started-at="2016-04-15T17:04:44Z" finished-at="2016-04-15T17:04:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySubmitButton -->
-        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4b7df2ba]" name="verifyPreviousButton" duration-ms="54" started-at="2016-04-15T16:46:21Z" finished-at="2016-04-15T16:46:21Z">
+        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@39cab80e]" name="verifyPreviousButton" duration-ms="56" started-at="2016-04-15T17:04:44Z" finished-at="2016-04-15T17:04:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPreviousButton -->
-        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4b7df2ba]" name="moveToNextQuestion" is-config="true" duration-ms="152" started-at="2016-04-15T16:46:21Z" finished-at="2016-04-15T16:46:21Z">
+        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@39cab80e]" name="moveToNextQuestion" is-config="true" duration-ms="168" started-at="2016-04-15T17:04:44Z" finished-at="2016-04-15T17:04:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- moveToNextQuestion -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </test> <!-- Scenario1_Test4 -->
-    <test name="Scenario1_Test5" duration-ms="852" started-at="2016-04-15T11:16:21Z" finished-at="2016-04-15T11:16:22Z">
+    <test name="Scenario1_Test5" duration-ms="886" started-at="2016-04-15T11:34:44Z" finished-at="2016-04-15T11:34:45Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
-        <test-method status="PASS" signature="startscore()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@4c4c9300]" name="startscore" is-config="true" duration-ms="0" started-at="2016-04-15T16:46:21Z" finished-at="2016-04-15T16:46:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startscore -->
-        <test-method status="FAIL" signature="verifyscore()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@4c4c9300]" name="verifyscore" duration-ms="701" started-at="2016-04-15T16:46:21Z" finished-at="2016-04-15T16:46:22Z">
+        <test-method status="FAIL" signature="verifyscore()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@37470c22]" name="verifyscore" duration-ms="675" started-at="2016-04-15T17:04:44Z" finished-at="2016-04-15T17:04:45Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [5] but found [9.76]]]>
+              <![CDATA[expected [0] but found [0.64]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [5] but found [9.76]
+              <![CDATA[java.lang.AssertionError: expected [0] but found [0.64]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
@@ -192,189 +188,153 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyscore -->
-        <test-method status="PASS" signature="verifybuttonstatus()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@4c4c9300]" name="verifybuttonstatus" duration-ms="55" started-at="2016-04-15T16:46:22Z" finished-at="2016-04-15T16:46:22Z">
+        <test-method status="PASS" signature="startscore()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@37470c22]" name="startscore" is-config="true" duration-ms="0" started-at="2016-04-15T17:04:44Z" finished-at="2016-04-15T17:04:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startscore -->
+        <test-method status="PASS" signature="verifybuttonstatus()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@37470c22]" name="verifybuttonstatus" duration-ms="132" started-at="2016-04-15T17:04:45Z" finished-at="2016-04-15T17:04:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifybuttonstatus -->
-        <test-method status="PASS" signature="verifyQuestionairetitle()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@4c4c9300]" name="verifyQuestionairetitle" duration-ms="94" started-at="2016-04-15T16:46:22Z" finished-at="2016-04-15T16:46:22Z">
+        <test-method status="PASS" signature="verifyQuestionairetitle()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@37470c22]" name="verifyQuestionairetitle" duration-ms="77" started-at="2016-04-15T17:04:45Z" finished-at="2016-04-15T17:04:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionairetitle -->
-        <test-method status="PASS" signature="nextScenario()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@4c4c9300]" name="nextScenario" is-config="true" duration-ms="0" started-at="2016-04-15T16:46:22Z" finished-at="2016-04-15T16:46:22Z">
+        <test-method status="PASS" signature="nextScenario()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@37470c22]" name="nextScenario" is-config="true" duration-ms="1" started-at="2016-04-15T17:04:45Z" finished-at="2016-04-15T17:04:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- nextScenario -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
     </test> <!-- Scenario1_Test5 -->
-    <test name="Scenario2_Test1" duration-ms="268" started-at="2016-04-15T11:16:22Z" finished-at="2016-04-15T11:16:22Z">
+    <test name="Scenario2_Test1" duration-ms="326" started-at="2016-04-15T11:34:45Z" finished-at="2016-04-15T11:34:46Z">
       <class name="com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment">
-        <test-method status="PASS" signature="startQuesttionaire()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@17f0d3b8]" name="startQuesttionaire" is-config="true" duration-ms="268" started-at="2016-04-15T16:46:22Z" finished-at="2016-04-15T16:46:22Z">
+        <test-method status="PASS" signature="startQuesttionaire()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@43dbe14f]" name="startQuesttionaire" is-config="true" duration-ms="325" started-at="2016-04-15T17:04:45Z" finished-at="2016-04-15T17:04:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startQuesttionaire -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@17f0d3b8]" name="verifyQuestionTitle" duration-ms="0" started-at="2016-04-15T16:46:22Z" finished-at="2016-04-15T16:46:22Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@43dbe14f]" name="verifyQuestionTitle" duration-ms="0" started-at="2016-04-15T17:04:46Z" finished-at="2016-04-15T17:04:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment -->
     </test> <!-- Scenario2_Test1 -->
-    <test name="Scenario2_Test2" duration-ms="2324" started-at="2016-04-15T11:16:22Z" finished-at="2016-04-15T11:16:24Z">
+    <test name="Scenario2_Test2" duration-ms="2556" started-at="2016-04-15T11:34:46Z" finished-at="2016-04-15T11:34:48Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@63fe0e45]" name="setBeforeTest" is-config="true" duration-ms="1106" started-at="2016-04-15T16:46:22Z" finished-at="2016-04-15T16:46:23Z">
+        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@3c5b074c]" name="setBeforeTest" is-config="true" duration-ms="1162" started-at="2016-04-15T17:04:46Z" finished-at="2016-04-15T17:04:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBeforeTest -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@63fe0e45]" name="verifyQuestionTitle" duration-ms="37" started-at="2016-04-15T16:46:23Z" finished-at="2016-04-15T16:46:23Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@3c5b074c]" name="verifyQuestionTitle" duration-ms="94" started-at="2016-04-15T17:04:47Z" finished-at="2016-04-15T17:04:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
-        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@63fe0e45]" name="verifyAnswerOptionsCount" duration-ms="1" started-at="2016-04-15T16:46:23Z" finished-at="2016-04-15T16:46:23Z">
+        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@3c5b074c]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T17:04:47Z" finished-at="2016-04-15T17:04:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerOptionsCount -->
-        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@63fe0e45]" name="verifyAnswersText" duration-ms="147" started-at="2016-04-15T16:46:23Z" finished-at="2016-04-15T16:46:23Z">
+        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@3c5b074c]" name="verifyAnswersText" duration-ms="368" started-at="2016-04-15T17:04:47Z" finished-at="2016-04-15T17:04:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswersText -->
-        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@63fe0e45]" name="verifyAnswerSelection" duration-ms="623" started-at="2016-04-15T16:46:23Z" finished-at="2016-04-15T16:46:24Z">
+        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@3c5b074c]" name="verifyAnswerSelection" duration-ms="666" started-at="2016-04-15T17:04:47Z" finished-at="2016-04-15T17:04:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerSelection -->
-        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@63fe0e45]" name="verifySubmitButton" duration-ms="0" started-at="2016-04-15T16:46:24Z" finished-at="2016-04-15T16:46:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySubmitButton -->
-        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@63fe0e45]" name="verifyPreviousButton" duration-ms="0" started-at="2016-04-15T16:46:24Z" finished-at="2016-04-15T16:46:24Z">
+        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@3c5b074c]" name="verifyPreviousButton" duration-ms="0" started-at="2016-04-15T17:04:48Z" finished-at="2016-04-15T17:04:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPreviousButton -->
-        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@63fe0e45]" name="moveToNextQuestion" is-config="true" duration-ms="409" started-at="2016-04-15T16:46:24Z" finished-at="2016-04-15T16:46:24Z">
+        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@3c5b074c]" name="verifySubmitButton" duration-ms="0" started-at="2016-04-15T17:04:48Z" finished-at="2016-04-15T17:04:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubmitButton -->
+        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@3c5b074c]" name="moveToNextQuestion" is-config="true" duration-ms="265" started-at="2016-04-15T17:04:48Z" finished-at="2016-04-15T17:04:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- moveToNextQuestion -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </test> <!-- Scenario2_Test2 -->
-    <test name="Scenario2_Test3" duration-ms="2334" started-at="2016-04-15T11:16:24Z" finished-at="2016-04-15T11:16:27Z">
+    <test name="Scenario2_Test3" duration-ms="2994" started-at="2016-04-15T11:34:48Z" finished-at="2016-04-15T11:34:51Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6e24d5d8]" name="setBeforeTest" is-config="true" duration-ms="1125" started-at="2016-04-15T16:46:24Z" finished-at="2016-04-15T16:46:26Z">
+        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@5a2d3360]" name="setBeforeTest" is-config="true" duration-ms="1160" started-at="2016-04-15T17:04:48Z" finished-at="2016-04-15T17:04:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBeforeTest -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6e24d5d8]" name="verifyQuestionTitle" duration-ms="45" started-at="2016-04-15T16:46:26Z" finished-at="2016-04-15T16:46:26Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@5a2d3360]" name="verifyQuestionTitle" duration-ms="92" started-at="2016-04-15T17:04:49Z" finished-at="2016-04-15T17:04:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
-        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6e24d5d8]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T16:46:26Z" finished-at="2016-04-15T16:46:26Z">
+        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@5a2d3360]" name="verifyAnswerOptionsCount" duration-ms="1" started-at="2016-04-15T17:04:49Z" finished-at="2016-04-15T17:04:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerOptionsCount -->
-        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6e24d5d8]" name="verifyAnswersText" duration-ms="199" started-at="2016-04-15T16:46:26Z" finished-at="2016-04-15T16:46:26Z">
+        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@5a2d3360]" name="verifyAnswersText" duration-ms="697" started-at="2016-04-15T17:04:49Z" finished-at="2016-04-15T17:04:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswersText -->
-        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6e24d5d8]" name="verifyAnswerSelection" duration-ms="683" started-at="2016-04-15T16:46:26Z" finished-at="2016-04-15T16:46:27Z">
+        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@5a2d3360]" name="verifyAnswerSelection" duration-ms="675" started-at="2016-04-15T17:04:50Z" finished-at="2016-04-15T17:04:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerSelection -->
-        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6e24d5d8]" name="verifyPreviousButton" duration-ms="36" started-at="2016-04-15T16:46:27Z" finished-at="2016-04-15T16:46:27Z">
+        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@5a2d3360]" name="verifyPreviousButton" duration-ms="63" started-at="2016-04-15T17:04:51Z" finished-at="2016-04-15T17:04:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPreviousButton -->
-        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6e24d5d8]" name="verifySubmitButton" duration-ms="0" started-at="2016-04-15T16:46:27Z" finished-at="2016-04-15T16:46:27Z">
+        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@5a2d3360]" name="verifySubmitButton" duration-ms="0" started-at="2016-04-15T17:04:51Z" finished-at="2016-04-15T17:04:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySubmitButton -->
-        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6e24d5d8]" name="moveToNextQuestion" is-config="true" duration-ms="244" started-at="2016-04-15T16:46:27Z" finished-at="2016-04-15T16:46:27Z">
+        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@5a2d3360]" name="moveToNextQuestion" is-config="true" duration-ms="305" started-at="2016-04-15T17:04:51Z" finished-at="2016-04-15T17:04:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- moveToNextQuestion -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </test> <!-- Scenario2_Test3 -->
-    <test name="Scenario2_Test4" duration-ms="5913" started-at="2016-04-15T11:16:27Z" finished-at="2016-04-15T11:16:33Z">
+    <test name="Scenario2_Test4" duration-ms="4289" started-at="2016-04-15T11:34:51Z" finished-at="2016-04-15T11:34:55Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@2018c0a1]" name="setBeforeTest" is-config="true" duration-ms="1123" started-at="2016-04-15T16:46:27Z" finished-at="2016-04-15T16:46:28Z">
+        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@390e9a7d]" name="setBeforeTest" is-config="true" duration-ms="1183" started-at="2016-04-15T17:04:51Z" finished-at="2016-04-15T17:04:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBeforeTest -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@2018c0a1]" name="verifyQuestionTitle" duration-ms="39" started-at="2016-04-15T16:46:28Z" finished-at="2016-04-15T16:46:28Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@390e9a7d]" name="verifyQuestionTitle" duration-ms="85" started-at="2016-04-15T17:04:52Z" finished-at="2016-04-15T17:04:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
-        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@2018c0a1]" name="verifyAnswersText" duration-ms="172" started-at="2016-04-15T16:46:28Z" finished-at="2016-04-15T16:46:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAnswersText -->
-        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@2018c0a1]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T16:46:28Z" finished-at="2016-04-15T16:46:28Z">
+        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@390e9a7d]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T17:04:52Z" finished-at="2016-04-15T17:04:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerOptionsCount -->
-        <test-method status="FAIL" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@2018c0a1]" name="verifyAnswerSelection" duration-ms="1392" started-at="2016-04-15T16:46:28Z" finished-at="2016-04-15T16:46:30Z">
-          <exception class="java.lang.NumberFormatException">
-            <message>
-              <![CDATA[For input string: "1.0"]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NumberFormatException: For input string: "1.0"
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Integer.parseInt(Integer.java:492)
-	at java.lang.Integer.parseInt(Integer.java:527)
-	at com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions.verifyAnswerSelection(TestHealthAssessmentQuestions.java:116)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at com.edifecs.breathe.qa.testcases.RunTests.main(RunTests.java:102)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NumberFormatException -->
+        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@390e9a7d]" name="verifyAnswersText" duration-ms="357" started-at="2016-04-15T17:04:52Z" finished-at="2016-04-15T17:04:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAnswersText -->
+        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@390e9a7d]" name="verifyAnswerSelection" duration-ms="1649" started-at="2016-04-15T17:04:53Z" finished-at="2016-04-15T17:04:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerSelection -->
-        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@2018c0a1]" name="verifySubmitButton" duration-ms="30" started-at="2016-04-15T16:46:30Z" finished-at="2016-04-15T16:46:30Z">
+        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@390e9a7d]" name="verifySubmitButton" duration-ms="499" started-at="2016-04-15T17:04:54Z" finished-at="2016-04-15T17:04:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySubmitButton -->
-        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@2018c0a1]" name="verifyPreviousButton" duration-ms="34" started-at="2016-04-15T16:46:30Z" finished-at="2016-04-15T16:46:30Z">
+        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@390e9a7d]" name="verifyPreviousButton" duration-ms="80" started-at="2016-04-15T17:04:55Z" finished-at="2016-04-15T17:04:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPreviousButton -->
-        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@2018c0a1]" name="moveToNextQuestion" is-config="true" duration-ms="3123" started-at="2016-04-15T16:46:30Z" finished-at="2016-04-15T16:46:33Z">
+        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@390e9a7d]" name="moveToNextQuestion" is-config="true" duration-ms="435" started-at="2016-04-15T17:04:55Z" finished-at="2016-04-15T17:04:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- moveToNextQuestion -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </test> <!-- Scenario2_Test4 -->
-    <test name="Scenario2_Test5" duration-ms="257" started-at="2016-04-15T11:16:33Z" finished-at="2016-04-15T11:16:33Z">
+    <test name="Scenario2_Test5" duration-ms="677" started-at="2016-04-15T11:34:55Z" finished-at="2016-04-15T11:34:56Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
-        <test-method status="FAIL" signature="verifyscore()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@4e2cb9f0]" name="verifyscore" duration-ms="102" started-at="2016-04-15T16:46:33Z" finished-at="2016-04-15T16:46:33Z">
+        <test-method status="FAIL" signature="verifyscore()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@5a6363a8]" name="verifyscore" duration-ms="409" started-at="2016-04-15T17:04:55Z" finished-at="2016-04-15T17:04:56Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [3] but found [9.76]]]>
+              <![CDATA[expected [0] but found [0.69]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [3] but found [9.76]
+              <![CDATA[java.lang.AssertionError: expected [0] but found [0.69]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
@@ -413,197 +373,153 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyscore -->
-        <test-method status="PASS" signature="startscore()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@4e2cb9f0]" name="startscore" is-config="true" duration-ms="0" started-at="2016-04-15T16:46:33Z" finished-at="2016-04-15T16:46:33Z">
+        <test-method status="PASS" signature="startscore()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@5a6363a8]" name="startscore" is-config="true" duration-ms="0" started-at="2016-04-15T17:04:55Z" finished-at="2016-04-15T17:04:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startscore -->
-        <test-method status="PASS" signature="verifybuttonstatus()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@4e2cb9f0]" name="verifybuttonstatus" duration-ms="86" started-at="2016-04-15T16:46:33Z" finished-at="2016-04-15T16:46:33Z">
+        <test-method status="PASS" signature="verifybuttonstatus()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@5a6363a8]" name="verifybuttonstatus" duration-ms="120" started-at="2016-04-15T17:04:56Z" finished-at="2016-04-15T17:04:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifybuttonstatus -->
-        <test-method status="PASS" signature="verifyQuestionairetitle()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@4e2cb9f0]" name="verifyQuestionairetitle" duration-ms="69" started-at="2016-04-15T16:46:33Z" finished-at="2016-04-15T16:46:33Z">
+        <test-method status="PASS" signature="verifyQuestionairetitle()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@5a6363a8]" name="verifyQuestionairetitle" duration-ms="148" started-at="2016-04-15T17:04:56Z" finished-at="2016-04-15T17:04:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionairetitle -->
-        <test-method status="PASS" signature="nextScenario()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@4e2cb9f0]" name="nextScenario" is-config="true" duration-ms="0" started-at="2016-04-15T16:46:33Z" finished-at="2016-04-15T16:46:33Z">
+        <test-method status="PASS" signature="nextScenario()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@5a6363a8]" name="nextScenario" is-config="true" duration-ms="0" started-at="2016-04-15T17:04:56Z" finished-at="2016-04-15T17:04:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- nextScenario -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
     </test> <!-- Scenario2_Test5 -->
-    <test name="Scenario3_Test1" duration-ms="332" started-at="2016-04-15T11:16:33Z" finished-at="2016-04-15T11:16:33Z">
+    <test name="Scenario3_Test1" duration-ms="293" started-at="2016-04-15T11:34:56Z" finished-at="2016-04-15T11:34:56Z">
       <class name="com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment">
-        <test-method status="PASS" signature="startQuesttionaire()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@56059be3]" name="startQuesttionaire" is-config="true" duration-ms="332" started-at="2016-04-15T16:46:33Z" finished-at="2016-04-15T16:46:33Z">
+        <test-method status="PASS" signature="startQuesttionaire()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@a3d8034]" name="startQuesttionaire" is-config="true" duration-ms="293" started-at="2016-04-15T17:04:56Z" finished-at="2016-04-15T17:04:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startQuesttionaire -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@56059be3]" name="verifyQuestionTitle" duration-ms="0" started-at="2016-04-15T16:46:33Z" finished-at="2016-04-15T16:46:33Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@a3d8034]" name="verifyQuestionTitle" duration-ms="0" started-at="2016-04-15T17:04:56Z" finished-at="2016-04-15T17:04:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment -->
     </test> <!-- Scenario3_Test1 -->
-    <test name="Scenario3_Test2" duration-ms="2348" started-at="2016-04-15T11:16:33Z" finished-at="2016-04-15T11:16:36Z">
+    <test name="Scenario3_Test2" duration-ms="2704" started-at="2016-04-15T11:34:56Z" finished-at="2016-04-15T11:34:59Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@948ecbd]" name="setBeforeTest" is-config="true" duration-ms="1156" started-at="2016-04-15T16:46:33Z" finished-at="2016-04-15T16:46:34Z">
+        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@12ae710e]" name="setBeforeTest" is-config="true" duration-ms="1164" started-at="2016-04-15T17:04:56Z" finished-at="2016-04-15T17:04:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBeforeTest -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@948ecbd]" name="verifyQuestionTitle" duration-ms="44" started-at="2016-04-15T16:46:34Z" finished-at="2016-04-15T16:46:35Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@12ae710e]" name="verifyQuestionTitle" duration-ms="54" started-at="2016-04-15T17:04:58Z" finished-at="2016-04-15T17:04:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
-        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@948ecbd]" name="verifyAnswersText" duration-ms="256" started-at="2016-04-15T16:46:35Z" finished-at="2016-04-15T16:46:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAnswersText -->
-        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@948ecbd]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T16:46:35Z" finished-at="2016-04-15T16:46:35Z">
+        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@12ae710e]" name="verifyAnswerOptionsCount" duration-ms="1" started-at="2016-04-15T17:04:58Z" finished-at="2016-04-15T17:04:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerOptionsCount -->
-        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@948ecbd]" name="verifyAnswerSelection" duration-ms="651" started-at="2016-04-15T16:46:35Z" finished-at="2016-04-15T16:46:35Z">
+        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@12ae710e]" name="verifyAnswersText" duration-ms="398" started-at="2016-04-15T17:04:58Z" finished-at="2016-04-15T17:04:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAnswersText -->
+        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@12ae710e]" name="verifyAnswerSelection" duration-ms="664" started-at="2016-04-15T17:04:58Z" finished-at="2016-04-15T17:04:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerSelection -->
-        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@948ecbd]" name="verifySubmitButton" duration-ms="0" started-at="2016-04-15T16:46:35Z" finished-at="2016-04-15T16:46:35Z">
+        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@12ae710e]" name="verifySubmitButton" duration-ms="0" started-at="2016-04-15T17:04:59Z" finished-at="2016-04-15T17:04:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySubmitButton -->
-        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@948ecbd]" name="verifyPreviousButton" duration-ms="0" started-at="2016-04-15T16:46:35Z" finished-at="2016-04-15T16:46:35Z">
+        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@12ae710e]" name="verifyPreviousButton" duration-ms="0" started-at="2016-04-15T17:04:59Z" finished-at="2016-04-15T17:04:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPreviousButton -->
-        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@948ecbd]" name="moveToNextQuestion" is-config="true" duration-ms="240" started-at="2016-04-15T16:46:35Z" finished-at="2016-04-15T16:46:36Z">
+        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@12ae710e]" name="moveToNextQuestion" is-config="true" duration-ms="421" started-at="2016-04-15T17:04:59Z" finished-at="2016-04-15T17:04:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- moveToNextQuestion -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </test> <!-- Scenario3_Test2 -->
-    <test name="Scenario3_Test3" duration-ms="2311" started-at="2016-04-15T11:16:36Z" finished-at="2016-04-15T11:16:38Z">
+    <test name="Scenario3_Test3" duration-ms="2136" started-at="2016-04-15T11:34:59Z" finished-at="2016-04-15T11:35:01Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@150858bb]" name="setBeforeTest" is-config="true" duration-ms="1133" started-at="2016-04-15T16:46:36Z" finished-at="2016-04-15T16:46:37Z">
+        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@56f967c6]" name="setBeforeTest" is-config="true" duration-ms="780" started-at="2016-04-15T17:04:59Z" finished-at="2016-04-15T17:05:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBeforeTest -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@150858bb]" name="verifyQuestionTitle" duration-ms="54" started-at="2016-04-15T16:46:37Z" finished-at="2016-04-15T16:46:37Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@56f967c6]" name="verifyQuestionTitle" duration-ms="58" started-at="2016-04-15T17:05:00Z" finished-at="2016-04-15T17:05:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
-        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@150858bb]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T16:46:37Z" finished-at="2016-04-15T16:46:37Z">
+        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@56f967c6]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T17:05:00Z" finished-at="2016-04-15T17:05:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerOptionsCount -->
-        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@150858bb]" name="verifyAnswersText" duration-ms="197" started-at="2016-04-15T16:46:37Z" finished-at="2016-04-15T16:46:37Z">
+        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@56f967c6]" name="verifyAnswersText" duration-ms="317" started-at="2016-04-15T17:05:00Z" finished-at="2016-04-15T17:05:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswersText -->
-        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@150858bb]" name="verifyAnswerSelection" duration-ms="632" started-at="2016-04-15T16:46:37Z" finished-at="2016-04-15T16:46:38Z">
+        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@56f967c6]" name="verifyAnswerSelection" duration-ms="673" started-at="2016-04-15T17:05:00Z" finished-at="2016-04-15T17:05:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerSelection -->
-        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@150858bb]" name="verifyPreviousButton" duration-ms="57" started-at="2016-04-15T16:46:38Z" finished-at="2016-04-15T16:46:38Z">
+        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@56f967c6]" name="verifyPreviousButton" duration-ms="62" started-at="2016-04-15T17:05:01Z" finished-at="2016-04-15T17:05:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPreviousButton -->
-        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@150858bb]" name="verifySubmitButton" duration-ms="0" started-at="2016-04-15T16:46:38Z" finished-at="2016-04-15T16:46:38Z">
+        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@56f967c6]" name="verifySubmitButton" duration-ms="0" started-at="2016-04-15T17:05:01Z" finished-at="2016-04-15T17:05:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySubmitButton -->
-        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@150858bb]" name="moveToNextQuestion" is-config="true" duration-ms="237" started-at="2016-04-15T16:46:38Z" finished-at="2016-04-15T16:46:38Z">
+        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@56f967c6]" name="moveToNextQuestion" is-config="true" duration-ms="245" started-at="2016-04-15T17:05:01Z" finished-at="2016-04-15T17:05:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- moveToNextQuestion -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </test> <!-- Scenario3_Test3 -->
-    <test name="Scenario3_Test4" duration-ms="4685" started-at="2016-04-15T11:16:38Z" finished-at="2016-04-15T11:16:43Z">
+    <test name="Scenario3_Test4" duration-ms="3781" started-at="2016-04-15T11:35:01Z" finished-at="2016-04-15T11:35:05Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@171183d8]" name="setBeforeTest" is-config="true" duration-ms="1123" started-at="2016-04-15T16:46:38Z" finished-at="2016-04-15T16:46:39Z">
+        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@7ee6e5bc]" name="setBeforeTest" is-config="true" duration-ms="1270" started-at="2016-04-15T17:05:01Z" finished-at="2016-04-15T17:05:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBeforeTest -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@171183d8]" name="verifyQuestionTitle" duration-ms="51" started-at="2016-04-15T16:46:39Z" finished-at="2016-04-15T16:46:39Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@7ee6e5bc]" name="verifyQuestionTitle" duration-ms="95" started-at="2016-04-15T17:05:02Z" finished-at="2016-04-15T17:05:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
-        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@171183d8]" name="verifyAnswersText" duration-ms="196" started-at="2016-04-15T16:46:39Z" finished-at="2016-04-15T16:46:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAnswersText -->
-        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@171183d8]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T16:46:39Z" finished-at="2016-04-15T16:46:39Z">
+        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@7ee6e5bc]" name="verifyAnswerOptionsCount" duration-ms="1" started-at="2016-04-15T17:05:03Z" finished-at="2016-04-15T17:05:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerOptionsCount -->
-        <test-method status="FAIL" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@171183d8]" name="verifyAnswerSelection" duration-ms="87" started-at="2016-04-15T16:46:39Z" finished-at="2016-04-15T16:46:39Z">
-          <exception class="java.lang.NumberFormatException">
-            <message>
-              <![CDATA[For input string: "1.0"]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NumberFormatException: For input string: "1.0"
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Integer.parseInt(Integer.java:492)
-	at java.lang.Integer.parseInt(Integer.java:527)
-	at com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions.verifyAnswerSelection(TestHealthAssessmentQuestions.java:116)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at com.edifecs.breathe.qa.testcases.RunTests.main(RunTests.java:102)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NumberFormatException -->
+        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@7ee6e5bc]" name="verifyAnswersText" duration-ms="570" started-at="2016-04-15T17:05:03Z" finished-at="2016-04-15T17:05:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAnswersText -->
+        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@7ee6e5bc]" name="verifyAnswerSelection" duration-ms="1109" started-at="2016-04-15T17:05:03Z" finished-at="2016-04-15T17:05:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerSelection -->
-        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@171183d8]" name="verifySubmitButton" duration-ms="10" started-at="2016-04-15T16:46:39Z" finished-at="2016-04-15T16:46:39Z">
+        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@7ee6e5bc]" name="verifySubmitButton" duration-ms="485" started-at="2016-04-15T17:05:04Z" finished-at="2016-04-15T17:05:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySubmitButton -->
-        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@171183d8]" name="verifyPreviousButton" duration-ms="90" started-at="2016-04-15T16:46:39Z" finished-at="2016-04-15T16:46:40Z">
+        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@7ee6e5bc]" name="verifyPreviousButton" duration-ms="66" started-at="2016-04-15T17:05:05Z" finished-at="2016-04-15T17:05:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPreviousButton -->
-        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@171183d8]" name="moveToNextQuestion" is-config="true" duration-ms="3126" started-at="2016-04-15T16:46:40Z" finished-at="2016-04-15T16:46:43Z">
+        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@7ee6e5bc]" name="moveToNextQuestion" is-config="true" duration-ms="183" started-at="2016-04-15T17:05:05Z" finished-at="2016-04-15T17:05:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- moveToNextQuestion -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </test> <!-- Scenario3_Test4 -->
-    <test name="Scenario3_Test5" duration-ms="224" started-at="2016-04-15T11:16:43Z" finished-at="2016-04-15T11:16:43Z">
+    <test name="Scenario3_Test5" duration-ms="927" started-at="2016-04-15T11:35:05Z" finished-at="2016-04-15T11:35:06Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
-        <test-method status="PASS" signature="startscore()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@2c1201d7]" name="startscore" is-config="true" duration-ms="1" started-at="2016-04-15T16:46:43Z" finished-at="2016-04-15T16:46:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startscore -->
-        <test-method status="FAIL" signature="verifyscore()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@2c1201d7]" name="verifyscore" duration-ms="52" started-at="2016-04-15T16:46:43Z" finished-at="2016-04-15T16:46:43Z">
+        <test-method status="FAIL" signature="verifyscore()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@5236e0db]" name="verifyscore" duration-ms="654" started-at="2016-04-15T17:05:05Z" finished-at="2016-04-15T17:05:06Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [3] but found [9.76]]]>
+              <![CDATA[expected [0] but found [6.59]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [3] but found [9.76]
+              <![CDATA[java.lang.AssertionError: expected [0] but found [6.59]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
@@ -642,153 +558,157 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyscore -->
-        <test-method status="PASS" signature="verifybuttonstatus()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@2c1201d7]" name="verifybuttonstatus" duration-ms="78" started-at="2016-04-15T16:46:43Z" finished-at="2016-04-15T16:46:43Z">
+        <test-method status="PASS" signature="startscore()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@5236e0db]" name="startscore" is-config="true" duration-ms="0" started-at="2016-04-15T17:05:05Z" finished-at="2016-04-15T17:05:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startscore -->
+        <test-method status="PASS" signature="verifybuttonstatus()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@5236e0db]" name="verifybuttonstatus" duration-ms="120" started-at="2016-04-15T17:05:06Z" finished-at="2016-04-15T17:05:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifybuttonstatus -->
-        <test-method status="PASS" signature="verifyQuestionairetitle()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@2c1201d7]" name="verifyQuestionairetitle" duration-ms="92" started-at="2016-04-15T16:46:43Z" finished-at="2016-04-15T16:46:43Z">
+        <test-method status="PASS" signature="verifyQuestionairetitle()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@5236e0db]" name="verifyQuestionairetitle" duration-ms="151" started-at="2016-04-15T17:05:06Z" finished-at="2016-04-15T17:05:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionairetitle -->
-        <test-method status="PASS" signature="nextScenario()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@2c1201d7]" name="nextScenario" is-config="true" duration-ms="0" started-at="2016-04-15T16:46:43Z" finished-at="2016-04-15T16:46:43Z">
+        <test-method status="PASS" signature="nextScenario()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@5236e0db]" name="nextScenario" is-config="true" duration-ms="0" started-at="2016-04-15T17:05:06Z" finished-at="2016-04-15T17:05:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- nextScenario -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit -->
     </test> <!-- Scenario3_Test5 -->
-    <test name="Scenario4_Test1" duration-ms="296" started-at="2016-04-15T11:16:43Z" finished-at="2016-04-15T11:16:43Z">
+    <test name="Scenario4_Test1" duration-ms="318" started-at="2016-04-15T11:35:06Z" finished-at="2016-04-15T11:35:06Z">
       <class name="com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment">
-        <test-method status="PASS" signature="startQuesttionaire()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@5c52d28a]" name="startQuesttionaire" is-config="true" duration-ms="295" started-at="2016-04-15T16:46:43Z" finished-at="2016-04-15T16:46:43Z">
+        <test-method status="PASS" signature="startQuesttionaire()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@417c9160]" name="startQuesttionaire" is-config="true" duration-ms="317" started-at="2016-04-15T17:05:06Z" finished-at="2016-04-15T17:05:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startQuesttionaire -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@5c52d28a]" name="verifyQuestionTitle" duration-ms="0" started-at="2016-04-15T16:46:43Z" finished-at="2016-04-15T16:46:43Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment@417c9160]" name="verifyQuestionTitle" duration-ms="1" started-at="2016-04-15T17:05:06Z" finished-at="2016-04-15T17:05:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment -->
     </test> <!-- Scenario4_Test1 -->
-    <test name="Scenario4_Test2" duration-ms="4802" started-at="2016-04-15T11:16:43Z" finished-at="2016-04-15T11:16:48Z">
+    <test name="Scenario4_Test2" duration-ms="4980" started-at="2016-04-15T11:35:06Z" finished-at="2016-04-15T11:35:11Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@43710f8d]" name="setBeforeTest" is-config="true" duration-ms="1144" started-at="2016-04-15T16:46:43Z" finished-at="2016-04-15T16:46:44Z">
+        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@33b41492]" name="setBeforeTest" is-config="true" duration-ms="1218" started-at="2016-04-15T17:05:06Z" finished-at="2016-04-15T17:05:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBeforeTest -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@43710f8d]" name="verifyQuestionTitle" duration-ms="35" started-at="2016-04-15T16:46:44Z" finished-at="2016-04-15T16:46:44Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@33b41492]" name="verifyQuestionTitle" duration-ms="86" started-at="2016-04-15T17:05:07Z" finished-at="2016-04-15T17:05:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
-        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@43710f8d]" name="verifyAnswersText" duration-ms="201" started-at="2016-04-15T16:46:44Z" finished-at="2016-04-15T16:46:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAnswersText -->
-        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@43710f8d]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T16:46:44Z" finished-at="2016-04-15T16:46:44Z">
+        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@33b41492]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T17:05:08Z" finished-at="2016-04-15T17:05:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerOptionsCount -->
-        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@43710f8d]" name="verifyAnswerSelection" duration-ms="3142" started-at="2016-04-15T16:46:45Z" finished-at="2016-04-15T16:46:48Z">
+        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@33b41492]" name="verifyAnswersText" duration-ms="250" started-at="2016-04-15T17:05:08Z" finished-at="2016-04-15T17:05:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAnswersText -->
+        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@33b41492]" name="verifyAnswerSelection" duration-ms="3181" started-at="2016-04-15T17:05:08Z" finished-at="2016-04-15T17:05:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerSelection -->
-        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@43710f8d]" name="moveToNextQuestion" is-config="true" duration-ms="278" started-at="2016-04-15T16:46:48Z" finished-at="2016-04-15T16:46:48Z">
+        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@33b41492]" name="verifySubmitButton" duration-ms="0" started-at="2016-04-15T17:05:11Z" finished-at="2016-04-15T17:05:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubmitButton -->
+        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@33b41492]" name="moveToNextQuestion" is-config="true" duration-ms="243" started-at="2016-04-15T17:05:11Z" finished-at="2016-04-15T17:05:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- moveToNextQuestion -->
-        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@43710f8d]" name="verifyPreviousButton" duration-ms="0" started-at="2016-04-15T16:46:48Z" finished-at="2016-04-15T16:46:48Z">
+        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@33b41492]" name="verifyPreviousButton" duration-ms="0" started-at="2016-04-15T17:05:11Z" finished-at="2016-04-15T17:05:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPreviousButton -->
-        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@43710f8d]" name="verifySubmitButton" duration-ms="0" started-at="2016-04-15T16:46:48Z" finished-at="2016-04-15T16:46:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySubmitButton -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </test> <!-- Scenario4_Test2 -->
-    <test name="Scenario4_Test3" duration-ms="5324" started-at="2016-04-15T11:16:48Z" finished-at="2016-04-15T11:16:53Z">
+    <test name="Scenario4_Test3" duration-ms="5337" started-at="2016-04-15T11:35:11Z" finished-at="2016-04-15T11:35:17Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4fa49021]" name="setBeforeTest" is-config="true" duration-ms="1144" started-at="2016-04-15T16:46:48Z" finished-at="2016-04-15T16:46:49Z">
+        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@3cf28f60]" name="setBeforeTest" is-config="true" duration-ms="1208" started-at="2016-04-15T17:05:11Z" finished-at="2016-04-15T17:05:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBeforeTest -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4fa49021]" name="verifyQuestionTitle" duration-ms="37" started-at="2016-04-15T16:46:49Z" finished-at="2016-04-15T16:46:49Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@3cf28f60]" name="verifyQuestionTitle" duration-ms="53" started-at="2016-04-15T17:05:12Z" finished-at="2016-04-15T17:05:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
-        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4fa49021]" name="verifyAnswersText" duration-ms="748" started-at="2016-04-15T16:46:49Z" finished-at="2016-04-15T16:46:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAnswersText -->
-        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4fa49021]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T16:46:49Z" finished-at="2016-04-15T16:46:49Z">
+        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@3cf28f60]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T17:05:12Z" finished-at="2016-04-15T17:05:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerOptionsCount -->
-        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4fa49021]" name="verifyAnswerSelection" duration-ms="3135" started-at="2016-04-15T16:46:50Z" finished-at="2016-04-15T16:46:53Z">
+        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@3cf28f60]" name="verifyAnswersText" duration-ms="429" started-at="2016-04-15T17:05:12Z" finished-at="2016-04-15T17:05:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAnswersText -->
+        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@3cf28f60]" name="verifyAnswerSelection" duration-ms="3202" started-at="2016-04-15T17:05:13Z" finished-at="2016-04-15T17:05:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerSelection -->
-        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4fa49021]" name="verifySubmitButton" duration-ms="0" started-at="2016-04-15T16:46:53Z" finished-at="2016-04-15T16:46:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySubmitButton -->
-        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4fa49021]" name="verifyPreviousButton" duration-ms="24" started-at="2016-04-15T16:46:53Z" finished-at="2016-04-15T16:46:53Z">
+        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@3cf28f60]" name="verifyPreviousButton" duration-ms="34" started-at="2016-04-15T17:05:16Z" finished-at="2016-04-15T17:05:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPreviousButton -->
-        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@4fa49021]" name="moveToNextQuestion" is-config="true" duration-ms="234" started-at="2016-04-15T16:46:53Z" finished-at="2016-04-15T16:46:53Z">
+        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@3cf28f60]" name="verifySubmitButton" duration-ms="0" started-at="2016-04-15T17:05:16Z" finished-at="2016-04-15T17:05:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubmitButton -->
+        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@3cf28f60]" name="moveToNextQuestion" is-config="true" duration-ms="409" started-at="2016-04-15T17:05:16Z" finished-at="2016-04-15T17:05:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- moveToNextQuestion -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </test> <!-- Scenario4_Test3 -->
-    <test name="Scenario4_Test4" duration-ms="4623" started-at="2016-04-15T11:16:53Z" finished-at="2016-04-15T11:16:58Z">
+    <test name="Scenario4_Test4" duration-ms="5136" started-at="2016-04-15T11:35:17Z" finished-at="2016-04-15T11:35:22Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions">
-        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6982f726]" name="setBeforeTest" is-config="true" duration-ms="1122" started-at="2016-04-15T16:46:53Z" finished-at="2016-04-15T16:46:54Z">
+        <test-method status="PASS" signature="setBeforeTest()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@153015e8]" name="setBeforeTest" is-config="true" duration-ms="670" started-at="2016-04-15T17:05:17Z" finished-at="2016-04-15T17:05:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBeforeTest -->
-        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6982f726]" name="verifyQuestionTitle" duration-ms="42" started-at="2016-04-15T16:46:54Z" finished-at="2016-04-15T16:46:55Z">
+        <test-method status="PASS" signature="verifyQuestionTitle()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@153015e8]" name="verifyQuestionTitle" duration-ms="75" started-at="2016-04-15T17:05:17Z" finished-at="2016-04-15T17:05:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionTitle -->
-        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6982f726]" name="verifyAnswersText" duration-ms="162" started-at="2016-04-15T16:46:55Z" finished-at="2016-04-15T16:46:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAnswersText -->
-        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6982f726]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T16:46:55Z" finished-at="2016-04-15T16:46:55Z">
+        <test-method status="PASS" signature="verifyAnswerOptionsCount()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@153015e8]" name="verifyAnswerOptionsCount" duration-ms="0" started-at="2016-04-15T17:05:17Z" finished-at="2016-04-15T17:05:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerOptionsCount -->
-        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6982f726]" name="verifyAnswerSelection" duration-ms="94" started-at="2016-04-15T16:46:55Z" finished-at="2016-04-15T16:46:55Z">
+        <test-method status="PASS" signature="verifyAnswersText()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@153015e8]" name="verifyAnswersText" duration-ms="408" started-at="2016-04-15T17:05:17Z" finished-at="2016-04-15T17:05:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAnswersText -->
+        <test-method status="PASS" signature="verifyAnswerSelection()[pri:4, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@153015e8]" name="verifyAnswerSelection" duration-ms="774" started-at="2016-04-15T17:05:18Z" finished-at="2016-04-15T17:05:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnswerSelection -->
-        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6982f726]" name="verifySubmitButton" duration-ms="22" started-at="2016-04-15T16:46:55Z" finished-at="2016-04-15T16:46:55Z">
+        <test-method status="PASS" signature="verifySubmitButton()[pri:5, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@153015e8]" name="verifySubmitButton" duration-ms="22" started-at="2016-04-15T17:05:18Z" finished-at="2016-04-15T17:05:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySubmitButton -->
-        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6982f726]" name="verifyPreviousButton" duration-ms="49" started-at="2016-04-15T16:46:55Z" finished-at="2016-04-15T16:46:55Z">
+        <test-method status="PASS" signature="verifyPreviousButton()[pri:6, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@153015e8]" name="verifyPreviousButton" duration-ms="48" started-at="2016-04-15T17:05:19Z" finished-at="2016-04-15T17:05:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPreviousButton -->
-        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@6982f726]" name="moveToNextQuestion" is-config="true" duration-ms="3131" started-at="2016-04-15T16:46:55Z" finished-at="2016-04-15T16:46:58Z">
+        <test-method status="PASS" signature="moveToNextQuestion()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions@153015e8]" name="moveToNextQuestion" is-config="true" duration-ms="3137" started-at="2016-04-15T17:05:19Z" finished-at="2016-04-15T17:05:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- moveToNextQuestion -->
       </class> <!-- com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions -->
     </test> <!-- Scenario4_Test4 -->
-    <test name="Scenario4_Test5" duration-ms="339" started-at="2016-04-15T11:16:58Z" finished-at="2016-04-15T11:16:58Z">
+    <test name="Scenario4_Test5" duration-ms="368" started-at="2016-04-15T11:35:22Z" finished-at="2016-04-15T11:35:22Z">
       <class name="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit">
-        <test-method status="PASS" signature="startscore()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@7ec5be3b]" name="startscore" is-config="true" duration-ms="1" started-at="2016-04-15T16:46:58Z" finished-at="2016-04-15T16:46:58Z">
+        <test-method status="PASS" signature="startscore()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@684c5482]" name="startscore" is-config="true" duration-ms="0" started-at="2016-04-15T17:05:22Z" finished-at="2016-04-15T17:05:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startscore -->
-        <test-method status="FAIL" signature="verifyscore()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@7ec5be3b]" name="verifyscore" duration-ms="122" started-at="2016-04-15T16:46:58Z" finished-at="2016-04-15T16:46:58Z">
+        <test-method status="FAIL" signature="verifyscore()[pri:1, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@684c5482]" name="verifyscore" duration-ms="122" started-at="2016-04-15T17:05:22Z" finished-at="2016-04-15T17:05:22Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [3] but found [9.76]]]>
+              <![CDATA[expected [0] but found [6.59]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [3] but found [9.76]
+              <![CDATA[java.lang.AssertionError: expected [0] but found [6.59]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
@@ -827,7 +747,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyscore -->
-        <test-method status="FAIL" signature="verifybuttonstatus()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@7ec5be3b]" name="verifybuttonstatus" duration-ms="152" started-at="2016-04-15T16:46:58Z" finished-at="2016-04-15T16:46:58Z">
+        <test-method status="FAIL" signature="verifybuttonstatus()[pri:2, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@684c5482]" name="verifybuttonstatus" duration-ms="175" started-at="2016-04-15T17:05:22Z" finished-at="2016-04-15T17:05:22Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Assessment completion status mismatched expected [Not Completed] but found [Completed 04.15.2016]]]>
@@ -872,11 +792,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifybuttonstatus -->
-        <test-method status="PASS" signature="verifyQuestionairetitle()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@7ec5be3b]" name="verifyQuestionairetitle" duration-ms="64" started-at="2016-04-15T16:46:58Z" finished-at="2016-04-15T16:46:58Z">
+        <test-method status="PASS" signature="verifyQuestionairetitle()[pri:3, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@684c5482]" name="verifyQuestionairetitle" duration-ms="71" started-at="2016-04-15T17:05:22Z" finished-at="2016-04-15T17:05:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionairetitle -->
-        <test-method status="PASS" signature="nextScenario()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@7ec5be3b]" name="nextScenario" is-config="true" duration-ms="0" started-at="2016-04-15T16:46:58Z" finished-at="2016-04-15T16:46:58Z">
+        <test-method status="PASS" signature="nextScenario()[pri:0, instance:com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit@684c5482]" name="nextScenario" is-config="true" duration-ms="0" started-at="2016-04-15T17:05:22Z" finished-at="2016-04-15T17:05:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- nextScenario -->
