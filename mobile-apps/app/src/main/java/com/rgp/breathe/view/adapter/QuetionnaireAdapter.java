@@ -50,7 +50,7 @@ public class QuetionnaireAdapter
             super(view);
             questionnaireTitle = (TextView) view.findViewById(R.id.questionnaire_title);
             questionnaireScore = (TextView) view.findViewById(R.id.questionnaire_score);
-            questionnaireStatus = (Button) view.findViewById(R.id.questionary_status_button);
+            questionnaireStatus = (Button) view.findViewById(R.id.questionnaire_status_button);
         }
     }
 

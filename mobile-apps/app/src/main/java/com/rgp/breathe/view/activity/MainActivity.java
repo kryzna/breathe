@@ -58,12 +58,12 @@ public class MainActivity extends AppCompatActivity
         mDrawer = (NavigationView) findViewById(R.id.nav_view);
         mDrawer.setNavigationItemSelectedListener(this);
 
-        View header = mDrawer.getHeaderView(0);
+        /*View header = mDrawer.getHeaderView(0);
         userNameView = (TextView) header.findViewById(R.id.user_name);
         userEmailView = (TextView) header.findViewById(R.id.user_email);
 
         userNameView.setText(sharedPreferencesHelper.getmUserName());
-        userEmailView.setText(sharedPreferencesHelper.getmEmail());
+        userEmailView.setText(sharedPreferencesHelper.getmEmail());*/
 
         //Add the Very First Fragment to the Container
         selectFragmentView(new TreatmentPlanFragment());
