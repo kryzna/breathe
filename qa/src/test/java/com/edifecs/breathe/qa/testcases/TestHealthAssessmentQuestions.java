@@ -25,6 +25,7 @@ public class TestHealthAssessmentQuestions {
     private int weightcount = 0;
     public static int riskscore = 0;
 
+
     @BeforeClass
     public void setBeforeTest(){
         healthRiskAssesment.setElementQuestionTitle(Andriodsetup.aDriver);
@@ -107,17 +108,25 @@ public class TestHealthAssessmentQuestions {
                     TestHealthRiskAssessment.listAnswersOptions.get(i).click();
                 }
             }
+            Aweight = 0;
             checkboxSelectionNumbers = excelReader.getCellData("RiskScenarios", "scenario" + TestStartHealthRiskAssessment.scenarioNumber, TestStartHealthRiskAssessment.questionNumber + 1);
             System.out.println(checkboxSelectionNumbers);
             String[] checkboxSelectionNumber = checkboxSelectionNumbers.split(",");
             System.out.println(checkboxSelectionNumber.length);
             if(checkboxSelectionNumber.length<2){
                 if(Double.valueOf(checkboxSelectionNumber[0]).intValue()>0) {
+                    weightcount = Double.valueOf(checkboxSelectionNumber[0]).intValue();
                     TestHealthRiskAssessment.listAnswersOptions.get(Double.valueOf(checkboxSelectionNumber[0]).intValue() - 1).click();
                     //Assert.assertEquals(TestHealthRiskAssessment.listAnswersOptions.get(Double.valueOf(checkboxSelectionNumber[0]).intValue() - 1).getAttribute("checked").toString(), "true");
                 }
+                else
+                {
+                    Aweight = 0;
+                }
             } else if(checkboxSelectionNumber.length>1) {
+                Aweight = 0;
                 for (int i = 0; i < checkboxSelectionNumber.length; i++) {
+                    weightcount = Double.valueOf(checkboxSelectionNumber[i]).intValue();
                     TestHealthRiskAssessment.listAnswersOptions.get(Integer.parseInt(checkboxSelectionNumber[i]) - 1).click();
                 }
             }
@@ -133,6 +142,10 @@ public class TestHealthAssessmentQuestions {
                 weightcount = radioSelectionNumber;
                 TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber - 1).click();
                 Assert.assertEquals(TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber - 1).getAttribute("checked").toString(), "true");
+            }
+            else
+            {
+                Aweight = 0;
             }
         }
     }
