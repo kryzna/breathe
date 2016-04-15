@@ -16,8 +16,10 @@ public class TestStartHealthRiskAssessment {
     HealthRiskAssesment healthRiskAssesment = new HealthRiskAssesment();
     public static int questionNumber;
     public static int scenarioNumber=1;
+    public static int riskscorefinal;
     @BeforeTest
     public void startQuesttionaire(){
+        riskscorefinal = 0;
         questionNumber=2;
         healthRiskAssesment.setAssessmentStartButton(Andriodsetup.aDriver);
         WebElement assessmentStartButton = healthRiskAssesment.getAssessmentStartButton();

@@ -37,11 +37,11 @@ public class TestHealthRiskAssessmentSubmit {
         try {
             System.out.println("------------Veirfying score-----------------------");
 
-            System.out.println("Expected: ---"+TestHealthAssessmentQuestions.riskscorefinal);
+            System.out.println("Expected: ---"+TestStartHealthRiskAssessment.riskscorefinal);
             healthRiskAssesment.setQuestionairescore(Andriodsetup.aDriver);
             healthRiskAssesment.getQuestionairescore();
             System.out.println("Actual ---"+healthRiskAssesment.getQuestionairescore());
-            Assert.assertEquals(healthRiskAssesment.getQuestionairescore(),TestHealthAssessmentQuestions.riskscorefinal);
+            Assert.assertEquals(healthRiskAssesment.getQuestionairescore(),TestStartHealthRiskAssessment.riskscorefinal);
         }
         catch(Exception e)
         {

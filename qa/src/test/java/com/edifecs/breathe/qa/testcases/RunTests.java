@@ -77,7 +77,7 @@ public class RunTests {
             List<XmlClass> classesStart = new ArrayList<XmlClass>();
             classesStart.add(new XmlClass("com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment"));
             testStart.setXmlClasses(classesStart);
-            ;
+
             int questionsCount = excelReader.getRowCount("RiskAssessment");
             for (int i = 1; i < questionsCount; i++) {
                 XmlTest newTest = new XmlTest(suite);
