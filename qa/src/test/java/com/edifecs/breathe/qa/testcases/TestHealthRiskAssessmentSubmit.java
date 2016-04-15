@@ -71,7 +71,7 @@ public class TestHealthRiskAssessmentSubmit {
             System.out.println("------------Veirfying Questionaire Title-----------------------");
             healthRiskAssesment.setElementQuestionnaireTitle(Andriodsetup.aDriver);
             StandardFunctions.getText(healthRiskAssesment.getElementQuestionnaireTitle());
-            Assert.assertEquals(StandardFunctions.getText(healthRiskAssesment.getElementQuestionnaireTitle()),myxls.getCellData("Questionnaries","QuestionaireTitle",2));
+            Assert.assertEquals(StandardFunctions.getText(healthRiskAssesment.getElementQuestionnaireTitle()),"Asthma Questionnaire for Beginners");
         } catch (Exception e) {
             e.printStackTrace();
         }
