@@ -108,6 +108,7 @@ public class TestHealthAssessmentQuestions {
                     TestHealthRiskAssessment.listAnswersOptions.get(i).click();
                 }
             }
+            Aweight = 0;
             checkboxSelectionNumbers = excelReader.getCellData("RiskScenarios", "scenario" + TestStartHealthRiskAssessment.scenarioNumber, TestStartHealthRiskAssessment.questionNumber + 1);
             System.out.println(checkboxSelectionNumbers);
             String[] checkboxSelectionNumber = checkboxSelectionNumbers.split(",");
