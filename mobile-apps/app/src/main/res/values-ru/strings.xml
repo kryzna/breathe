@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">breathe</string>
+    <string name="action_settings">Настройки</string>
+    <string name="hint_email">Электронная почта</string>
+    <string name="hint_dob">Дата Рождения</string>
+    <string name="hint_password">Пароль</string>
+    <string name="btn_login">Войти</string>
+    <string name="btn_register">Зарегистрироваться</string>
+    <string name="hint_name">Имя</string>
+
+    <string name="error_invalid_email">В электронном адрессе содержиться ошибка</string>
+    <string name="error_invalid_password">Пароль слишком короткий</string>
+    <string name="error_incorrect_password">Пароль не верный</string>
+    <string name="error_field_required">Это поле необходимо быть заполнено</string>
+
+    <string name="treatment_plan">План лечения</string>
+    <string name="health_risk_assesment">Оценка риска здоровья</string>
+    <string name="alerts">Напоминания</string>
+    <string name="tracking">Отслеживание</string>
+
+    <string name="share_subject">Добро ПОжаловать в Breathe</string>
+    <string name="share_text">Поделиться</string>
+    <string name="signout_text">Выйти</string>
+    <string name="about_text">О программе</string>
+
+    <string name="pref_send_report">Отправить отчеты об ошибках</string>
+    <string name="pref_send_report_summary">Помочь исправить дефекты</string>
+    <string name="pref_sync_frequency">Частота синхронизации</string>
+    <string name="pref_sync_frequency_summary">Установить частоту синхронизации</string>
+    <string name="pref_user_name">Установить имя пользователя</string>
+    <string name="pref_user_name_summary">Установать ваше имя</string>
+
+    <string name="pref_user_profile">Профиль пользователя</string>
+    <string name="pref_update_setting">Обновить настройки</string>
+
+    <string name="health_risk_page_title">Оценка риска здоровья для астматиков</string>
+    <string name="health_risk_average_score">Умеренный(6.1 из 10)</string>
+    <string name="questionnaires">Опросники</string>
+    <string name="questionnaire_not_completed">Не заполнен</string>
+    <string name="questionnaire_completed">Заполнен</string>
+
+    <string-array name="tracking_spiner_array">
+        <item>ПСВ</item>
+        <item>FEV1</item>
+        <item>O2 насыщение</item>
+    </string-array>
+
+
+</resources>
