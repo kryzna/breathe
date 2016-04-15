@@ -113,9 +113,10 @@ public class TestHealthAssessmentQuestions {
                 }
             } else if(checkboxSelectionNumber.length>1) {
                 for (int i = 0; i < checkboxSelectionNumber.length; i++) {
+                    weightcount = Integer.parseInt(checkboxSelectionNumber[i]);
                     TestHealthRiskAssessment.listAnswersOptions.get(Integer.parseInt(checkboxSelectionNumber[i]) - 1).click();
-                    Aweight = Double.parseDouble(excelReader.getCellData("RiskAssessment", "cweight" + weightcount, TestStartHealthRiskAssessment.questionNumber));
-                    //Assert.assertEquals(TestHealthRiskAssessment.listAnswersOptions.get(Integer.parseInt(checkboxSelectionNumber[i]) - 1).getAttribute("checked").toString(), "true");
+
+                    Aweight = Aweight + Double.parseDouble(excelReader.getCellData("RiskAssessment", "cweight" + weightcount, TestStartHealthRiskAssessment.questionNumber));
                 }
             }
         } else if(questionType.equals("r")) {
