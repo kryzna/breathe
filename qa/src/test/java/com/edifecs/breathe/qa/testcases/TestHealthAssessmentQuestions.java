@@ -19,10 +19,11 @@ public class TestHealthAssessmentQuestions {
     private static String questionTitle;
     private int expectedAnswerCount,actualAnswerCount;
     private String expectedAnswerText,actualAnswerText;
+
     public static  double Qweight = 0;
     public static double Aweight = 0;
-    private int weightcount = 1;
-    public static double riskscore = 0.0;
+    private int weightcount = 0;
+    public static int riskscore = 0;
 
     @BeforeClass
     public void setBeforeTest(){
@@ -119,8 +120,8 @@ public class TestHealthAssessmentQuestions {
             } else if(checkboxSelectionNumber.length>1) {
                 for (int i = 0; i < checkboxSelectionNumber.length; i++) {
                     TestHealthRiskAssessment.listAnswersOptions.get(Integer.parseInt(checkboxSelectionNumber[i]) - 1).click();
-                    Aweight = Double.parseDouble(excelReader.getCellData("RiskAssessment", "cweight" + weightcount, TestStartHealthRiskAssessment.questionNumber));
-                    //Assert.assertEquals(TestHealthRiskAssessment.listAnswersOptions.get(Integer.parseInt(checkboxSelectionNumber[i]) - 1).getAttribute("checked").toString(), "true");
+
+                    Aweight = Aweight + Double.parseDouble(excelReader.getCellData("RiskAssessment", "cweight" + weightcount, TestStartHealthRiskAssessment.questionNumber));
                 }
             }
         } else if(questionType.equals("r")) {
@@ -132,6 +133,7 @@ public class TestHealthAssessmentQuestions {
             }
             System.out.println("Selection: " + radioSelectionNumber);
             if (radioSelectionNumber > 0) {
+                weightcount = radioSelectionNumber;
                 TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber - 1).click();
                 Aweight = Double.parseDouble(excelReader.getCellData("RiskAssessment", "cweight" + weightcount, TestStartHealthRiskAssessment.questionNumber));
                 Assert.assertEquals(TestHealthRiskAssessment.listAnswersOptions.get(radioSelectionNumber - 1).getAttribute("checked").toString(), "true");
@@ -162,11 +164,11 @@ public class TestHealthAssessmentQuestions {
 
     @AfterClass
     public void moveToNextQuestion(){
-      WebElement elementNextButton =   HealthRiskAssesment.getElementNextButton();
+        WebElement elementNextButton =   HealthRiskAssesment.getElementNextButton();
         StandardFunctions.click(elementNextButton);
         TestStartHealthRiskAssessment.questionNumber=TestStartHealthRiskAssessment.questionNumber+1;
-        weightcount++;
-        riskscore = Qweight*Aweight;
+       // weightcount++;
+        riskscore = (int) (Qweight*Aweight);
         System.out.println(riskscore);
         TestStartHealthRiskAssessment.riskscorefinal = TestStartHealthRiskAssessment.riskscorefinal+riskscore;
         System.out.println(TestStartHealthRiskAssessment.riskscorefinal);

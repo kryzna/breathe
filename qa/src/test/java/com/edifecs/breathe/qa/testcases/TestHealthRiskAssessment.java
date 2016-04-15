@@ -84,6 +84,7 @@ public class TestHealthRiskAssessment {
             System.out.println(healthRiskAssesment.getAssessmentStartButtonText());
             System.out.println("Updated date===="+Utility.getFormattedDate("MM.dd.yyyy"));
             Assert.assertEquals(healthRiskAssesment.getAssessmentStartButtonText(),"Not Completed");
+
         }
         catch(Exception e)
         {

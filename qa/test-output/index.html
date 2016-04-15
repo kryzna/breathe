@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 7 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">86 methods, 5 failed,   81 passed</span>
+                    <span class="method-stats">90 methods, 7 failed,   83 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -99,6 +99,16 @@
                       <a href="#" panel-name="suite-TmpSuite" class="show-methods failed suite-TmpSuite"> (show)</a> <!-- show-methods failed suite-TmpSuite -->
                     </span>
                     <div class="method-list-content failed suite-TmpSuite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TmpSuite" title="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" hash-for-method="verifyAnswerSelection">verifyAnswerSelection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TmpSuite" title="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" hash-for-method="verifyAnswerSelection">verifyAnswerSelection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-TmpSuite" title="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit" hash-for-method="verifybuttonstatus">verifybuttonstatus</a> <!-- method navigator-link -->
@@ -191,16 +201,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-TmpSuite" title="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" hash-for-method="verifyAnswerOptionsCount">verifyAnswerOptionsCount</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TmpSuite" title="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" hash-for-method="verifyAnswerSelection">verifyAnswerSelection</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TmpSuite" title="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" hash-for-method="verifyAnswerSelection">verifyAnswerSelection</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -460,6 +460,26 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TmpSuite" title="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit" hash-for-method="verifyQuestionairetitle">verifyQuestionairetitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TmpSuite" title="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit" hash-for-method="verifyQuestionairetitle">verifyQuestionairetitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TmpSuite" title="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit" hash-for-method="verifyQuestionairetitle">verifyQuestionairetitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TmpSuite" title="com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit" hash-for-method="verifyQuestionairetitle">verifyQuestionairetitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-TmpSuite" title="com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions" hash-for-method="verifySubmitButton">verifySubmitButton</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -553,6 +573,46 @@
           <div class="suite-TmpSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
+              <span class="class-name">com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAnswerSelection">
+                  </a> <!-- verifyAnswerSelection -->
+                  <span class="method-name">verifyAnswerSelection</span>
+                  <div class="stack-trace">java.lang.NumberFormatException: For input string: &quot;1.0&quot;
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:492)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions.verifyAnswerSelection(TestHealthAssessmentQuestions.java:116)
+	at com.edifecs.breathe.qa.testcases.RunTests.main(RunTests.java:102)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAnswerSelection">
+                  </a> <!-- verifyAnswerSelection -->
+                  <span class="method-name">verifyAnswerSelection</span>
+                  <div class="stack-trace">java.lang.NumberFormatException: For input string: &quot;1.0&quot;
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:492)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions.verifyAnswerSelection(TestHealthAssessmentQuestions.java:116)
+	at com.edifecs.breathe.qa.testcases.RunTests.main(RunTests.java:102)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TmpSuite-class-failed -->
+          <div class="suite-TmpSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
               <span class="class-name">com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -562,7 +622,7 @@
                   </a> <!-- verifybuttonstatus -->
                   <span class="method-name">verifybuttonstatus</span>
                   <div class="stack-trace">java.lang.AssertionError: Assessment completion status mismatched expected [Not Completed] but found [Completed 04.15.2016]
-	at com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit.verifybuttonstatus(TestHealthRiskAssessmentSubmit.java:65)
+	at com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit.verifybuttonstatus(TestHealthRiskAssessmentSubmit.java:68)
 	at com.edifecs.breathe.qa.testcases.RunTests.main(RunTests.java:102)
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
 ... Removed 29 stack frames
@@ -574,8 +634,8 @@
                   <a name="verifyscore">
                   </a> <!-- verifyscore -->
                   <span class="method-name">verifyscore</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [3.0] but found [3.5]
-	at com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit.verifyscore(TestHealthRiskAssessmentSubmit.java:40)
+                  <div class="stack-trace">java.lang.AssertionError: expected [5] but found [9.76]
+	at com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit.verifyscore(TestHealthRiskAssessmentSubmit.java:43)
 	at com.edifecs.breathe.qa.testcases.RunTests.main(RunTests.java:102)
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
 ... Removed 29 stack frames
@@ -587,8 +647,8 @@
                   <a name="verifyscore">
                   </a> <!-- verifyscore -->
                   <span class="method-name">verifyscore</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [3.0] but found [6.46]
-	at com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit.verifyscore(TestHealthRiskAssessmentSubmit.java:40)
+                  <div class="stack-trace">java.lang.AssertionError: expected [3] but found [9.76]
+	at com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit.verifyscore(TestHealthRiskAssessmentSubmit.java:43)
 	at com.edifecs.breathe.qa.testcases.RunTests.main(RunTests.java:102)
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
 ... Removed 29 stack frames
@@ -600,8 +660,8 @@
                   <a name="verifyscore">
                   </a> <!-- verifyscore -->
                   <span class="method-name">verifyscore</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [3.0] but found [8.58]
-	at com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit.verifyscore(TestHealthRiskAssessmentSubmit.java:40)
+                  <div class="stack-trace">java.lang.AssertionError: expected [3] but found [9.76]
+	at com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit.verifyscore(TestHealthRiskAssessmentSubmit.java:43)
 	at com.edifecs.breathe.qa.testcases.RunTests.main(RunTests.java:102)
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
 ... Removed 29 stack frames
@@ -613,8 +673,8 @@
                   <a name="verifyscore">
                   </a> <!-- verifyscore -->
                   <span class="method-name">verifyscore</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [3.0] but found [8.58]
-	at com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit.verifyscore(TestHealthRiskAssessmentSubmit.java:40)
+                  <div class="stack-trace">java.lang.AssertionError: expected [3] but found [9.76]
+	at com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit.verifyscore(TestHealthRiskAssessmentSubmit.java:43)
 	at com.edifecs.breathe.qa.testcases.RunTests.main(RunTests.java:102)
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
 ... Removed 29 stack frames
@@ -623,6 +683,28 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-TmpSuite-class-failed -->
+          <div class="suite-TmpSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyQuestionTitle">
+                  </a> <!-- verifyQuestionTitle -->
+                  <span class="method-name">verifyQuestionTitle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifybuttonstatus">
+                  </a> <!-- verifybuttonstatus -->
+                  <span class="method-name">verifybuttonstatus</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TmpSuite-class-passed -->
           <div class="suite-TmpSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -821,20 +903,6 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyAnswerSelection">
-                  </a> <!-- verifyAnswerSelection -->
-                  <span class="method-name">verifyAnswerSelection</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyAnswerSelection">
-                  </a> <!-- verifyAnswerSelection -->
-                  <span class="method-name">verifyAnswerSelection</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="verifyAnswersText">
                   </a> <!-- verifyAnswersText -->
                   <span class="method-name">verifyAnswersText</span>
@@ -1179,9 +1247,30 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifybuttonstatus">
-                  </a> <!-- verifybuttonstatus -->
-                  <span class="method-name">verifybuttonstatus</span>
+                  <a name="verifyQuestionairetitle">
+                  </a> <!-- verifyQuestionairetitle -->
+                  <span class="method-name">verifyQuestionairetitle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyQuestionairetitle">
+                  </a> <!-- verifyQuestionairetitle -->
+                  <span class="method-name">verifyQuestionairetitle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyQuestionairetitle">
+                  </a> <!-- verifyQuestionairetitle -->
+                  <span class="method-name">verifyQuestionairetitle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyQuestionairetitle">
+                  </a> <!-- verifyQuestionairetitle -->
+                  <span class="method-name">verifyQuestionairetitle</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -1196,21 +1285,6 @@
                   <a name="verifybuttonstatus">
                   </a> <!-- verifybuttonstatus -->
                   <span class="method-name">verifybuttonstatus</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TmpSuite-class-passed -->
-          <div class="suite-TmpSuite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyQuestionTitle">
-                  </a> <!-- verifyQuestionTitle -->
-                  <span class="method-name">verifyQuestionTitle</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -1437,273 +1511,273 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(86);
+data.addRows(90);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyAnswerSelection')
 data.setCell(0, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(0, 3, 3195);
+data.setCell(0, 3, 3142);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyAnswerSelection')
 data.setCell(1, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(1, 3, 3165);
+data.setCell(1, 3, 3135);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyAnswerSelection')
 data.setCell(2, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(2, 3, 1504);
+data.setCell(2, 3, 1392);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'verifyAnswerSelection')
 data.setCell(3, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(3, 3, 860);
+data.setCell(3, 3, 844);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyAnswerSelection')
+data.setCell(4, 1, 'verifyAnswersText')
 data.setCell(4, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(4, 3, 844);
+data.setCell(4, 3, 748);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'verifyAnswerSelection')
 data.setCell(5, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(5, 3, 764);
+data.setCell(5, 3, 702);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'verifyscore')
 data.setCell(6, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit')
-data.setCell(6, 3, 745);
+data.setCell(6, 3, 701);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'verifyAnswerSelection')
 data.setCell(7, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(7, 3, 735);
+data.setCell(7, 3, 683);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyAnswersText')
+data.setCell(8, 1, 'verifyAnswerSelection')
 data.setCell(8, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(8, 3, 716);
+data.setCell(8, 3, 651);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'verifyAnswerSelection')
 data.setCell(9, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(9, 3, 657);
+data.setCell(9, 3, 645);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'verifyAnswerSelection')
 data.setCell(10, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(10, 3, 643);
+data.setCell(10, 3, 632);
 data.setCell(11, 0, 11)
 data.setCell(11, 1, 'verifyAnswerSelection')
 data.setCell(11, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(11, 3, 640);
+data.setCell(11, 3, 623);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'verifyAnswerSelection')
+data.setCell(12, 1, 'verifySubmitButton')
 data.setCell(12, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(12, 3, 640);
+data.setCell(12, 3, 494);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'verifyAnswerSelection')
+data.setCell(13, 1, 'verifyAnswersText')
 data.setCell(13, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(13, 3, 635);
+data.setCell(13, 3, 256);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'verifyscore')
-data.setCell(14, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit')
-data.setCell(14, 3, 599);
+data.setCell(14, 1, 'verifyAnswersText')
+data.setCell(14, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
+data.setCell(14, 3, 245);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'verifySubmitButton')
+data.setCell(15, 1, 'verifyAnswersText')
 data.setCell(15, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(15, 3, 555);
+data.setCell(15, 3, 202);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'verifySubmitButton')
+data.setCell(16, 1, 'verifyAnswersText')
 data.setCell(16, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(16, 3, 509);
+data.setCell(16, 3, 201);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'verifySubmitButton')
+data.setCell(17, 1, 'verifyAnswersText')
 data.setCell(17, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(17, 3, 482);
+data.setCell(17, 3, 199);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'verifyscore')
-data.setCell(18, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit')
-data.setCell(18, 3, 456);
+data.setCell(18, 1, 'verifyAnswersText')
+data.setCell(18, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
+data.setCell(18, 3, 197);
 data.setCell(19, 0, 19)
 data.setCell(19, 1, 'verifyAnswersText')
 data.setCell(19, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(19, 3, 276);
+data.setCell(19, 3, 196);
 data.setCell(20, 0, 20)
 data.setCell(20, 1, 'verifyAnswersText')
 data.setCell(20, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(20, 3, 243);
+data.setCell(20, 3, 196);
 data.setCell(21, 0, 21)
 data.setCell(21, 1, 'verifyAnswersText')
 data.setCell(21, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(21, 3, 235);
+data.setCell(21, 3, 172);
 data.setCell(22, 0, 22)
 data.setCell(22, 1, 'verifyAnswersText')
 data.setCell(22, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(22, 3, 206);
+data.setCell(22, 3, 162);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'verifyAnswersText')
-data.setCell(23, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(23, 3, 188);
+data.setCell(23, 1, 'verifybuttonstatus')
+data.setCell(23, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit')
+data.setCell(23, 3, 152);
 data.setCell(24, 0, 24)
 data.setCell(24, 1, 'verifyAnswersText')
 data.setCell(24, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(24, 3, 188);
+data.setCell(24, 3, 147);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'verifyAnswersText')
-data.setCell(25, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(25, 3, 188);
+data.setCell(25, 1, 'verifyscore')
+data.setCell(25, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit')
+data.setCell(25, 3, 122);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'verifyAnswersText')
-data.setCell(26, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(26, 3, 173);
+data.setCell(26, 1, 'verifyscore')
+data.setCell(26, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit')
+data.setCell(26, 3, 102);
 data.setCell(27, 0, 27)
-data.setCell(27, 1, 'verifyAnswersText')
-data.setCell(27, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(27, 3, 172);
+data.setCell(27, 1, 'verifybuttonstatus')
+data.setCell(27, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment')
+data.setCell(27, 3, 101);
 data.setCell(28, 0, 28)
-data.setCell(28, 1, 'verifyAnswersText')
-data.setCell(28, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(28, 3, 168);
+data.setCell(28, 1, 'verifyQuestionairetitle')
+data.setCell(28, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit')
+data.setCell(28, 3, 94);
 data.setCell(29, 0, 29)
-data.setCell(29, 1, 'verifyAnswersText')
+data.setCell(29, 1, 'verifyAnswerSelection')
 data.setCell(29, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(29, 3, 167);
+data.setCell(29, 3, 94);
 data.setCell(30, 0, 30)
-data.setCell(30, 1, 'verifybuttonstatus')
-data.setCell(30, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment')
-data.setCell(30, 3, 142);
+data.setCell(30, 1, 'verifyQuestionairetitle')
+data.setCell(30, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit')
+data.setCell(30, 3, 92);
 data.setCell(31, 0, 31)
-data.setCell(31, 1, 'verifybuttonstatus')
-data.setCell(31, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit')
-data.setCell(31, 3, 104);
+data.setCell(31, 1, 'verifyQuestionTitle')
+data.setCell(31, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
+data.setCell(31, 3, 91);
 data.setCell(32, 0, 32)
 data.setCell(32, 1, 'verifyPreviousButton')
 data.setCell(32, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(32, 3, 99);
+data.setCell(32, 3, 90);
 data.setCell(33, 0, 33)
-data.setCell(33, 1, 'verifyQuestionTitle')
+data.setCell(33, 1, 'verifyAnswerSelection')
 data.setCell(33, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(33, 3, 85);
+data.setCell(33, 3, 87);
 data.setCell(34, 0, 34)
-data.setCell(34, 1, 'verifyscore')
+data.setCell(34, 1, 'verifybuttonstatus')
 data.setCell(34, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit')
-data.setCell(34, 3, 85);
+data.setCell(34, 3, 86);
 data.setCell(35, 0, 35)
 data.setCell(35, 1, 'verifybuttonstatus')
 data.setCell(35, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit')
-data.setCell(35, 3, 81);
+data.setCell(35, 3, 78);
 data.setCell(36, 0, 36)
-data.setCell(36, 1, 'verifyPreviousButton')
-data.setCell(36, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(36, 3, 79);
+data.setCell(36, 1, 'verifyQuestionairetitle')
+data.setCell(36, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit')
+data.setCell(36, 3, 69);
 data.setCell(37, 0, 37)
-data.setCell(37, 1, 'verifybuttonstatus')
+data.setCell(37, 1, 'verifyQuestionairetitle')
 data.setCell(37, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit')
-data.setCell(37, 3, 75);
+data.setCell(37, 3, 64);
 data.setCell(38, 0, 38)
-data.setCell(38, 1, 'verifybuttonstatus')
-data.setCell(38, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit')
-data.setCell(38, 3, 74);
+data.setCell(38, 1, 'verifyPreviousButton')
+data.setCell(38, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
+data.setCell(38, 3, 57);
 data.setCell(39, 0, 39)
-data.setCell(39, 1, 'verifyQuestionTitle')
-data.setCell(39, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(39, 3, 56);
+data.setCell(39, 1, 'verifybuttonstatus')
+data.setCell(39, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit')
+data.setCell(39, 3, 55);
 data.setCell(40, 0, 40)
-data.setCell(40, 1, 'verifyQuestionTitle')
+data.setCell(40, 1, 'verifyPreviousButton')
 data.setCell(40, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(40, 3, 52);
+data.setCell(40, 3, 54);
 data.setCell(41, 0, 41)
-data.setCell(41, 1, 'verifyPreviousButton')
+data.setCell(41, 1, 'verifyQuestionTitle')
 data.setCell(41, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(41, 3, 47);
+data.setCell(41, 3, 54);
 data.setCell(42, 0, 42)
-data.setCell(42, 1, 'verifyQuestionTitle')
+data.setCell(42, 1, 'verifyPreviousButton')
 data.setCell(42, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(42, 3, 45);
+data.setCell(42, 3, 53);
 data.setCell(43, 0, 43)
-data.setCell(43, 1, 'verifyQuestionTitle')
-data.setCell(43, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(43, 3, 44);
+data.setCell(43, 1, 'verifyscore')
+data.setCell(43, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit')
+data.setCell(43, 3, 52);
 data.setCell(44, 0, 44)
 data.setCell(44, 1, 'verifyQuestionTitle')
 data.setCell(44, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(44, 3, 42);
+data.setCell(44, 3, 51);
 data.setCell(45, 0, 45)
 data.setCell(45, 1, 'verifyPreviousButton')
 data.setCell(45, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(45, 3, 41);
+data.setCell(45, 3, 49);
 data.setCell(46, 0, 46)
 data.setCell(46, 1, 'verifyQuestionTitle')
 data.setCell(46, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(46, 3, 37);
+data.setCell(46, 3, 45);
 data.setCell(47, 0, 47)
 data.setCell(47, 1, 'verifyQuestionTitle')
 data.setCell(47, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(47, 3, 33);
+data.setCell(47, 3, 44);
 data.setCell(48, 0, 48)
-data.setCell(48, 1, 'verifyPreviousButton')
+data.setCell(48, 1, 'verifyQuestionTitle')
 data.setCell(48, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(48, 3, 33);
+data.setCell(48, 3, 44);
 data.setCell(49, 0, 49)
-data.setCell(49, 1, 'verifyPreviousButton')
+data.setCell(49, 1, 'verifyQuestionTitle')
 data.setCell(49, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(49, 3, 31);
+data.setCell(49, 3, 42);
 data.setCell(50, 0, 50)
 data.setCell(50, 1, 'verifyQuestionTitle')
 data.setCell(50, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(50, 3, 30);
+data.setCell(50, 3, 39);
 data.setCell(51, 0, 51)
 data.setCell(51, 1, 'verifyQuestionTitle')
 data.setCell(51, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(51, 3, 28);
+data.setCell(51, 3, 37);
 data.setCell(52, 0, 52)
-data.setCell(52, 1, 'verifyPreviousButton')
+data.setCell(52, 1, 'verifyQuestionTitle')
 data.setCell(52, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(52, 3, 28);
+data.setCell(52, 3, 37);
 data.setCell(53, 0, 53)
-data.setCell(53, 1, 'verifyQuestionTitle')
+data.setCell(53, 1, 'verifyPreviousButton')
 data.setCell(53, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(53, 3, 27);
+data.setCell(53, 3, 36);
 data.setCell(54, 0, 54)
-data.setCell(54, 1, 'verifyPreviousButton')
+data.setCell(54, 1, 'verifyQuestionTitle')
 data.setCell(54, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(54, 3, 25);
+data.setCell(54, 3, 35);
 data.setCell(55, 0, 55)
 data.setCell(55, 1, 'verifyQuestionTitle')
 data.setCell(55, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(55, 3, 22);
+data.setCell(55, 3, 34);
 data.setCell(56, 0, 56)
-data.setCell(56, 1, 'verifySubmitButton')
+data.setCell(56, 1, 'verifyPreviousButton')
 data.setCell(56, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(56, 3, 14);
+data.setCell(56, 3, 34);
 data.setCell(57, 0, 57)
-data.setCell(57, 1, 'verifyAnswerOptionsCount')
+data.setCell(57, 1, 'verifySubmitButton')
 data.setCell(57, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(57, 3, 1);
+data.setCell(57, 3, 30);
 data.setCell(58, 0, 58)
-data.setCell(58, 1, 'verifySubmitButton')
+data.setCell(58, 1, 'verifyPreviousButton')
 data.setCell(58, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(58, 3, 1);
+data.setCell(58, 3, 24);
 data.setCell(59, 0, 59)
-data.setCell(59, 1, 'verifyAnswerOptionsCount')
+data.setCell(59, 1, 'verifySubmitButton')
 data.setCell(59, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(59, 3, 1);
+data.setCell(59, 3, 22);
 data.setCell(60, 0, 60)
 data.setCell(60, 1, 'verifySubmitButton')
 data.setCell(60, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(60, 3, 1);
+data.setCell(60, 3, 10);
 data.setCell(61, 0, 61)
 data.setCell(61, 1, 'verifyAnswerOptionsCount')
 data.setCell(61, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
 data.setCell(61, 3, 1);
 data.setCell(62, 0, 62)
-data.setCell(62, 1, 'verifyPreviousButton')
-data.setCell(62, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
-data.setCell(62, 3, 1);
+data.setCell(62, 1, 'verifyQuestionTitle')
+data.setCell(62, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment')
+data.setCell(62, 3, 0);
 data.setCell(63, 0, 63)
 data.setCell(63, 1, 'verifyQuestionTitle')
-data.setCell(63, 2, 'com.edifecs.breathe.qa.testcases.TestHealthRiskAssessment')
+data.setCell(63, 2, 'com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment')
 data.setCell(63, 3, 0);
 data.setCell(64, 0, 64)
-data.setCell(64, 1, 'verifyQuestionTitle')
-data.setCell(64, 2, 'com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment')
+data.setCell(64, 1, 'verifyAnswerOptionsCount')
+data.setCell(64, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
 data.setCell(64, 3, 0);
 data.setCell(65, 0, 65)
-data.setCell(65, 1, 'verifySubmitButton')
+data.setCell(65, 1, 'verifyPreviousButton')
 data.setCell(65, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
 data.setCell(65, 3, 0);
 data.setCell(66, 0, 66)
-data.setCell(66, 1, 'verifyPreviousButton')
+data.setCell(66, 1, 'verifySubmitButton')
 data.setCell(66, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
 data.setCell(66, 3, 0);
 data.setCell(67, 0, 67)
@@ -1723,31 +1797,31 @@ data.setCell(70, 1, 'verifyQuestionTitle')
 data.setCell(70, 2, 'com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment')
 data.setCell(70, 3, 0);
 data.setCell(71, 0, 71)
-data.setCell(71, 1, 'verifyPreviousButton')
+data.setCell(71, 1, 'verifySubmitButton')
 data.setCell(71, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
 data.setCell(71, 3, 0);
 data.setCell(72, 0, 72)
-data.setCell(72, 1, 'verifyAnswerOptionsCount')
+data.setCell(72, 1, 'verifyPreviousButton')
 data.setCell(72, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
 data.setCell(72, 3, 0);
 data.setCell(73, 0, 73)
-data.setCell(73, 1, 'verifySubmitButton')
+data.setCell(73, 1, 'verifyAnswerOptionsCount')
 data.setCell(73, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
 data.setCell(73, 3, 0);
 data.setCell(74, 0, 74)
-data.setCell(74, 1, 'verifyAnswerOptionsCount')
+data.setCell(74, 1, 'verifySubmitButton')
 data.setCell(74, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
 data.setCell(74, 3, 0);
 data.setCell(75, 0, 75)
-data.setCell(75, 1, 'verifyQuestionTitle')
-data.setCell(75, 2, 'com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment')
+data.setCell(75, 1, 'verifyAnswerOptionsCount')
+data.setCell(75, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
 data.setCell(75, 3, 0);
 data.setCell(76, 0, 76)
-data.setCell(76, 1, 'verifyPreviousButton')
-data.setCell(76, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
+data.setCell(76, 1, 'verifyQuestionTitle')
+data.setCell(76, 2, 'com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment')
 data.setCell(76, 3, 0);
 data.setCell(77, 0, 77)
-data.setCell(77, 1, 'verifyAnswerOptionsCount')
+data.setCell(77, 1, 'verifyPreviousButton')
 data.setCell(77, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
 data.setCell(77, 3, 0);
 data.setCell(78, 0, 78)
@@ -1759,34 +1833,50 @@ data.setCell(79, 1, 'verifyAnswerOptionsCount')
 data.setCell(79, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
 data.setCell(79, 3, 0);
 data.setCell(80, 0, 80)
-data.setCell(80, 1, 'verifyQuestionTitle')
-data.setCell(80, 2, 'com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment')
+data.setCell(80, 1, 'verifyAnswerOptionsCount')
+data.setCell(80, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
 data.setCell(80, 3, 0);
 data.setCell(81, 0, 81)
-data.setCell(81, 1, 'verifyAnswerOptionsCount')
+data.setCell(81, 1, 'verifySubmitButton')
 data.setCell(81, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
 data.setCell(81, 3, 0);
 data.setCell(82, 0, 82)
-data.setCell(82, 1, 'verifySubmitButton')
+data.setCell(82, 1, 'verifyAnswerOptionsCount')
 data.setCell(82, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
 data.setCell(82, 3, 0);
 data.setCell(83, 0, 83)
-data.setCell(83, 1, 'verifySubmitButton')
-data.setCell(83, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
+data.setCell(83, 1, 'verifyQuestionTitle')
+data.setCell(83, 2, 'com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment')
 data.setCell(83, 3, 0);
 data.setCell(84, 0, 84)
 data.setCell(84, 1, 'verifyAnswerOptionsCount')
 data.setCell(84, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
 data.setCell(84, 3, 0);
 data.setCell(85, 0, 85)
-data.setCell(85, 1, 'verifyAnswerOptionsCount')
+data.setCell(85, 1, 'verifySubmitButton')
 data.setCell(85, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
 data.setCell(85, 3, 0);
+data.setCell(86, 0, 86)
+data.setCell(86, 1, 'verifyPreviousButton')
+data.setCell(86, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
+data.setCell(86, 3, 0);
+data.setCell(87, 0, 87)
+data.setCell(87, 1, 'verifySubmitButton')
+data.setCell(87, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
+data.setCell(87, 3, 0);
+data.setCell(88, 0, 88)
+data.setCell(88, 1, 'verifyAnswerOptionsCount')
+data.setCell(88, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
+data.setCell(88, 3, 0);
+data.setCell(89, 0, 89)
+data.setCell(89, 1, 'verifyAnswerOptionsCount')
+data.setCell(89, 2, 'com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions')
+data.setCell(89, 3, 0);
 window.suiteTableData['TmpSuite']= { tableData: data, tableDiv: 'times-div-TmpSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 22 seconds</span>
+              <span class="suite-total-time">Total running time: 18 seconds</span>
               <div id="times-div-TmpSuite">
               </div> <!-- times-div-TmpSuite -->
             </div> <!-- times-div -->
@@ -1819,537 +1909,557 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyQuestionTitle</span>
-                <span class="method-start">26823 ms</span>
+                <span class="method-start">26280 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifybuttonstatus</span>
-                <span class="method-start">26824 ms</span>
+                <span class="method-start">26281 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">startQuesttionaire</span>
-                <span class="method-start">26981 ms</span>
+                <span class="method-start">26397 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">verifyQuestionTitle</span>
-                <span class="method-start">27306 ms</span>
+                <span class="method-start">26674 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setBeforeTest</span>
-                <span class="method-start">27310 ms</span>
+                <span class="method-start">26678 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyQuestionTitle</span>
-                <span class="method-start">28478 ms</span>
+                <span class="method-start">27818 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAnswerOptionsCount</span>
-                <span class="method-start">28535 ms</span>
+                <span class="method-start">27909 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAnswersText</span>
-                <span class="method-start">28535 ms</span>
+                <span class="method-start">27909 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAnswerSelection</span>
-                <span class="method-start">28770 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifySubmitButton</span>
-                <span class="method-start">29410 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyPreviousButton</span>
-                <span class="method-start">29411 ms</span>
+                <span class="method-start">28105 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">moveToNextQuestion</span>
-                <span class="method-start">29411 ms</span>
+                <span class="method-start">28807 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="test-method">
+                <span class="method-name">verifyPreviousButton</span>
+                <span class="method-start">28807 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySubmitButton</span>
+                <span class="method-start">28807 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class before">
+                <span class="method-name">setBeforeTest</span>
+                <span class="method-start">29043 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyQuestionTitle</span>
+                <span class="method-start">30150 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswerOptionsCount</span>
+                <span class="method-start">30194 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswersText</span>
+                <span class="method-start">30194 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswerSelection</span>
+                <span class="method-start">30439 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyPreviousButton</span>
+                <span class="method-start">31084 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySubmitButton</span>
+                <span class="method-start">31084 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">moveToNextQuestion</span>
+                <span class="method-start">31137 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class before">
                 <span class="method-name">setBeforeTest</span>
-                <span class="method-start">29663 ms</span>
+                <span class="method-start">31393 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyQuestionTitle</span>
-                <span class="method-start">30840 ms</span>
+                <span class="method-start">32510 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAnswerOptionsCount</span>
-                <span class="method-start">30885 ms</span>
+                <span class="method-start">32544 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAnswersText</span>
-                <span class="method-start">30886 ms</span>
+                <span class="method-start">32544 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAnswerSelection</span>
-                <span class="method-start">31074 ms</span>
+                <span class="method-start">32746 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifySubmitButton</span>
-                <span class="method-start">31718 ms</span>
+                <span class="method-start">33590 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyPreviousButton</span>
-                <span class="method-start">31718 ms</span>
+                <span class="method-start">34084 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">moveToNextQuestion</span>
-                <span class="method-start">31818 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-class before">
-                <span class="method-name">setBeforeTest</span>
-                <span class="method-start">32249 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">verifyQuestionTitle</span>
-                <span class="method-start">32909 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswerOptionsCount</span>
-                <span class="method-start">32942 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswersText</span>
-                <span class="method-start">32942 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswerSelection</span>
-                <span class="method-start">33109 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifySubmitButton</span>
-                <span class="method-start">33969 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyPreviousButton</span>
-                <span class="method-start">34524 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">moveToNextQuestion</span>
-                <span class="method-start">34555 ms</span>
+                <span class="method-start">34138 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">startscore</span>
-                <span class="method-start">34976 ms</span>
+                <span class="method-start">34294 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyscore</span>
-                <span class="method-start">34976 ms</span>
+                <span class="method-start">34295 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifybuttonstatus</span>
-                <span class="method-start">35433 ms</span>
+                <span class="method-start">34997 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyQuestionairetitle</span>
+                <span class="method-start">35052 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">nextScenario</span>
-                <span class="method-start">35537 ms</span>
+                <span class="method-start">35146 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">startQuesttionaire</span>
-                <span class="method-start">35543 ms</span>
+                <span class="method-start">35152 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">verifyQuestionTitle</span>
-                <span class="method-start">35851 ms</span>
+                <span class="method-start">35420 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setBeforeTest</span>
-                <span class="method-start">35854 ms</span>
+                <span class="method-start">35423 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyQuestionTitle</span>
-                <span class="method-start">37032 ms</span>
+                <span class="method-start">36529 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAnswerOptionsCount</span>
-                <span class="method-start">37074 ms</span>
+                <span class="method-start">36566 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAnswersText</span>
-                <span class="method-start">37074 ms</span>
+                <span class="method-start">36567 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAnswerSelection</span>
-                <span class="method-start">37350 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifySubmitButton</span>
-                <span class="method-start">38085 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyPreviousButton</span>
-                <span class="method-start">38086 ms</span>
+                <span class="method-start">36715 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">moveToNextQuestion</span>
-                <span class="method-start">38086 ms</span>
+                <span class="method-start">37338 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="test-method">
+                <span class="method-name">verifyPreviousButton</span>
+                <span class="method-start">37338 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySubmitButton</span>
+                <span class="method-start">37338 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class before">
+                <span class="method-name">setBeforeTest</span>
+                <span class="method-start">37754 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyQuestionTitle</span>
+                <span class="method-start">38879 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswerOptionsCount</span>
+                <span class="method-start">38924 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswersText</span>
+                <span class="method-start">38924 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswerSelection</span>
+                <span class="method-start">39123 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyPreviousButton</span>
+                <span class="method-start">39807 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySubmitButton</span>
+                <span class="method-start">39807 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">moveToNextQuestion</span>
+                <span class="method-start">39843 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class before">
                 <span class="method-name">setBeforeTest</span>
-                <span class="method-start">38500 ms</span>
+                <span class="method-start">40092 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyQuestionTitle</span>
-                <span class="method-start">39164 ms</span>
+                <span class="method-start">41215 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAnswerOptionsCount</span>
-                <span class="method-start">39192 ms</span>
+                <span class="method-start">41254 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAnswersText</span>
-                <span class="method-start">39193 ms</span>
+                <span class="method-start">41254 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verifyAnswerSelection</span>
-                <span class="method-start">39365 ms</span>
+                <span class="method-start">41426 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifySubmitButton</span>
-                <span class="method-start">40022 ms</span>
+                <span class="method-start">42818 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyPreviousButton</span>
-                <span class="method-start">40022 ms</span>
+                <span class="method-start">42848 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">moveToNextQuestion</span>
-                <span class="method-start">40101 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-class before">
-                <span class="method-name">setBeforeTest</span>
-                <span class="method-start">40338 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">verifyQuestionTitle</span>
-                <span class="method-start">41458 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswerOptionsCount</span>
-                <span class="method-start">41495 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswersText</span>
-                <span class="method-start">41496 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswerSelection</span>
-                <span class="method-start">41702 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifySubmitButton</span>
-                <span class="method-start">43207 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyPreviousButton</span>
-                <span class="method-start">43690 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">moveToNextQuestion</span>
-                <span class="method-start">43737 ms</span>
+                <span class="method-start">42882 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">startscore</span>
-                <span class="method-start">43935 ms</span>
+                <span class="method-start">46013 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyscore</span>
-                <span class="method-start">43935 ms</span>
+                <span class="method-start">46013 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifybuttonstatus</span>
-                <span class="method-start">44680 ms</span>
+                <span class="method-start">46115 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyQuestionairetitle</span>
+                <span class="method-start">46201 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">nextScenario</span>
-                <span class="method-start">44762 ms</span>
+                <span class="method-start">46270 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">startQuesttionaire</span>
-                <span class="method-start">44765 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">verifyQuestionTitle</span>
-                <span class="method-start">45075 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setBeforeTest</span>
-                <span class="method-start">45078 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">verifyQuestionTitle</span>
-                <span class="method-start">46221 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswerOptionsCount</span>
                 <span class="method-start">46273 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswersText</span>
-                <span class="method-start">46273 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswerSelection</span>
-                <span class="method-start">46990 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifySubmitButton</span>
-                <span class="method-start">47630 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyPreviousButton</span>
-                <span class="method-start">47631 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">moveToNextQuestion</span>
-                <span class="method-start">47631 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-class before">
-                <span class="method-name">setBeforeTest</span>
-                <span class="method-start">47877 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">verifyQuestionTitle</span>
-                <span class="method-start">49064 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswerOptionsCount</span>
-                <span class="method-start">49086 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswersText</span>
-                <span class="method-start">49087 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswerSelection</span>
-                <span class="method-start">49260 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifySubmitButton</span>
-                <span class="method-start">49896 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyPreviousButton</span>
-                <span class="method-start">49896 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">moveToNextQuestion</span>
-                <span class="method-start">49924 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-class before">
-                <span class="method-name">setBeforeTest</span>
-                <span class="method-start">50184 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">verifyQuestionTitle</span>
-                <span class="method-start">51321 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswerOptionsCount</span>
-                <span class="method-start">51406 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswersText</span>
-                <span class="method-start">51406 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswerSelection</span>
-                <span class="method-start">51594 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifySubmitButton</span>
-                <span class="method-start">52438 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyPreviousButton</span>
-                <span class="method-start">52947 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">moveToNextQuestion</span>
-                <span class="method-start">52980 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">startscore</span>
-                <span class="method-start">53124 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifyscore</span>
-                <span class="method-start">53124 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifybuttonstatus</span>
-                <span class="method-start">53723 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">nextScenario</span>
-                <span class="method-start">53798 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">startQuesttionaire</span>
-                <span class="method-start">53801 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">verifyQuestionTitle</span>
-                <span class="method-start">54085 ms</span>
+                <span class="method-start">46605 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setBeforeTest</span>
-                <span class="method-start">54088 ms</span>
+                <span class="method-start">46609 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyQuestionTitle</span>
-                <span class="method-start">55204 ms</span>
+                <span class="method-start">47765 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAnswerOptionsCount</span>
-                <span class="method-start">55231 ms</span>
+                <span class="method-start">47809 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAnswersText</span>
-                <span class="method-start">55231 ms</span>
+                <span class="method-start">47809 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAnswerSelection</span>
-                <span class="method-start">55399 ms</span>
+                <span class="method-start">48065 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifySubmitButton</span>
-                <span class="method-start">58564 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyPreviousButton</span>
-                <span class="method-start">58564 ms</span>
+                <span class="method-start">48716 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">moveToNextQuestion</span>
-                <span class="method-start">58565 ms</span>
+                <span class="method-start">48717 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="test-method">
+                <span class="method-name">verifyPreviousButton</span>
+                <span class="method-start">48717 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class before">
+                <span class="method-name">setBeforeTest</span>
+                <span class="method-start">48960 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyQuestionTitle</span>
+                <span class="method-start">50093 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswerOptionsCount</span>
+                <span class="method-start">50148 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswersText</span>
+                <span class="method-start">50148 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswerSelection</span>
+                <span class="method-start">50345 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyPreviousButton</span>
+                <span class="method-start">50977 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySubmitButton</span>
+                <span class="method-start">50977 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">moveToNextQuestion</span>
+                <span class="method-start">51034 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class before">
                 <span class="method-name">setBeforeTest</span>
-                <span class="method-start">58973 ms</span>
+                <span class="method-start">51277 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyQuestionTitle</span>
-                <span class="method-start">59628 ms</span>
+                <span class="method-start">52401 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAnswerOptionsCount</span>
-                <span class="method-start">59672 ms</span>
+                <span class="method-start">52452 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAnswersText</span>
-                <span class="method-start">59672 ms</span>
+                <span class="method-start">52452 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verifyAnswerSelection</span>
-                <span class="method-start">59860 ms</span>
+                <span class="method-start">52648 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifySubmitButton</span>
-                <span class="method-start">63055 ms</span>
+                <span class="method-start">52736 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyPreviousButton</span>
-                <span class="method-start">63055 ms</span>
+                <span class="method-start">52746 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">moveToNextQuestion</span>
-                <span class="method-start">63080 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-class before">
-                <span class="method-name">setBeforeTest</span>
-                <span class="method-start">63315 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">verifyQuestionTitle</span>
-                <span class="method-start">64463 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswerOptionsCount</span>
-                <span class="method-start">64493 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswersText</span>
-                <span class="method-start">64493 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAnswerSelection</span>
-                <span class="method-start">64736 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifySubmitButton</span>
-                <span class="method-start">65500 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyPreviousButton</span>
-                <span class="method-start">65514 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">moveToNextQuestion</span>
-                <span class="method-start">65555 ms</span>
+                <span class="method-start">52836 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">startscore</span>
-                <span class="method-start">68679 ms</span>
+                <span class="method-start">55966 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyscore</span>
-                <span class="method-start">68679 ms</span>
+                <span class="method-start">55967 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifybuttonstatus</span>
+                <span class="method-start">56019 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyQuestionairetitle</span>
+                <span class="method-start">56098 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">nextScenario</span>
+                <span class="method-start">56190 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.edifecs.breathe.qa.testcases.TestStartHealthRiskAssessment</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startQuesttionaire</span>
+                <span class="method-start">56194 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">verifyQuestionTitle</span>
+                <span class="method-start">56490 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.edifecs.breathe.qa.testcases.TestHealthAssessmentQuestions</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setBeforeTest</span>
+                <span class="method-start">56494 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyQuestionTitle</span>
+                <span class="method-start">57638 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswerOptionsCount</span>
+                <span class="method-start">57674 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswersText</span>
+                <span class="method-start">57674 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswerSelection</span>
+                <span class="method-start">57875 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">moveToNextQuestion</span>
+                <span class="method-start">61018 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="test-method">
+                <span class="method-name">verifyPreviousButton</span>
+                <span class="method-start">61018 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySubmitButton</span>
+                <span class="method-start">61018 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class before">
+                <span class="method-name">setBeforeTest</span>
+                <span class="method-start">61299 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyQuestionTitle</span>
+                <span class="method-start">62444 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswerOptionsCount</span>
+                <span class="method-start">62481 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswersText</span>
+                <span class="method-start">62481 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswerSelection</span>
+                <span class="method-start">63229 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyPreviousButton</span>
+                <span class="method-start">66365 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySubmitButton</span>
+                <span class="method-start">66365 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">moveToNextQuestion</span>
+                <span class="method-start">66389 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-class before">
+                <span class="method-name">setBeforeTest</span>
+                <span class="method-start">66628 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyQuestionTitle</span>
+                <span class="method-start">67750 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswerOptionsCount</span>
+                <span class="method-start">67792 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswersText</span>
+                <span class="method-start">67792 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAnswerSelection</span>
+                <span class="method-start">67954 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySubmitButton</span>
+                <span class="method-start">68048 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyPreviousButton</span>
+                <span class="method-start">68070 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">moveToNextQuestion</span>
+                <span class="method-start">68120 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.edifecs.breathe.qa.testcases.TestHealthRiskAssessmentSubmit</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">startscore</span>
+                <span class="method-start">71255 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyscore</span>
+                <span class="method-start">71256 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifybuttonstatus</span>
-                <span class="method-start">68764 ms</span>
+                <span class="method-start">71378 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyQuestionairetitle</span>
+                <span class="method-start">71530 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">nextScenario</span>
-                <span class="method-start">68839 ms</span>
+                <span class="method-start">71594 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
