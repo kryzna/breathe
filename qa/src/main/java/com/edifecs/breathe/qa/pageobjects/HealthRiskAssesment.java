@@ -15,7 +15,7 @@ public class HealthRiskAssesment {
     public WebElement leftnav_Healthassessment,setAssessmentStartButton,elementQuestionnaireTitle,
             getHealtAssessment_questionnairechoice_yes_radio1,getHealtAssessment_questionnairechoice_next,
             getHealtAssessment_questionnairechoice_checkbox1,text_HealtAssessment_completed,elementQuestionTitle;
-    public static WebElement elementNextButton,getHealtAssessmentSubmit,questionairescore;
+    public static WebElement elementNextButton,getHealtAssessmentSubmit,questionairescore,elementPreviousButton;
     public static List<WebElement> listAnswerOptions = new ArrayList<WebElement>();
 
 
@@ -53,6 +53,14 @@ public class HealthRiskAssesment {
 
     public static WebElement getElementNextButton(){
         return elementNextButton;
+    }
+
+    public void setElementPreviousButton(AndroidDriver aDriver){
+        elementPreviousButton=aDriver.findElement(By.id("android:id/button2"));
+    }
+
+    public static WebElement getElementPreviousButton(){
+        return elementPreviousButton;
     }
 
     //set the object of question title

@@ -3,3 +3,4 @@ app/
 .gradle/
 build/
 test-output/
+*.7z

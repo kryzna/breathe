@@ -21,6 +21,7 @@ public class TestStartHealthRiskAssessment {
     public void startQuesttionaire(){
         riskscorefinal = 0;
         questionNumber=2;
+        riskscorefinal = 0;
         healthRiskAssesment.setAssessmentStartButton(Andriodsetup.aDriver);
         WebElement assessmentStartButton = healthRiskAssesment.getAssessmentStartButton();
         standardFunctions.click(assessmentStartButton);

@@ -41,9 +41,12 @@ public class Andriodsetup {
         //This capability is used to reset the app’s state before the session starts;
       //  capabilities.setCapability("noreset", "false");
         //this will delete the entire simulator folder
-        // capabilities.setCapability("fullReset","true");
+       // capabilities.setCapability("fullReset","true");
         //used to set the language on the simulator/emulator
-        //capabilities.setCapability("locale", "en");
+       // capabilities.setCapability("locale", "hi_IN");
+       // capabilities.setCapability("language", "hi");
+       // capabilities.setCapability("locale", "en");
+       // capabilities.setCapability("language", "en");
         //used to start in a certain orientation in simulator/emulator
         //capabilities.setCapability("orientation", "PORTRAIT");
         //used to set the mobile OS platform.

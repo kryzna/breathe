@@ -4,6 +4,7 @@ import com.edifecs.breathe.qa.functions.ExcelReader;
 import com.edifecs.breathe.qa.functions.StandardFunctions;
 import com.edifecs.breathe.qa.pageobjects.HealthRiskAssesment;
 import com.edifecs.breathe.qa.functions.Andriodsetup;
+import org.apache.tools.ant.taskdefs.condition.And;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -18,8 +19,9 @@ public class TestHealthAssessmentQuestions {
     private static String questionTitle;
     private int expectedAnswerCount,actualAnswerCount;
     private String expectedAnswerText,actualAnswerText;
-    public static  double Qweight = 0.0;
-    public static double Aweight = 0.0;
+
+    public static  double Qweight = 0;
+    public static double Aweight = 0;
     private int weightcount = 0;
     public static int riskscore = 0;
 
@@ -61,7 +63,7 @@ public class TestHealthAssessmentQuestions {
     @Test(priority = 2)
     public void verifyAnswerOptionsCount() throws InterruptedException {
         try {
-            expectedAnswerCount = excelReader.getColumnCount("RiskAssessment", TestStartHealthRiskAssessment.questionNumber)/2;
+            expectedAnswerCount = excelReader.getColumnCount("RiskAssessment", TestStartHealthRiskAssessment.questionNumber-1)/2;
             System.out.println(expectedAnswerCount);
             actualAnswerCount = TestHealthRiskAssessment.listAnswersOptions.size();
             Assert.assertEquals(actualAnswerCount,expectedAnswerCount);
@@ -80,7 +82,7 @@ public class TestHealthAssessmentQuestions {
     public void verifyAnswersText() throws InterruptedException {
         int i;
         try{
-            for(i=1;i<=5;i++) {
+            for(i=1;i<=expectedAnswerCount;i++) {
                 expectedAnswerText=excelReader.getCellData("RiskAssessment", "choice"+i, TestStartHealthRiskAssessment.questionNumber);
                 actualAnswerText=TestHealthRiskAssessment.listAnswersOptions.get(i-1).getText().toString();
                 Assert.assertEquals(TestHealthRiskAssessment.listAnswersOptions.get(i-1).getText().toString(),excelReader.getCellData("RiskAssessment", "choice"+i, TestStartHealthRiskAssessment.questionNumber));
@@ -95,12 +97,17 @@ public class TestHealthAssessmentQuestions {
 
     //checking weather the answer is getting selected or not
     @Test(priority = 4)
-    public void verifyRadioAnswerSelection(){
+    public void verifyAnswerSelection(){
         String questionType = excelReader.getCellData("RiskAssessment", "Type", TestStartHealthRiskAssessment.questionNumber).toString();
         System.out.println(questionType);
         String checkboxSelectionNumbers;
         if(questionType.equals("c")){
             System.out.println("It's a checkbox based question:");
+            for(int i=0;i<expectedAnswerCount;i++) {
+                if(TestHealthRiskAssessment.listAnswersOptions.get(i).getAttribute("checked").toString().equals("true")){
+                    TestHealthRiskAssessment.listAnswersOptions.get(i).click();
+                }
+            }
             checkboxSelectionNumbers = excelReader.getCellData("RiskScenarios", "scenario" + TestStartHealthRiskAssessment.scenarioNumber, TestStartHealthRiskAssessment.questionNumber + 1);
             System.out.println(checkboxSelectionNumbers);
             String[] checkboxSelectionNumber = checkboxSelectionNumbers.split(",");
@@ -121,6 +128,7 @@ public class TestHealthAssessmentQuestions {
                 for (int i = 0; i < checkboxSelectionNumber.length; i++) {
                     weightcount = Double.valueOf(checkboxSelectionNumber[i]).intValue();
                     TestHealthRiskAssessment.listAnswersOptions.get(Integer.parseInt(checkboxSelectionNumber[i]) - 1).click();
+
                     Aweight = Aweight + Double.parseDouble(excelReader.getCellData("RiskAssessment", "cweight" + weightcount, TestStartHealthRiskAssessment.questionNumber));
                 }
             }
@@ -142,6 +150,27 @@ public class TestHealthAssessmentQuestions {
             {
                 Aweight = 0;
             }
+        }
+    }
+
+    @Test(priority = 5)
+    public void verifySubmitButton(){
+        int currentQuestionNumber = TestStartHealthRiskAssessment.questionNumber-1;
+        int totalQuestions = excelReader.getRowCount("RiskAssessment")-1;
+        if(currentQuestionNumber==totalQuestions){
+            WebElement elementSubmitButton =   HealthRiskAssesment.getElementNextButton();
+            Assert.assertEquals(elementSubmitButton.getText().toString(),"SUBMIT","Submit button not present");
+        }
+    }
+
+    @Test(priority = 6)
+    public void verifyPreviousButton() throws InterruptedException {
+        int currentQuestionNumber = TestStartHealthRiskAssessment.questionNumber-1;
+        int totalQuestions = excelReader.getRowCount("RiskAssessment")-1;
+        if(currentQuestionNumber>1 && currentQuestionNumber<=totalQuestions){
+            healthRiskAssesment.setElementPreviousButton(Andriodsetup.aDriver);
+            WebElement elementPreviousButton =   HealthRiskAssesment.getElementPreviousButton();
+            Assert.assertEquals(elementPreviousButton.getText().toString(),"PREVIOUS","Previous button not present");
         }
     }
 
